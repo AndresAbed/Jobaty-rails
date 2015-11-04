@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username: postgres
+  password: 123
+
+development:
+  <<: *default
+  database: Jobaty_development
+test:
+  <<: *default
+  database: Jobaty_test
+
+production:
+  <<: *default
+  database: Jobaty_production
+  username: Jobaty
+  password: <%= ENV['JOBATY_DATABASE_PASSWORD'] %>
