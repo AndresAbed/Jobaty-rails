@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   
-  devise_for :users, :employees
+  devise_for :employees
 end
