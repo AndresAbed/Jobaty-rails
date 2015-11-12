@@ -1,3 +1,5 @@
+<p>Hola <%= current_employee.first_name %></p>
+<%= image_tag current_employee.profile_img.url(:medium) %>
 <% if loged_in_using_OAuth? %>
   <%= link_to "Cerrar sesión - LinkedIn", signout_path %>
 <% else %>  

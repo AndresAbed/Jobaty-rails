@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
 
   def employee_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up){|u| 
-      u.permit(:first_name, :last_name, :email, :password, :password_confirmation)}
+      u.permit(:first_name, :last_name, :email, :password, 
+        :password_confirmation, :profile_img)}
     devise_parameter_sanitizer.for(:sign_in){|u| 
       u.permit(:email, :password)}
     devise_parameter_sanitizer.for(:account_update){|u| 

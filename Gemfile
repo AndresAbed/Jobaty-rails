@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'omniauth-linkedin'
+gem "paperclip", "~> 4.3"
 group :development, :test do
   gem 'byebug'
 end
