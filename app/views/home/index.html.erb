@@ -1,0 +1,5 @@
+<% if loged_in_using_OAuth? %>
+  <%= link_to "Cerrar sesión - LinkedIn", signout_path %>
+<% else %>  
+  <%= link_to('Cerrar sesión - Devise', destroy_employee_session_path, :method => :delete) %>
+<% end %>
