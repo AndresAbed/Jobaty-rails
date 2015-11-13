@@ -8,6 +8,8 @@ class Employee < ActiveRecord::Base
   has_many :degrees
   has_many :interested_jobs
 
+  validates :first_name, presence: true
+
   has_attached_file :profile_img, :styles => {medium: "300x300"}, 
   :url  => "/images/employees/:id/:style/:basename.:extension"
   validates_attachment_presence :profile_img  
