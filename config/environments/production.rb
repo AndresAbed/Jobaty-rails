@@ -76,4 +76,14 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  config.action_mailer.default_url_options = {host: "jobaty.herokuapp.com"}
+  ActionMailer::Base.smtp_settings = {
+    :address => 'apolo.servidoraweb.net',
+    :port => '25',
+    :authentication => :plain,
+    :user_name => 'info@novopacheco.com',
+    :password =>  'infonovo2015',
+    :domain => 'novopacheco.com',
+    :enable_starttls_auto => true
+  }
 end
