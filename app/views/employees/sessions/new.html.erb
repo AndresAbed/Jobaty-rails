@@ -23,13 +23,4 @@
   </div>
 <% end %>
 
-<div>
-  <% if current_employee %>
-    Signed in as <strong><%= current_employee.first_name %></strong>!
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to "Sign in with LinkedIn", "/auth/linkedin", id: "sign_in" %>
-  <% end %>
-</div>
-
-<%= render "devise/shared/links" %>
+<%= render "employees/shared/links" %>
