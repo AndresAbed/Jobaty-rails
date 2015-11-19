@@ -1,7 +1,12 @@
-<p>Hola <%= current_employee.first_name %></p>
-<%= image_tag current_employee.profile_img.url(:medium) %>
-<% if loged_in_using_OAuth? %>
-  <%= link_to "Cerrar sesión - LinkedIn", signout_path %>
-<% else %>  
-  <%= link_to('Cerrar sesión - Devise', destroy_employee_session_path, :method => :delete) %>
-<% end %>
+<% if current_employee %>
+  <p>Hola <%= current_employee.first_name %></p>
+  <%= image_tag current_employee.profile_img.url(:medium) %>
+  <% if loged_in_using_OAuth? %>
+    <%= link_to "Cerrar sesión - LinkedIn", signout_path %>
+  <% else %>  
+    <%= link_to('Cerrar sesión - Devise', destroy_employee_session_path, :method => :delete) %>
+  <% end %>
+<% else %>
+  <p>Hola <%= current_company.name %></p>
+  <%= link_to('Cerrar sesión - Devise', destroy_company_session_path, :method => :delete) %>
+<% end %>  

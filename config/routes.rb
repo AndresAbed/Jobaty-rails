@@ -1,13 +1,8 @@
 Rails.application.routes.draw do
- 
-  devise_for :employees
   devise_scope :employee do
-    unauthenticated :employee do
-      root to: "devise/sessions#new"
-    end
-    #match '/sessions/employee', to: 'devise/sessions#create', via: :post
+    root :to => 'devise/sessions#new'
   end
-  
+  devise_for :employees, :companies
   get "home/index", as: :home
   
   #Omniauth
