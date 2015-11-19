@@ -13,6 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'omniauth-linkedin'
 gem "paperclip", "~> 4.3"
+gem "therubyracer"
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 group :development, :test do
   gem 'byebug'
 end
