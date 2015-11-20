@@ -1,0 +1,5 @@
+#faqs { position:relative; }
+#faqs h4	{ cursor:pointer; }
+#faqs h4.active	{ color:#EF6C00; }
+#faqs div   { position:relative; }
+#faqs div p	{ padding:0; margin-bottom:15px; }

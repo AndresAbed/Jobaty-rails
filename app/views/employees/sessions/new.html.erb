@@ -1,4 +1,4 @@
-<h2>Log in</h2>
+<!--<h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -23,4 +23,420 @@
   </div>
 <% end %>
 
-<%= render "employees/shared/links" %>
+<%= render "employees/shared/links" %>-->
+
+<!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+
+        <!-- Header
+        ============================================= -->
+        <header id="header" class="transparent-header page-section dark">
+
+             <div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+                            <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+                                <ul class="cd-switcher">
+                                    <li><a href="#0">Ingresar</a></li>
+                                    <li><a href="#0">Registrarse</a></li>
+                                </ul>
+
+                                <div id="cd-login"> <!-- log in form -->
+                                    <form class="cd-form">
+                                        <p class="fieldset">
+                                            <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                                            <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+                                            <span class="cd-error-message">¡Error Email no registrado!</span>
+                                        </p>
+
+                                        <p class="fieldset">
+                                            <label class="image-replace cd-password" for="signin-password">Contraseña</label>
+                                            <input class="full-width has-padding has-border" id="signin-password" type="password"   placeholder="Contraseña">
+                                            <a href="#0" class="hide-password">Show</a>
+                                            <span class="cd-error-message">¡Error tu contraseña es equivocada!</span>
+                                        </p>
+
+                                        <p class="fieldset">
+                                            <input type="checkbox" id="remember-me" checked>
+                                            <label for="remember-me">¡Recuerdame!</label>
+                                            <img class="u-linkedinbutton" src="<%= image_path('Sign-In-Small---Active.png') %>">
+                                        </p>
+                                         <p class="fieldset">
+                                            <a href="user-recover-password.html">Recuperar contraseña</a>
+                                        </p>
+                                        <p class="fieldset">
+                                            <input class="full-width" type="submit" value="Login">
+                                        </p>
+                                    </form>
+                                    
+                                    <p class="cd-form-bottom-message"><a href="#0">¿Olvidaste tu contraseña?</a></p>
+                                    <!-- <a href="#0" class="cd-close-form">Close</a> -->
+                                </div> <!-- cd-login -->
+
+                                <div id="cd-signup"> <!-- sign up form -->
+                                    <form class="cd-form">
+                                        <p class="fieldset sideby">
+                                            <label class="image-replace cd-username" for="signup-username">Nombre</label>
+                                            <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Nombres">
+                                            <span class="cd-error-message">¡Error ingrese sus nombres!</span>
+                                        </p>
+                                         <p class="fieldset sideby">
+                                            <label class="image-replace cd-username" for="signup-username">Apellidos</label>
+                                            <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Apellidos">
+                                            <span class="cd-error-message">¡Error ingrese sus Apellidos!</span>
+                                        </p>
+
+                                        <p class="fieldset">
+                                            <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                                            <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+                                            <span class="cd-error-message">¡Error ingrese un mail valido!</span>
+                                        </p>
+
+                                        <p class="fieldset">
+                                            <label class="image-replace cd-password" for="signup-password">Contraseña</label>
+                                            <input class="full-width has-padding has-border" id="signup-password" type="password"   placeholder="Contraseña">
+                                            <a href="#0" class="hide-password">Show</a>
+                                            <span class="cd-error-message">¡Error tu contraseña tiene que ser al menos 8 caracteres!</span>
+                                        </p>
+
+                                        <p class="fieldset">
+                                            <label class="image-replace cd-password" for="signup-password">Confirmar contraseña</label>
+                                            <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Confirmar contraseña">
+                                            <a href="#0" class="hide-password">Show</a>
+                                            <span class="cd-error-message">¡Error no concuerda con tu contraseña!</span>
+                                        </p>
+
+                                        <p class="fieldset">
+                                            <input type="checkbox" id="accept-terms">
+                                            <label for="accept-terms">Acepto los <a href="#0">Terminos y condiciones</a></label>
+                                            <img class="u-linkedinbutton" src="<%= image_path('Sign-In-Small---Active.png') %>">
+                                        </p>
+
+                                        <p class="fieldset">
+                                            <input class="full-width has-padding" type="submit" value="Create account">
+                                        </p>
+                                    </form>
+
+                                    <!-- <a href="#0" class="cd-close-form">Close</a> -->
+                                </div> <!-- cd-signup -->
+
+                                <div id="cd-reset-password"> <!-- reset password form -->
+                                    <p class="cd-form-message">Perdiste tu contraseña? Please enter your email address. You will receive a link to create a new password.</p>
+
+                                    <form class="cd-form">
+                                        <p class="fieldset">
+                                            <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                                            <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+                                            <span class="cd-error-message">Error message here!</span>
+                                        </p>
+
+                                        <p class="fieldset">
+                                            <input class="full-width has-padding" type="submit" value="Reset password">
+                                        </p>
+                                    </form>
+
+                                    <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+                                </div> <!-- cd-reset-password -->
+                                <a href="#0" class="cd-close-form">Close</a>
+                            </div> <!-- cd-user-modal-container -->
+                        </div> <!-- cd-user-modal -->
+            <div id="header-wrap">
+
+                <div class="container clearfix">
+
+                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                    <!-- Logo
+                    ============================================= -->
+                    <div id="logo">
+                        <a href="index.html" class="standard-logo" data-dark-logo="assets/img/logo-dark.png"><img src="<%= image_path('logo.png') %>" alt="Jobaty Logo"></a>
+                        <a href="index.html" class="retina-logo" data-dark-logo="assets/img/logo-dark@2x.png"><img src="<%= image_path('logo@2x.png') %>" alt="Jobaty Logo"></a>
+                    </div><!-- #logo end -->
+
+                    <!-- Primary Navigation
+                    ============================================= -->
+                    <nav id="primary-menu" class="main-nav style-3">
+
+                        <ul >
+                            <li ><a class="cd-signin" href="#0">Ingresar</a></li>
+                            <li ><a class="cd-signup" href="#0">Registrarse</a></li>
+                            <li class="current"><a href="empresas/empleador.html">Para Empleadores</a></li>
+                        </ul>
+                    </nav><!-- #primary-menu end -->
+
+
+                </div>
+
+            </div>
+
+
+        </header><!-- #header end -->
+
+                
+
+        <section id="slider" class="force-full-screen slider-parallax full-screen dark" style="background: url(<%= image_path('landing/bg.jpg') %>) center;">
+
+            <div class="container vertical-middle clearfix" >
+
+                <div class="heading-block title-center nobottomborder">
+
+                    <!-- <h1 data-caption-animate="fadeInUp">Tu trabajo ideal va a vos</h1> -->
+                    <h1 data-caption-animate="fadeInUp">Tu trabajo ideal te busca a vos</h1>
+                </div>
+
+                <div class="center">
+                <h3 data-caption-animate="fadeInUp" data-caption-delay="200">Recibí solo propuestas que te interesan y a tu medida</h3>
+                    <div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+               <!--  <form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin"> -->
+                <form id="mc-form2" role="form">
+                    <div class="input-group input-group-lg divcenter" style="max-width:600px;">
+                        <span class="input-group-addon"><i class="icon-email2"></i></span>
+                        <input type="email" id="mc-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Ingrese su email"style="background-color: #444444; opacity: 0.94;">
+                        <span class="input-group-btn">
+                            <button class="btn btn-info" type="submit">Anotame</button>
+                        </span>
+                    </div>
+                    <label for="mc-email" style="color: #EF6C00;"></label>
+                </form>
+
+            </div>
+                </div>
+
+                <a href="#section-steps" data-scrollto="#section-steps" class="one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+
+            </div>
+
+        </section>
+
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div id="section-steps" class="content-wrap">
+
+                <div class="container clearfix">
+
+                    <div  class="heading-block title-center page-section">
+                        <h2>Es muy <span>simple</span></h2>
+                        <span>En tan solo 3 simples pasos recibí ofertas de las principales empresas</span>
+                    </div>
+
+                    <div id="processTabs">
+                        <ul class="process-steps process-3 bottommargin clearfix">
+                            <li style="padding-right: 15px; padding-left: 15px;">
+                                <div class="i-circled i-alt divcenter bgcolor icon-user2" ></div>
+                                <h5 style="color: #EF6C00; font-weight: bold;">Regístrate</h5>
+                                <p class="p-text">Completa tu perfil, puedes importar todos estos datos desde LinkedIn. Determina el salario minimo para ser contactado.</p>
+                            </li>
+                            <li style="padding-right: 15px; padding-left: 15px;">
+                                <div class="i-circled i-alt divcenter bgcolor icon-mail"></div>
+                                <h5 style="color: #EF6C00; font-weight: bold;">Recibí ofertas</h5>
+                                <p class="p-text">Se pondran en contacto empresas con ofertas que igualen o superen tus requisitos.</p>
+                            </li>
+                            <li style="padding-right: 15px; padding-left: 15px;">
+                                <div class="i-circled i-alt divcenter bgcolor icon-line-heart"></div>
+                                <h5 style="color: #EF6C00; font-weight: bold;">Comienza en un nuevo trabajo</h5>
+                                <p class="p-text">Es todo! Vas a empezar tu nueva experiencia laboral en el trabajo que siempre quisiste.</p>
+                            </li>
+                        </ul>
+                        
+                    </div>
+        
+                </div>
+
+                <div id="section-profiles"  class="section footer-stick">
+
+                    <div class="container clearfix">
+                    <div  class="heading-block title-center page-section">
+                        <h2>Perfiles</h2>
+                        <span>Profesionales de las siguientes áreas</span>
+                    </div>
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-line-cog"></i></a>
+                            </div>
+                            <h3>Backend</h3>
+                            <p class="p-text">Java, Ruby, Python, Node.js, .NET</p>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="200">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-line-monitor"></i></a>
+                            </div>
+                            <h3>Frontend</h3>
+                            <p class="p-text">JQuery, AngularJS, Backbone, HTML5, CSS3</p>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third col_last">
+                        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="400">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-phone"></i></a>
+                            </div>
+                            <h3>Mobile</h3>
+                            <p class="p-text">Android, iOS, Windows Phone</p>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="600">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-line-alt"></i></a>
+                            </div>
+                            <h3>Infraestructura</h3>
+                            <p class="p-text">SysAdmin, Implementador, Soporte</p>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third">
+                        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="800">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-pencil"></i></a>
+                            </div>
+                            <h3>Design</h3>
+                            <p class="p-text">Web Designer, Brand Designer, Ilustrador, UX, UI</p>
+                        </div>
+                    </div>
+
+                    <div class="col_one_third col_last">
+                        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="1000">
+                            <div class="fbox-icon">
+                                <a href="#"><i class="icon-line-circle-check"></i></a>
+                            </div>
+                            <h3>Managment</h3>
+                            <p class="p-text">Project Manager, Account Manager, Product Manager</p>
+                        </div>
+                    </div>
+
+                </div>
+                </div>  
+                </div>
+
+            </div>
+
+        </section><!-- #content end -->
+        <div class="section nomargin noborder light" style="background-color: #46b8da; " >
+                    <div class="center clearfix">
+
+                        
+                        <h2>Suscribete para enterarte de nuestras novedades.</h2>
+
+                        <div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+                            <!-- <form id="widget-subscribe-form2" action="include/subscribe.php" role="form" method="post" class="nobottommargin"> -->
+                            <form id="mc-form" role="form">
+
+                                <div class="input-group input-group-lg divcenter" style="max-width:600px;">
+                                    <span class="input-group-addon"><i class="icon-email2"></i></span>
+                                    <input type="email" id="mc-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Ingrese su email">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">Anotame</button>
+                                    </span>
+
+                                </div>
+
+                                <label for="mc-email"  style="max-width:600px;color: #EF6C00;"></label>
+                                 
+                            </form>
+
+                        </div>
+                    
+                </div>
+
+        <!-- Footer
+        ============================================= -->
+        <footer id="footer" class="dark">
+
+            <!-- Copyrights
+            ============================================= -->
+            <div id="copyrights">
+
+                <div class="container clearfix">
+
+                    <div class="col_half">
+                        Copyrights &copy; 2015 All Rights Reserved by Jobaty.<br>
+                        <div class="copyright-links"><a href="index.html">Inicio</a> / <a href="companies.html">Para Empresas</a></div>
+                    </div>
+
+                    <div class="col_half col_last tright">
+                        <!--<div class="fright clearfix">
+                            <a href="#" class="social-icon si-small si-borderless si-facebook">
+                                <i class="icon-facebook"></i>
+                                <i class="icon-facebook"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-twitter">
+                                <i class="icon-twitter"></i>
+                                <i class="icon-twitter"></i>
+                            </a>
+
+                            <!-- <a href="#" class="social-icon si-small si-borderless si-linkedin">
+                                <i class="icon-linkedin"></i>
+                                <i class="icon-linkedin"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-gplus">
+                                <i class="icon-gplus"></i>
+                                <i class="icon-gplus"></i>
+                            </a>
+                        </div> 
+
+                        <div class="clear"></div>-->
+
+                       <a href="mailto:info@jobaty.com"><i class="icon-envelope2"></i> info@jobaty.com</a> <span class="middot">&middot;</span><a href="skype:contacto.jobaty"><i class="icon-skype2"></i> contacto.jobaty</a>
+                    </div>
+
+                </div>
+
+            </div><!-- #copyrights end -->
+
+        </footer><!-- #footer end -->
+
+    </div><!-- #wrapper end -->
+
+    <!-- Footer Scripts
+    ============================================= -->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-65166208-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <!-- Hotjar Tracking Code for jobaty.com -->
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:59104,hjsv:5};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+   <script>
+    function init() {
+      // var ROOT = 'https://jobaty-1026.appspot.com/_ah/api';
+
+      //    gapi.client.load('jobatyApi', 'v1', function() {
+
+      //       var request = gapi.client.jobatyApi.sayHi({'name':'Diego Putito'});
+      //       request.execute(function(jsonResp, rawResp) {
+      //                         console.log(jsonResp); 
+      //                       });
+
+      //    }, ROOT);
+
+    }
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
