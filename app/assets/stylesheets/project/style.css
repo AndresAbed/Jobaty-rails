@@ -1376,6 +1376,7 @@ html[xmlns] .slider-wrap {display: block;}
 #slider + #header.transparent-header {
 	top: -100px;
 	margin-bottom: -100px;
+  height: 100%;
 }
 
 #header.transparent-header.floating-header + #slider,
@@ -3224,8 +3225,11 @@ body.side-panel-open:not(.device-xxs):not(.device-xs):not(.device-sm) .body-over
 }
 
 #slider .container {
-	position: relative;
-	height: 100%;
+	position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -95.5px;
+  opacity: 1.99861;
 }
 
 #slider.canvas-slider .swiper-slide img { width: 100%; }
@@ -10946,7 +10950,6 @@ fieldset[disabled] .sm-form-control {
 	border-color: #999;
 	box-shadow: none;
   background-color: #fff;
-  color: #555555;
 }
 
 label {
@@ -12430,9 +12433,10 @@ label.checkbox { padding-left: 20px; }
 body:not(.no-transition) #wrapper,
 .animsition-overlay {
 	position: relative;
-	opacity: 0;
 	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
+  width: 100%;
+  height: 100%;
 }
 
 .css3-spinner {
@@ -17397,6 +17401,10 @@ only screen and (                min-resolution: 2dppx) and (max-width: 991px) {
 
 .icon-email2{
   color: #555555;
+}
+
+#header-email{
+  color: #999;
 }
 
 input #mc-email{
