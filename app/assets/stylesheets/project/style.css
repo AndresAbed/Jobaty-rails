@@ -8479,6 +8479,7 @@ body:not(.device-touch) .social-icon {
 	-webkit-transition: all .3s ease;
 	-o-transition: all .3s ease;
 	transition: all .3s ease;
+  font-size: 28pt;
 }
 
 .i-rounded,
@@ -11527,7 +11528,7 @@ blockquote.pull-right {
 .quote p { position: relative; }
 
 .quote:before {
-	font-family: 'font-icons';
+	
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -17404,10 +17405,25 @@ only screen and (                min-resolution: 2dppx) and (max-width: 991px) {
 }
 
 #header-email{
-  color: #999;
+  color: #CBCBCB;
+  font-size: 18pt;
+}
+
+#footer-email{
+  font-size: 18pt;
 }
 
 input #mc-email{
   border: 1px solid #cccccc !important;
   background-color: red;
+}
+
+i.ion-chevron-down{
+  font-size: 16pt !important;
+}
+
+.footer-info{
+  font-size: 16pt;
+  vertical-align: middle;
+  margin-right: 3px;
 }

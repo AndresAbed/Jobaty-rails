@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'font-icons';
+	
 	src:url('fonts/font-icons.eot');
 	src:url('fonts/font-icons.eot') format('embedded-opentype'),
 		url('fonts/font-icons.woff') format('woff'),
@@ -31,12 +31,11 @@
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"],
+[class^="ion-"], [class*=" icon-"],
 [class^="icon-line-"], [class*=" icon-line-"],
 [class^="icon-line2-"], [class*=" icon-line2-"],
 .side-header #primary-menu ul > li.sub-menu > a:after {
 	display: inline-block;
-	font-family: 'font-icons';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
