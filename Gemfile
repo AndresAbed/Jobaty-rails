@@ -23,3 +23,4 @@ group :development do
   gem 'spring'
   gem 'guard-livereload', require: false
 end
+gem 'rails_12factor', group: :production
