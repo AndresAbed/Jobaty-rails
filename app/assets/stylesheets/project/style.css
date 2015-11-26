@@ -309,13 +309,13 @@ xsigin/signup popup
   background-position: 50% 0;
 }
 .cd-form label.cd-username {
-  background-image: url("../img/cd-icon-username.svg");
+    background-image: url(http://s28.postimg.org/wgotu8eux/cd_icon_username.png);
 }
 .cd-form label.cd-email {
-  background-image: url("../img/cd-icon-email.svg");
+  background-image: url(http://s15.postimg.org/65ccpjrpz/cd_icon_email.png);
 }
 .cd-form label.cd-password {
-  background-image: url("../img/cd-icon-password.svg");
+    background-image: url(http://s3.postimg.org/53kmwb5cv/cd_icon_password.png);
 }
 .cd-form input {
   margin: 0;
@@ -438,6 +438,7 @@ xsigin/signup popup
   }
   .cd-form input.has-padding {
     padding: 16px 20px 16px 50px;
+    font-size: 10pt
   }
   .cd-form input[type=submit] {
     padding: 16px 0;
@@ -479,7 +480,6 @@ xsigin/signup popup
   height: 40px;
   right: 0;
   top: -40px;
-  background: url("../img/cd-icon-close.svg") no-repeat center center;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -8231,7 +8231,6 @@ body:not(.device-touch) .button.button-full strong {
 	padding: 2px;
 	z-index: -1;
 	box-shadow: none;
-	background-image: url('images/icons/iconalt.svg');
 	background-position: center center;
 	background-size: 100% 100%;
 	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s, background-color 0.5s;
@@ -8521,7 +8520,6 @@ body:not(.device-touch) .social-icon {
 }
 
 .i-alt {
-	background-image: url('images/icons/iconalt.svg');
 	background-position: center center;
 	background-size: 100% 100%;
 }
@@ -14398,7 +14396,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 	background-color: rgba(0,0,0,0.5);
 }
 
-.dark label { color: #BBB; }
+.dark label { color: #BBB; font-size: 8pt; }
 
 .dark label.label-muted { color: #777; }
 
@@ -17427,4 +17425,8 @@ i.ion-chevron-down{
   font-size: 16pt;
   vertical-align: middle;
   margin-right: 3px;
+}
+
+.recover-password{
+  font-size: 10pt;
 }
