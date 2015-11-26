@@ -7953,7 +7953,7 @@ body:not(.device-touch) .button.button-full strong {
 
 .feature-box.fbox-plain.fbox-small p { margin-left: -42px; }
 
-.feature-box.fbox-plain.fbox-small .fbox-icon i { font-size: 28px; }
+.feature-box.fbox-plain.fbox-small .fbox-icon i { font-size: 30px; }
 
 .feature-box.fbox-plain.fbox-small .fbox-icon img { height: 28px; }
 
@@ -15184,7 +15184,8 @@ body #side-panel.dark #side-panel-trigger-close a {
 
 }
 .p-text{
-	font-size: 16px;
+	font-size: 14px;
+  font-weight: 300;
 }
 
 * ----------------------------------------------------------------
