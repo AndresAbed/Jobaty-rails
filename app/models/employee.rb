@@ -12,7 +12,7 @@ class Employee < ActiveRecord::Base
 
   has_attached_file :profile_img, :styles => {medium: "300x300"}, 
   :url  => "/images/employees/:id/:style/:basename.:extension"
-  validates_attachment_presence :profile_img  
+  #validates_attachment_presence :profile_img  
   validates_attachment :profile_img, content_type: { content_type: 
     ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
