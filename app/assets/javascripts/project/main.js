@@ -27,15 +27,6 @@ jQuery(document).ready(function($){
 
   });
 
-  $(".cd-signup").click(function(){ 
-     $form_modal.addClass('is-visible');
-     signup_selected() 
-  });
-  $(".cd-signin").click(function(){ 
-     $form_modal.addClass('is-visible');
-     login_selected() 
-  });
-
   //close modal
   $('.cd-user-modal').on('click', function(event){
     if( $(event.target).is($form_modal) || $(event.target).is('.cd-close-form') ) {
