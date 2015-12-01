@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   devise_scope :employee do
     root :to => 'devise/sessions#new'
   end
-  devise_for :employees, :companies
+  devise_for :employees, controllers: {registrations: "registrations"}
+  devise_for :companies
   get "home/index", as: :home
   
   #Omniauth
