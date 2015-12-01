@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class OauthSessionsController < ApplicationController
   def create_oauth_session
     employee = Employee.from_omniauth(env["omniauth.auth"])
     session[:employee_id] = employee.id
