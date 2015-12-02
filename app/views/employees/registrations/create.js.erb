@@ -1,5 +1,5 @@
 <% if @flag %>
-  window.location.href = "/home/index"
+  window.location.href = "/index"
 <% else %>
   $(".registration-errors").html("<%= escape_javascript(render("new")) %>");
 <% end %>

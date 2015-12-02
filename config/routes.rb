@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   devise_scope :employee do
-    root :to => 'devise/sessions#new'
+    root :to => 'main#welcome'
   end
   devise_for :employees, controllers: {registrations: "registrations"}
   devise_for :companies
-  get "home/index", as: :home
+
+  get "/index" => "main#index", as: :index
   
   #Omniauth
   get 'auth/:provider/callback', to: 'oauth_sessions#create_oauth_session'

@@ -14,7 +14,8 @@ class ApplicationController < ActionController::Base
       u.permit()}
   end
 
-  helper_method :current_employee, :loged_in_using_OAuth?
+  helper_method :current_employee, :loged_in_using_OAuth?,
+                :resource_name, :resource, :devise_mapping
 
   alias_method :devise_current_employee, :current_employee
   
@@ -33,6 +34,18 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    home_path
+    index_path
+  end 
+
+  def resource_name
+    :employee
+  end
+ 
+  def resource
+    @resource ||= Employee.new
+  end
+ 
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:employee]
   end
 end
