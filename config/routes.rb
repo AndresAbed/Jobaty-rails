@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_scope :employee do
-    root :to => 'main#employee'
+    root :to => 'main#employees'
   end
   devise_for :employees, controllers: {registrations: "registrations"}
   devise_for :companies

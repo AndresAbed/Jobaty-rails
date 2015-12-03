@@ -1,5 +1,5 @@
 class MainController < ApplicationController
-  def employee
+  def employees
   end
   def companies
   end

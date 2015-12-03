@@ -3246,7 +3246,7 @@ body.side-panel-open:not(.device-xxs):not(.device-xs):not(.device-sm) .body-over
 	position: absolute;
   top: 50%;
   width: 100%;
-  margin-top: -67.5px;
+  margin-top: -95.5px;
   opacity: 1.99861;
 }
 
@@ -17427,12 +17427,12 @@ only screen and (                min-resolution: 2dppx) and (max-width: 991px) {
 }
 
 #header-email{
-  color: #CBCBCB;
-  font-size: 18pt;
+  color: #999;
+  font-size: 14pt;
 }
 
 #footer-email{
-  font-size: 18pt;
+  font-size: 14pt;
 }
 
 input #mc-email{
