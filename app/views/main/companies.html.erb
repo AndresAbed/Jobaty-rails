@@ -1,342 +1,340 @@
-    <!-- Document Wrapper
-    ============================================= -->
-    <div id="wrapper" class="clearfix">
-      <!-- Header
-      ============================================= -->
-      <header id="header" class="transparent-header page-section dark">
-        <div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
-          <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
-            <ul class="cd-switcher">
-              <li><a href="#0">Ingresar</a></li>
-              <li><a href="#0">Registrarse</a></li>
-            </ul>
-            <div id="cd-login"> <!-- log in form -->
-              <form class="cd-form">
-                <p class="fieldset">
-                  <label class="image-replace cd-email" for="signin-email">E-mail</label>
-                  <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
-                  <span class="cd-error-message">¡Error Email no registrado!</span>
-                </p>
-                <p class="fieldset">
-                  <label class="image-replace cd-password" for="signin-password">Contraseña</label>
-                  <input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Contraseña">
-                  <a href="#0" class="hide-password">Show</a>
-                  <span class="cd-error-message">¡Error tu contraseña es equivocada!</span>
-                </p>
-                <p class="fieldset">
-                  <input type="checkbox" id="remember-me" checked>
-                  <label for="remember-me">¡Recuerdame!</label>
-                </p>
-                 <p class="fieldset">
-                  <a href="user-recover-password.html">Recuperar contraseña</a>
-                </p>
-                <p class="fieldset">
-                  <input class="full-width" type="submit" value="Login">
-                </p>
-              </form>
-              <p class="cd-form-bottom-message"><a href="#0">¿Olvidaste tu contraseña?</a></p>
-              <!-- <a href="#0" class="cd-close-form">Close</a> -->
-            </div> <!-- cd-login -->
-            <div id="cd-signup"> <!-- sign up form -->
-              <form class="cd-form">
-                <p class="fieldset">
-                  <label class="image-replace cd-username" for="signup-username">Nombre Empresa</label>
-                  <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Nombre Empresa">
-                  <span class="cd-error-message">¡Error ingrese un nombre de empresa!</span>
-                </p>
-                <p class="fieldset">
-                  <label class="image-replace cd-email" for="signup-email">E-mail</label>
-                  <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
-                  <span class="cd-error-message">¡Error ingrese un mail valido!</span>
-                </p>
-                <p class="fieldset">
-                  <label class="image-replace cd-password" for="signup-password">Contraseña</label>
-                  <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Contraseña">
-                  <a href="#0" class="hide-password">Show</a>
-                  <span class="cd-error-message">¡Error tu contraseña tiene que ser al menos 8 caracteres!</span>
-                </p>
-                <p class="fieldset">
-                  <label class="image-replace cd-password" for="signup-password">Confirmar contraseña</label>
-                  <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Confirmar contraseña">
-                  <a href="#0" class="hide-password">Show</a>
-                  <span class="cd-error-message">¡Error no concuerda con tu contraseña!</span>
-                </p>
-                <p class="fieldset">
-                  <input type="checkbox" id="accept-terms">
-                  <label for="accept-terms">Acepto los <a href="#0">Terminos y condiciones</a></label>
-                </p>
-                <p class="fieldset">
-                  <input class="full-width has-padding" type="submit" value="Create account">
-                </p>
-              </form>
-              <!-- <a href="#0" class="cd-close-form">Close</a> -->
-            </div> <!-- cd-signup -->
-            <div id="cd-reset-password"> <!-- reset password form -->
-              <p class="cd-form-message">Perdiste tu contraseña? Please enter your email address. You will receive a link to create a new password.</p>
-              <form class="cd-form">
-                <p class="fieldset">
-                  <label class="image-replace cd-email" for="reset-email">E-mail</label>
-                  <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
-                  <span class="cd-error-message">Error message here!</span>
-                </p>
-                <p class="fieldset">
-                  <input class="full-width has-padding" type="submit" value="Reset password">
-                </p>
-              </form>
-                <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
-            </div> <!-- cd-reset-password -->
-            <a href="#0" class="cd-close-form">Close</a>
-          </div> <!-- cd-user-modal-container -->
-        </div> <!-- cd-user-modal -->
-        <div id="header-wrap">
-          <div class="container clearfix">
-            <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-            <!-- Logo
-            ============================================= -->
-            <div id="logo">
-              <a href="../index.html" class="standard-logo" data-dark-logo="../assets/img/logo-dark.png"><img src="images/logo.png" alt="Jobaty Logo"></a>
-              <a href="../index.html" class="retina-logo" data-dark-logo="../assets/img/logo-dark@2x.png"><img src="../assets/img/logo@2x.png" alt="Jobaty Logo"></a>
-            </div><!-- #logo end -->
-            <!-- Primary Navigation
-            ============================================= -->
-            <nav id="primary-menu" class="main-nav style-3">
-              <ul >
-                <li ><a class="cd-signin" href="#0">Ingresar</a></li>
-                <li ><a class="cd-signup" href="#0">Registrarse</a></li>
-                <!--<li><a href="#section-steps"><div>Pasos</div></a></li>
-                <li><a href="#section-profiles"><div>Perfiles</div></a></li> -->
-                <li class="current"><a href="../index.html">Para Talentos</a></li>
-              </ul>
-            </nav><!-- #primary-menu end -->
-          </div>
-        </div>
-      </header><!-- #header end -->
-      <section id="slider" class="force-full-screen slider-parallax full-screen dark" 
-      style="background: url(../assets/img/landing/bgc.jpg) center;">
-        <div class="container vertical-middle clearfix">
-          <div class="heading-block title-center nobottomborder">
-            <!-- <h1 data-caption-animate="fadeInUp">Tu trabajo ideal va a vos</h1> -->
-            <h1 data-caption-animate="fadeInUp">Agiliza el proceso de selección</h1>
-            <span data-caption-animate="fadeInUp" data-caption-delay="200">Busca entre nuestra red de profesionales calificados</span>
-          </div>
-          <div class="center">
-            <a href="#section-contact" class="button button-rounded button-reveal button-large 
-            button-dirtygreen">
-              <i class="icon-email2"></i>
-              <span>Contactar</span>
-            </a>
-          </div>
-        </div>
-        <a href="#section-profiles" data-scrollto="#section-profiles" 
-        class="one-page-arrow">
-          <i class="icon-angle-down infinite animated fadeInDown"></i>
-        </a>
-      </section>
-    </div>
-    <!-- Content
-    ============================================= -->
-    <section id="content">
-      <div class="promo-dark promo-full bottommargin" style="background-color: #F5F5F5;">
-        <div id="section-profiles" class="container clearfix">
-          <div  class="heading-block title-center page-section">
-            <h2>Perfiles</h2>
-            <span>Contamos con una red de profesionales de las siguientes áreas</span>
-          </div>
-          <div class="col_one_third">
-            <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn">
-              <div class="fbox-icon">
-                <a href="#"><i class="icon-line-cog"></i></a>
-              </div>
-              <h3>Backend</h3>
-              <p style="p-text">Java, Ruby, Python, Node.js, .NET</p>
-            </div>
-          </div>
-          <div class="col_one_third">
-            <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="200">
-              <div class="fbox-icon">
-                <a href="#"><i class="icon-line-monitor"></i></a>
-              </div>
-              <h3>Frontend</h3>
-              <p style="p-text">JQuery, AngularJS, Backbone, HTML5, CSS3</p>
-            </div>
-          </div>
-          <div class="col_one_third col_last">
-            <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="400">
-              <div class="fbox-icon">
-                <a href="#"><i class="icon-phone"></i></a>
-              </div>
-              <h3>Mobile</h3>
-              <p style="p-text">Android, iOS, Windows Phone</p>
-            </div>
-          </div>
-          <div class="clear"></div>
-          <div class="col_one_third">
-            <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="600">
-              <div class="fbox-icon">
-                <a href="#"><i class="icon-line-alt"></i></a>
-              </div>
-              <h3>Infraestructura</h3>
-              <p style="p-text">SysAdmin, Implementador, Soporte</p>
-            </div>
-          </div>
-          <div class="col_one_third">
-            <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="800">
-              <div class="fbox-icon">
-                <a href="#"><i class="icon-pencil"></i></a>
-              </div>
-              <h3>Design</h3>
-              <p style="p-text">Web Designer, Brand Designer, Ilustrador, UX, UI</p>
-            </div>
-          </div>
-          <div class="col_one_third col_last">
-            <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="1000">
-              <div class="fbox-icon">
-                <a href="#"><i class="icon-line-circle-check"></i></a>
-              </div>
-              <h3>Managment</h3>
-              <p style="p-text">Project Manager, Account Manager, Product Manager</p>
-            </div>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </div>
-      <div class="content-wrap">
-        <div id="section-steps" class="container clearfix" >
-          <div id="section-features" class="heading-block title-center page-section">
-            <h2>Servicios</h2>
-            <span>Estos son algunos de los servicios que ofrecemos</span>
-          </div>
-          <div class="col_one_third">
-            <div class="feature-box fbox-plain">
-              <div class="fbox-icon" data-animate="bounceIn">
-                <a href="#"><img src="../assets/img/icons/features/retina.png" alt="Responsive Layout"></a>
-              </div>
-              <h3>Perfiles</h3>
-              <p>Acceso a nuestra red de profesionales en tecnología.</p>
-            </div>
-          </div>
-          <div class="col_one_third">
-            <div class="feature-box fbox-plain">
-              <div class="fbox-icon" data-animate="bounceIn" data-delay="200">
-                <a href="#"><img src="../assets/img/icons/features/responsive.png" alt="Retina Graphics"></a>
-              </div>
-              <h3>Panel</h3>
-              <p>Acceso a un panel donde podrás gestionar las ofertas creadas y perfiles.</p>
-            </div>
-          </div>
-          <div class="col_one_third col_last">
-            <div class="feature-box fbox-plain">
-              <div class="fbox-icon" data-animate="bounceIn" data-delay="400">
-                <a href="#"><img src="../assets/img/icons/features/tools.png" alt="Powerful Performance"></a>
-              </div>
-              <h3>ESTADÍSTICAS</h3>
-              <p>Dentro del panel podrá ver estadísticas del mercado y de las ofertas creadas.</p>
-            </div>
-          </div>
-          <div class="clear"></div>
-          <div class="col_one_third">
-            <div class="feature-box fbox-plain">
-              <div class="fbox-icon" data-animate="bounceIn" data-delay="600">
-                <a href="#"><img src="../assets/img/icons/features/support.png" alt="Responsive Layout"></a>
-              </div>
-              <h3>Asesoramiento</h3>
-              <p>Ofrecemos nuestro asesoramiento para optimizar tu búsqueda.</p>
-            </div>
-          </div>
-          <div class="col_one_third">
-            <div class="feature-box fbox-plain">
-              <div class="fbox-icon" data-animate="bounceIn" data-delay="800">
-                <a href="#"><img src="../assets/img/icons/features/performance.png" alt="Retina Graphics"></a>
-              </div>
-              <h3>Aplicación de gestión</h3>
-              <p>Aplicaciones para crear y gestionar tus búsquedas. iOS &amp; Android.</p>
-            </div>
-          </div>
-          <div class="col_one_third col_last">
-            <div class="feature-box fbox-plain">
-              <div class="fbox-icon" data-animate="bounceIn" data-delay="1000">
-                <a href="#"><img src="../assets/img/icons/features/seo.png" alt="Powerful Performance"></a>
-              </div>
-              <h3>Servicio de Entrevista</h3>
-              <p>Contamos con un departamento de RRHH para realizar entrevistas que coincidan con tus busquedas.</p>
-            </div>
-          </div>
-          <div class="clear"></div>
-        </div>    
-      </div>
-      <div id="section-companies"  class="section footer-stick">
-        <div id="section-contact" class="container clearfix">
-          <h3>Contactate con nosotros</h3>
-          <div id="contact-form-result" data-notify-type="success" 
-          data-notify-msg="<i class=icon-ok-sign></i> Mensaje enviado!"></div>
-          <form class="nobottommargin" id="template-contactform" 
-          name="template-contactform" action="include/sendemail.php" method="post">
-            <div class="form-process"></div>
-            <div class="col_one_third">
-              <label for="template-contactform-name">Empresa <small>*</small></label>
-              <input type="text" id="template-contactform-name" 
-              name="template-contactform-name" value="" class="sm-form-control required" />
-            </div>
-            <div class="col_one_third">
-              <label for="template-contactform-email">Email <small>*</small></label>
-              <input type="email" id="template-contactform-email" 
-              name="template-contactform-email" value="" class="required email sm-form-control" />
-            </div>
-            <div class="col_one_third col_last">
-              <label for="template-contactform-phone">Telefono</label>
-              <input type="text" id="template-contactform-phone" 
-              name="template-contactform-phone" value="" class="sm-form-control" />
-            </div>
-            <div class="clear"></div>
-            <div class="col_two_third">
-              <label for="template-contactform-subject">Asunto <small>*</small></label>
-              <input type="text" id="template-contactform-subject" 
-              name="template-contactform-subject" value="" class="required sm-form-control" />
-            </div>
-            <div class="col_one_third col_last">
-              <label for="template-contactform-service">Planes</label>
-              <select id="template-contactform-service" 
-              name="template-contactform-service" class="sm-form-control">
-                <option value="">-- Seleccione Uno --</option>
-                <option value="Plan Inicial">Plan Inicial</option>
-                <option value="Plan Avanzado">Plan Avanzado</option>
-                <option value="Plan Premium">Plan Premium</option>
-                <option value="Consulta">Consulta</option>
-              </select>
-            </div>
-            <div class="clear"></div>
-            <div class="col_full">
-              <label for="template-contactform-message">Mensaje <small>*</small></label>
-              <textarea class="required sm-form-control" id="template-contactform-message" 
-              name="template-contactform-message" rows="6" cols="30"></textarea>
-            </div>
-            <div class="col_full hidden">
-              <input type="text" id="template-contactform-botcheck" 
-              name="template-contactform-botcheck" value="" class="sm-form-control" />
-            </div>
-            <div class="col_full">
-              <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" 
-              name="template-contactform-submit" value="submit">ENVIAR</button>
-            </div>
+<!-- Document Wrapper
+============================================= -->
+<div id="wrapper" class="clearfix">
+  <!-- Header
+  ============================================= -->
+  <header id="header" class="transparent-header page-section dark">
+    <div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+      <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+        <ul class="cd-switcher">
+          <li><a href="javascript:;">Ingresar</a></li>
+          <li><a href="javascript:;">Registrarse</a></li>
+        </ul>
+        <div id="cd-login"> <!-- log in form -->
+          <form class="cd-form">
+            <p class="fieldset">
+              <label class="image-replace cd-email" for="signin-email">E-mail</label>
+              <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+              <span class="cd-error-message">¡Error Email no registrado!</span>
+            </p>
+            <p class="fieldset">
+              <label class="image-replace cd-password" for="signin-password">Contraseña</label>
+              <input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Contraseña">
+              <a href="javascript:;" class="hide-password">Show</a>
+              <span class="cd-error-message">¡Error tu contraseña es equivocada!</span>
+            </p>
+            <p class="fieldset">
+              <input type="checkbox" id="remember-me" checked>
+              <label for="remember-me">¡Recuerdame!</label>
+            </p>
+             <p class="fieldset">
+              <a href="user-recover-password.html">Recuperar contraseña</a>
+            </p>
+            <p class="fieldset">
+              <input class="full-width" type="submit" value="Login">
+            </p>
           </form>
+          <p class="cd-form-bottom-message"><a href="javascript:;">¿Olvidaste tu contraseña?</a></p>
+          <!-- <a href="javascript:;" class="cd-close-form">Close</a> -->
+        </div> <!-- cd-login -->
+        <div id="cd-signup"> <!-- sign up form -->
+          <form class="cd-form">
+            <p class="fieldset">
+              <label class="image-replace cd-username" for="signup-username">Nombre Empresa</label>
+              <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Nombre Empresa">
+              <span class="cd-error-message">¡Error ingrese un nombre de empresa!</span>
+            </p>
+            <p class="fieldset">
+              <label class="image-replace cd-email" for="signup-email">E-mail</label>
+              <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+              <span class="cd-error-message">¡Error ingrese un mail valido!</span>
+            </p>
+            <p class="fieldset">
+              <label class="image-replace cd-password" for="signup-password">Contraseña</label>
+              <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Contraseña">
+              <a href="javascript:;" class="hide-password">Show</a>
+              <span class="cd-error-message">¡Error tu contraseña tiene que ser al menos 8 caracteres!</span>
+            </p>
+            <p class="fieldset">
+              <label class="image-replace cd-password" for="signup-password">Confirmar contraseña</label>
+              <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Confirmar contraseña">
+              <a href="javascript:;" class="hide-password">Show</a>
+              <span class="cd-error-message">¡Error no concuerda con tu contraseña!</span>
+            </p>
+            <p class="fieldset">
+              <input type="checkbox" id="accept-terms">
+              <label for="accept-terms">Acepto los <a href="javascript:;">Terminos y condiciones</a></label>
+            </p>
+            <p class="fieldset">
+              <input class="full-width has-padding" type="submit" value="Create account">
+            </p>
+          </form>
+          <!-- <a href="javascript:;" class="cd-close-form">Close</a> -->
+        </div> <!-- cd-signup -->
+        <div id="cd-reset-password"> <!-- reset password form -->
+          <p class="cd-form-message">Perdiste tu contraseña? Please enter your email address. You will receive a link to create a new password.</p>
+          <form class="cd-form">
+            <p class="fieldset">
+              <label class="image-replace cd-email" for="reset-email">E-mail</label>
+              <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+            <p class="fieldset">
+              <input class="full-width has-padding" type="submit" value="Reset password">
+            </p>
+          </form>
+            <p class="cd-form-bottom-message"><a href="javascript:;">Back to log-in</a></p>
+        </div> <!-- cd-reset-password -->
+        <a href="javascript:;" class="cd-close-form">Close</a>
+      </div> <!-- cd-user-modal-container -->
+    </div> <!-- cd-user-modal -->
+    <div id="header-wrap">
+      <div class="container clearfix">
+        <div id="primary-menu-trigger"><i class="ion-navicon-round"></i></div>
+        <!-- Logo
+        ============================================= -->
+        <div id="logo">
+          <a href="<%= root_path %>" class="standard-logo" ><img src="<%= image_path('logo-dark.png') %>" alt="Jobaty Logo"></a>
+          <a href="<%= root_path %>" class="retina-logo"><img src="<%= image_path('logo-dark@2x.png') %>" alt="Jobaty Logo"></a>
+        </div><!-- #logo end -->
+        <!-- Primary Navigation
+        ============================================= -->
+        <nav id="primary-menu" class="main-nav style-3">
+          <ul >
+            <li ><a class="cd-signin" href="javascript:;">Ingresar</a></li>
+            <li ><a class="cd-signup" href="javascript:;">Registrarse</a></li>
+            <!--<li><a href="#section-steps"><div>Pasos</div></a></li>
+            <li><a href="#section-profiles"><div>Perfiles</div></a></li> -->
+            <li class="current"><a href="<%= root_path %>">Para Talentos</a></li>
+          </ul>
+        </nav><!-- #primary-menu end -->
+      </div>
+    </div>
+  </header><!-- #header end -->
+  <section id="slider" class="force-full-screen slider-parallax full-screen dark" 
+  style="background: url(<%= image_path('landing/bgc.jpg') %>) center;">
+    <div class="container vertical-middle clearfix">
+      <div class="heading-block title-center nobottomborder">
+        <!-- <h1 data-caption-animate="fadeInUp">Tu trabajo ideal va a vos</h1> -->
+        <h1 data-caption-animate="fadeInUp">Agiliza el proceso de selección</h1>
+        <span data-caption-animate="fadeInUp" data-caption-delay="200">Busca entre nuestra red de profesionales calificados</span>
+      </div>
+      <div class="center">
+        <a href="#section-contact" class="button button-rounded button-reveal button-large 
+        button-dirtygreen">
+          <i class="fa fa-paper-plane"></i>
+          <span>Contactar</span>
+        </a>
+      </div>
+    </div>
+    <a href="javascript:;" class="companies-arrow">
+    <i class="ion-chevron-down infinite animated fadeInDown"></i></a>
+  </section>
+</div>
+<!-- Content
+============================================= -->
+<section id="content">
+  <div class="promo-dark promo-full bottommargin" style="background-color: #F5F5F5;">
+    <div id="section-profiles" class="container clearfix">
+      <div  class="heading-block title-center page-section">
+        <h2>Perfiles</h2>
+        <span>Contamos con una red de profesionales de las siguientes áreas</span>
+      </div>
+      <div class="col_one_third">
+        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn">
+          <div class="fbox-icon">
+            <a href="#"><i class="ion-ios-gear-outline"></i></a>
+          </div>
+          <h3>Backend</h3>
+          <p class="p-text">Java, Ruby, Python, Node.js, .NET</p>
         </div>
       </div>
-    </section><!-- #content end -->
-    <!-- Footer
-    ============================================= -->
-    <footer id="footer" class="dark">
-      <!-- Copyrights
-      ============================================= -->
-      <div id="copyrights">
-        <div class="container clearfix">
-          <div class="col_half">
-            Copyrights &copy; 2015 All Rights Reserved by Jobaty.<br>
-            <div class="copyright-links"><a href="index.html">Inicio</a> / <a href="companies.html">Para Empresas</a></div>
+      <div class="col_one_third">
+        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="200">
+          <div class="fbox-icon">
+            <a href="#"><i class="ion-monitor"></i></a>
           </div>
-          <div class="col_half col_last tright">                
-            <div class="clear"></div>
-            <a href="mailto:info@jobaty.com"><i class="icon-envelope2"></i> info@jobaty.com</a> <span class="middot">&middot;</span><a href="skype:contacto.jobaty"><i class="icon-skype2"></i> contacto.jobaty</a>
-          </div>
+          <h3>Frontend</h3>
+          <p class="p-text">JQuery, AngularJS, Backbone, HTML5, CSS3</p>
         </div>
-      </div><!-- #copyrights end -->
-    </footer><!-- #footer end -->
+      </div>
+      <div class="col_one_third col_last">
+        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="400">
+          <div class="fbox-icon">
+            <a href="#"><i class="ion-iphone"></i></a>
+          </div>
+          <h3>Mobile</h3>
+          <p class="p-text">Android, iOS, Windows Phone</p>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="col_one_third">
+        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="600">
+          <div class="fbox-icon">
+            <a href="#"><i class="ion-android-funnel"></i></a>
+          </div>
+          <h3>Infraestructura</h3>
+          <p class="p-text">SysAdmin, Implementador, Soporte</p>
+        </div>
+      </div>
+      <div class="col_one_third">
+        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="800">
+          <div class="fbox-icon">
+            <a href="#"><i class="ion-edit"></i></a>
+          </div>
+          <h3>Design</h3>
+          <p class="p-text">Web Designer, Brand Designer, Ilustrador, UX, UI</p>
+        </div>
+      </div>
+      <div class="col_one_third col_last">
+        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="1000">
+          <div class="fbox-icon">
+            <a href="#"><i class="ion-ios-checkmark-outline"></i></a>
+          </div>
+          <h3>Managment</h3>
+          <p class="p-text">Project Manager, Account Manager, Product Manager</p>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="content-wrap">
+    <div id="section-steps" class="container clearfix" >
+      <div id="section-features" class="heading-block title-center page-section">
+        <h2>Servicios</h2>
+        <span>Estos son algunos de los servicios que ofrecemos</span>
+      </div>
+      <div class="col_one_third">
+        <div class="feature-box fbox-plain">
+          <div class="fbox-icon" data-animate="bounceIn">
+            <a href="#"><img src="<%= image_path('features/retina.png') %>" alt="Responsive Layout"></a>
+          </div>
+          <h3>Perfiles</h3>
+          <p>Acceso a nuestra red de profesionales en tecnología.</p>
+        </div>
+      </div>
+      <div class="col_one_third">
+        <div class="feature-box fbox-plain">
+          <div class="fbox-icon" data-animate="bounceIn" data-delay="200">
+            <a href="#"><img src="<%= image_path('features/responsive.png') %>" alt="Retina Graphics"></a>
+          </div>
+          <h3>Panel</h3>
+          <p>Acceso a un panel donde podrás gestionar las ofertas creadas y perfiles.</p>
+        </div>
+      </div>
+      <div class="col_one_third col_last">
+        <div class="feature-box fbox-plain">
+          <div class="fbox-icon" data-animate="bounceIn" data-delay="400">
+            <a href="#"><img src="<%= image_path('features/tools.png') %>" alt="Powerful Performance"></a>
+          </div>
+          <h3>ESTADÍSTICAS</h3>
+          <p>Dentro del panel podrá ver estadísticas del mercado y de las ofertas creadas.</p>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="col_one_third">
+        <div class="feature-box fbox-plain">
+          <div class="fbox-icon" data-animate="bounceIn" data-delay="600">
+            <a href="#"><img src="<%= image_path('features/support.png') %>" alt="Responsive Layout"></a>
+          </div>
+          <h3>Asesoramiento</h3>
+          <p>Ofrecemos nuestro asesoramiento para optimizar tu búsqueda.</p>
+        </div>
+      </div>
+      <div class="col_one_third">
+        <div class="feature-box fbox-plain">
+          <div class="fbox-icon" data-animate="bounceIn" data-delay="800">
+            <a href="#"><img src="<%= image_path('features/performance.png') %>" alt="Retina Graphics"></a>
+          </div>
+          <h3>Aplicación de gestión</h3>
+          <p>Aplicaciones para crear y gestionar tus búsquedas. iOS &amp; Android.</p>
+        </div>
+      </div>
+      <div class="col_one_third col_last">
+        <div class="feature-box fbox-plain">
+          <div class="fbox-icon" data-animate="bounceIn" data-delay="1000">
+            <a href="#"><img src="<%= image_path('features/seo.png') %>" alt="Powerful Performance"></a>
+          </div>
+          <h3>Servicio de Entrevista</h3>
+          <p>Contamos con un departamento de RRHH para realizar entrevistas que coincidan con tus busquedas.</p>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>    
+  </div>
+  <div id="section-companies"  class="section footer-stick">
+    <div id="section-contact" class="container clearfix">
+      <h3>Contactate con nosotros</h3>
+      <div id="contact-form-result" data-notify-type="success" 
+      data-notify-msg="<i class=icon-ok-sign></i> Mensaje enviado!"></div>
+      <form class="nobottommargin" id="template-contactform" 
+      name="template-contactform" action="include/sendemail.php" method="post">
+        <div class="form-process"></div>
+        <div class="col_one_third">
+          <label for="template-contactform-name">Empresa <small>*</small></label>
+          <input type="text" id="template-contactform-name" 
+          name="template-contactform-name" value="" class="sm-form-control required" />
+        </div>
+        <div class="col_one_third">
+          <label for="template-contactform-email">Email <small>*</small></label>
+          <input type="email" id="template-contactform-email" 
+          name="template-contactform-email" value="" class="required email sm-form-control" />
+        </div>
+        <div class="col_one_third col_last">
+          <label for="template-contactform-phone">Telefono</label>
+          <input type="text" id="template-contactform-phone" 
+          name="template-contactform-phone" value="" class="sm-form-control" />
+        </div>
+        <div class="clear"></div>
+        <div class="col_two_third">
+          <label for="template-contactform-subject">Asunto <small>*</small></label>
+          <input type="text" id="template-contactform-subject" 
+          name="template-contactform-subject" value="" class="required sm-form-control" />
+        </div>
+        <div class="col_one_third col_last">
+          <label for="template-contactform-service">Planes</label>
+          <select id="template-contactform-service" 
+          name="template-contactform-service" class="sm-form-control">
+            <option value="">-- Seleccione Uno --</option>
+            <option value="Plan Inicial">Plan Inicial</option>
+            <option value="Plan Avanzado">Plan Avanzado</option>
+            <option value="Plan Premium">Plan Premium</option>
+            <option value="Consulta">Consulta</option>
+          </select>
+        </div>
+        <div class="clear"></div>
+        <div class="col_full">
+          <label for="template-contactform-message">Mensaje <small>*</small></label>
+          <textarea class="required sm-form-control" id="template-contactform-message" 
+          name="template-contactform-message" rows="6" cols="30"></textarea>
+        </div>
+        <div class="col_full hidden">
+          <input type="text" id="template-contactform-botcheck" 
+          name="template-contactform-botcheck" value="" class="sm-form-control" />
+        </div>
+        <div class="col_full">
+          <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" 
+          name="template-contactform-submit" value="submit">ENVIAR</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section><!-- #content end -->
+<!-- Footer
+============================================= -->
+<footer id="footer" class="dark">
+  <!-- Copyrights
+  ============================================= -->
+  <div id="copyrights">
+    <div class="container clearfix">
+      <div class="col_half">
+        Copyrights &copy; 2015 All Rights Reserved by Jobaty.<br>
+        <div class="copyright-links"><a href="index.html">Inicio</a> / <a href="companies.html">Para Empresas</a></div>
+      </div>
+      <div class="col_half col_last tright">                
+        <div class="clear"></div>
+        <a href="mailto:info@jobaty.com"><i class="footer-info ion-ios-email-outline"></i> info@jobaty.com</a> <span class="middot">&middot;</span><a href="skype:contacto.jobaty"><i class="footer-info ion-social-skype"></i> contacto.jobaty</a>
+      </div>
+    </div>
+  </div><!-- #copyrights end -->
+</footer><!-- #footer end -->

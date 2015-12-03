@@ -115,4 +115,8 @@ $(document).ready(function(){
       $('html,body').animate({
           scrollTop: $("#section-steps").offset().top},1000);
   });
+  $(".companies-arrow").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#section-profiles").offset().top-40},1000);
+  });
 })

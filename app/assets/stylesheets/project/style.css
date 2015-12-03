@@ -2710,6 +2710,19 @@ body:not(.device-touch) #page-menu.dots-menu nav li .dots-menu-caption {
 	color: #222;
 }
 
+.companies-arrow {
+  position: absolute;
+  z-index: 3;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -16px;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  text-align: center;
+  color: #222;
+}
+
 
 /* ----------------------------------------------------------------
 	Side Header
@@ -3228,7 +3241,7 @@ body.side-panel-open:not(.device-xxs):not(.device-xs):not(.device-sm) .body-over
 	position: absolute;
   top: 50%;
   width: 100%;
-  margin-top: -95.5px;
+  margin-top: -67.5px;
   opacity: 1.99861;
 }
 
@@ -3798,7 +3811,11 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 	background-color: #FFF;
 }
 
-#content p { line-height: 1.8; }
+#content p { 
+  line-height: 1.8;
+  font-size: 14px;
+  font-weight: 300;
+}
 
 .content-wrap {
 	position: relative;
@@ -7327,6 +7344,7 @@ body:not(.device-touch) .button.button-reveal span {
 }
 
 .button.button-reveal.button-large { padding: 0 32px; }
+.button.button-reveal.button-large:hover { color: #fff;}
 
 .button.button-reveal.button-large i {
 	left: -38px;
@@ -13745,7 +13763,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 .dark .top-cart-action { border-top-color: #3F3F3F; }
 
 .dark .one-page-arrow,
-.one-page-arrow.dark { color: #FFF; }
+.one-page-arrow.dark, .companies-arrow { color: #FFF; }
 
 
 .dark.side-header #header {
