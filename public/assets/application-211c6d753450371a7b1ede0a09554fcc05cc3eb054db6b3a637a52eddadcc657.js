@@ -13876,6 +13876,14 @@ $(document).ready(function(){
       $('html,body').animate({
           scrollTop: $("#section-steps").offset().top},1000);
   });
+  $(".companies-arrow").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#section-profiles").offset().top-40},1000);
+  });
+  $(".button-dirtygreen").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#section-contact").offset().top},800);
+  });
 })
 ;
 // This is a manifest file that'll be compiled into application.js, which will include all the files
