@@ -1,5 +1,5 @@
 class MainController < ApplicationController
-  def welcome
+  def employee
   end
   def index
   end
