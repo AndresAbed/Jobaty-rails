@@ -119,4 +119,8 @@ $(document).ready(function(){
       $('html,body').animate({
           scrollTop: $("#section-profiles").offset().top-40},1000);
   });
+  $(".button-dirtygreen").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#section-contact").offset().top},800);
+  });
 })
