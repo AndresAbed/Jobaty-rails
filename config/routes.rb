@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_for :companies
 
   get "/index" => "main#index", as: :index
+  get "/empleadores" => "main#companies", as: :companies
   
   #Omniauth
   get 'auth/:provider/callback', to: 'oauth_sessions#create_oauth_session'
