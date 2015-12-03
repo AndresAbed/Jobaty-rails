@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   devise_scope :employee do
-    root :to => 'main#welcome'
+    root :to => 'main#employees'
   end
   devise_for :employees, controllers: {registrations: "registrations"}
   devise_for :companies
 
   get "/index" => "main#index", as: :index
+  get "/empleadores" => "main#companies", as: :companies
   
   #Omniauth
   get 'auth/:provider/callback', to: 'oauth_sessions#create_oauth_session'

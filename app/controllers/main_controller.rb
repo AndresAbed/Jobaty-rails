@@ -1,5 +1,7 @@
 class MainController < ApplicationController
-  def welcome
+  def employees
+  end
+  def companies
   end
   def index
   end
