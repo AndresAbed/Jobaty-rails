@@ -76,14 +76,14 @@
                 </p>
                 <p class="fieldset">
                   <label class="image-replace cd-password" for="signup-password">Contraseña</label>
-                  <%= f.text_field :password, placeholder: "Contraseña", autocomplete: "off",
+                  <%= f.password_field :password, placeholder: "Contraseña", autocomplete: "off",
                   class: "full-width has-padding has-border", id: "signup-password" %>
                   <a href="#0" class="hide-password">Show</a>
                   <span class="cd-error-message">¡Error tu contraseña tiene que ser al menos 8 caracteres!</span>
                 </p>
                 <p class="fieldset">
                   <label class="image-replace cd-password" for="signup-password">Confirmar contraseña</label>
-                  <%= f.text_field :password_confirmation, placeholder: "Confirmar contraseña", 
+                  <%= f.password_field :password_confirmation, placeholder: "Confirmar contraseña", 
                   autocomplete: "off", class: "full-width has-padding has-border", id: "signup-password" %>
                   <a href="#0" class="hide-password">Show</a>
                   <span class="cd-error-message">¡Error no concuerda con tu contraseña!</span>
