@@ -103,6 +103,11 @@ p.fieldset.sideby {
   background: url("../img/cd-icon-menu.svg") no-repeat center center;
   cursor: pointer;
 }
+
+.main-nav-2 {margin-right: 5%}
+
+.main-nav-no-margin {margin-right: 0;}
+
 .main-nav ul {
   position: absolute;
   top: 0;
