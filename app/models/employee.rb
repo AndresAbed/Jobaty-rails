@@ -9,6 +9,7 @@ class Employee < ActiveRecord::Base
   has_many :interested_jobs
 
   validates :first_name, presence: true
+  validates :last_name, presence: true
 
   has_attached_file :profile_img, :styles => {medium: "300x300"}, 
   :url  => "/images/employees/:id/:style/:basename.:extension"

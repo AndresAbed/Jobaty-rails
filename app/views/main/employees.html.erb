@@ -39,7 +39,9 @@
                 <p class="fieldset">
                   <%= f.check_box :remember_me, id: "remember-me" %>
                   <label for="remember-me">¡Recuerdame!</label>
-                  <img class="u-linkedinbutton" src="<%= image_path('Sign-In-Small---Active.png') %>">
+                  <%= link_to "/auth/linkedin", id: "sign_in" do %>
+                    <img class="u-linkedinbutton" src="<%= image_path('Sign-In-Small---Active.png') %>">
+                  <% end %>  
                 </p>
                 <p class="fieldset">
                   <a href="user-recover-password.html" class="recover-password">Recuperar contraseña</a>
