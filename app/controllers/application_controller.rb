@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_employee, :loged_in_using_OAuth?,
-                :resource_name, :resource, :devise_mapping
+                :resource_name, :resource, :resource_name_company, :resource_company
 
   alias_method :devise_current_employee, :current_employee
   
@@ -44,8 +44,12 @@ class ApplicationController < ActionController::Base
   def resource
     @resource ||= Employee.new
   end
+
+  def resource_name_company
+    :company
+  end
  
-  def devise_mapping
-    @devise_mapping ||= Devise.mappings[:employee]
+  def resource_company
+    @resource ||= Company.new
   end
 end

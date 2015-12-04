@@ -11,53 +11,63 @@
           <li><a href="javascript:;">Registrarse</a></li>
         </ul>
         <div id="cd-login"> <!-- log in form -->
-          <form class="cd-form">
+          <%= form_for(resource_company, as: resource_name_company, url: session_path(resource_name_company), 
+          html: {class: "cd-form"}) do |f| %>
             <p class="fieldset">
               <label class="image-replace cd-email" for="signin-email">E-mail</label>
-              <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+              <%= f.email_field :email, placeholder: "E-mail", 
+              class: "full-width has-padding has-border", id: "signin-email" %>
               <span class="cd-error-message">¡Error Email no registrado!</span>
             </p>
             <p class="fieldset">
               <label class="image-replace cd-password" for="signin-password">Contraseña</label>
-              <input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Contraseña">
+              <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña",
+               class: "full-width has-padding has-border", id: "signin-password"%>
               <a href="javascript:;" class="hide-password">Show</a>
               <span class="cd-error-message">¡Error tu contraseña es equivocada!</span>
             </p>
             <p class="fieldset">
-              <input type="checkbox" id="remember-me" checked>
+              <%= f.check_box :remember_me, id: "remember-me" %>
               <label for="remember-me">¡Recuerdame!</label>
             </p>
-             <p class="fieldset">
-              <a href="user-recover-password.html">Recuperar contraseña</a>
+            <p class="fieldset">
+              <a href="user-recover-password.html" class="recover-password">Recuperar contraseña</a>
             </p>
             <p class="fieldset">
-              <input class="full-width" type="submit" value="Login">
+              <%= f.submit "Log in", class: "full-width" %>
             </p>
-          </form>
+          <% end %>
           <p class="cd-form-bottom-message"><a href="javascript:;">¿Olvidaste tu contraseña?</a></p>
           <!-- <a href="javascript:;" class="cd-close-form">Close</a> -->
         </div> <!-- cd-login -->
         <div id="cd-signup"> <!-- sign up form -->
-          <form class="cd-form">
+          <%= form_for(resource_company, as: resource_name_company, url: registration_path(resource_name_company), 
+          html: {class: "cd-form"}) do |f| %>
+            <div class="registration-errors">
+            </div>
             <p class="fieldset">
-              <label class="image-replace cd-username" for="signup-username">Nombre Empresa</label>
-              <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Nombre Empresa">
-              <span class="cd-error-message">¡Error ingrese un nombre de empresa!</span>
+              <label class="image-replace cd-username" for="signup-username">Nombre</label>
+              <%= f.text_field :name, placeholder: "Nombre Empresa",
+              class: "full-width has-padding has-border", id: "signup-username" %>
+              <span class="cd-error-message">¡Error ingrese sus nombres!</span>
             </p>
             <p class="fieldset">
-              <label class="image-replace cd-email" for="signup-email">E-mail</label>
-              <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+              <label class="image-replace cd-email" for="signin-email">E-mail</label>
+              <%= f.email_field :email, placeholder: "E-mail",
+              class: "full-width has-padding has-border", id: "signup-email" %>
               <span class="cd-error-message">¡Error ingrese un mail valido!</span>
             </p>
             <p class="fieldset">
               <label class="image-replace cd-password" for="signup-password">Contraseña</label>
-              <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Contraseña">
+              <%= f.password_field :password, placeholder: "Contraseña", autocomplete: "off",
+              class: "full-width has-padding has-border", id: "signup-password" %>
               <a href="javascript:;" class="hide-password">Show</a>
               <span class="cd-error-message">¡Error tu contraseña tiene que ser al menos 8 caracteres!</span>
             </p>
             <p class="fieldset">
               <label class="image-replace cd-password" for="signup-password">Confirmar contraseña</label>
-              <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Confirmar contraseña">
+              <%= f.password_field :password_confirmation, placeholder: "Confirmar contraseña", 
+              autocomplete: "off", class: "full-width has-padding has-border", id: "signup-password" %>
               <a href="javascript:;" class="hide-password">Show</a>
               <span class="cd-error-message">¡Error no concuerda con tu contraseña!</span>
             </p>
@@ -66,9 +76,9 @@
               <label for="accept-terms">Acepto los <a href="javascript:;">Terminos y condiciones</a></label>
             </p>
             <p class="fieldset">
-              <input class="full-width has-padding" type="submit" value="Create account">
+              <%= f.submit "Create acconut", class: "full-width has-padding" %>
             </p>
-          </form>
+          <% end %>
           <!-- <a href="javascript:;" class="cd-close-form">Close</a> -->
         </div> <!-- cd-signup -->
         <div id="cd-reset-password"> <!-- reset password form -->
