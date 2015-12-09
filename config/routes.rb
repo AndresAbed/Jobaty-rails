@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get "/index" => "main#index", as: :index
   get "/empleadores" => "companies#index", as: :companies
+
+  get "/ofertas" => "employees#offers", as: :offers
   
   #Omniauth
   get 'auth/:provider/callback', to: 'oauth_sessions#create_oauth_session'
