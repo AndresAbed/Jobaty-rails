@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/empleadores" => "companies#index", as: :companies
 
   get "/ofertas" => "employees#offers", as: :offers
+  get "/perfil" => "employees#profile", as: :employee_profile
   
   #Omniauth
   get 'auth/:provider/callback', to: 'oauth_sessions#create_oauth_session'

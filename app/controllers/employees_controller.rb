@@ -3,4 +3,6 @@ class EmployeesController < ApplicationController
   end
   def offers
   end
+  def profile
+  end
 end

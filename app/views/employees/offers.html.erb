@@ -1,7 +1,7 @@
 <!-- OVERLAY -->
 <div class="grayOverlay" id="grayOverlay">
   <div class="grayOverlay-box">
-    <a href="user-perfil.html"><button class="btn btn-primary btn-cons">Completá tu perfil</button></a>
+    <a href="<%= employee_profile_path %>"><button class="btn btn-primary btn-cons">Completá tu perfil</button></a>
     <p class="m-t-30">Completá tu perfil para acceder a todas las ofertas</p>
   </div>
 </div>
@@ -25,7 +25,7 @@
         <a href="user-perfil.html" class="detailed">
           <span class="title">Perfil </span>
         </a>
-        <span class="icon-thumbnail "><i class="ion-android-textsms"></i></span>
+        <span class="icon-thumbnail "><i class="pg-social"></i></span>
       </li>
       <li class="m-t-10">
         <a href="user-mensajes-pendientes.html" class="detailed">
@@ -45,7 +45,7 @@
         <a href="user-contacto.html">
           <span class="title">Contacto</span>
         </a>
-        <span class="icon-thumbnail "><i class="ion-android-mail"></i></span>
+        <span class="icon-thumbnail "><i class="pg-mail"></i></span>
       </li>
       </li>
     </ul>
@@ -84,7 +84,7 @@
     <div class=" pull-left sm-table">
       <div class="header-inner">
         <div class="brand inline">
-          <img src="<%= image_path('logo.png') %>" alt="logo" data-src="<%= image_path('logo.png') %>" data-src-retina="<%= image_path('logo_2x.png') %>" width="78" height="22">
+          <img src="<%= image_path('logo.png') %>" alt="logo" width="78" height="22">
         </div>
         <!-- BEGIN NOTIFICATION DROPDOWN -->
         <ul class="notification-list no-margin hidden-sm hidden-xs b-grey b-l b-r no-style p-l-30 p-r-20">
@@ -151,7 +151,7 @@
         <div class="dropdown pull-right">
           <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="thumbnail-wrapper d32 circular inline m-t-5">
-            <img src="<%= image_path('profiles/avatar.jpg') %>" alt="" data-src="<%= image_path('profiles/avatar.jpg') %>" data-src-retina="<%= image_path('profiles/avatar_small2x.jpg') %>" width="32" height="32">
+            <img src="<%= image_path('profiles/avatar.jpg') %>" alt="" width="32" height="32">
         </span>
           </button>
           <ul class="dropdown-menu profile-dropdown" role="menu">
