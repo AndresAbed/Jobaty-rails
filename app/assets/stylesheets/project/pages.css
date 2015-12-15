@@ -1002,7 +1002,7 @@ body.dashboard .page-container {
 ------------------------------------
 */
 .icon-set {
-  background: url('../img/icons/top_tray.png') no-repeat;
+  background: url(http://s21.postimg.org/t96fmtc9f/top_tray.png) no-repeat;
   position: relative;
   display: block;
 }

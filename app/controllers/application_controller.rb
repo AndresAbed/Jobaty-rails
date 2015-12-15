@@ -34,7 +34,12 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    index_path
+    case resource
+    when Employee
+      offers_path
+    when Company
+      index_path
+    end
   end 
 
   def resource_name

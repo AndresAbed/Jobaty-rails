@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  root 'main#employees'
+  root 'employees#index'
   
   devise_for :employees, controllers: {registrations: "employees/registrations"}
   devise_for :companies, controllers: {registrations: "companies/registrations"}
 
   get "/index" => "main#index", as: :index
-  get "/empleadores" => "main#companies", as: :companies
+  get "/empleadores" => "companies#index", as: :companies
+
+  get "/ofertas" => "employees#offers", as: :offers
+  get "/perfil" => "employees#profile", as: :employee_profile
   
   #Omniauth
   get 'auth/:provider/callback', to: 'oauth_sessions#create_oauth_session'
