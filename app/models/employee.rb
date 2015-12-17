@@ -10,6 +10,7 @@ class Employee < ActiveRecord::Base
 
   validates :first_name, presence: { message: "no puede estar en blanco" }
   validates :last_name, presence: { message: "no puede estar en blanco" }
+  validates :birth_date, presence: true, on: :update
 
   has_attached_file :profile_img, :styles => {medium: "300x300"}, 
   :url  => "/images/employees/:id/:style/:basename.:extension"

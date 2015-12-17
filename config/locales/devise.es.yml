@@ -6,8 +6,12 @@ es:
       employee:
         first_name: Nombre
         last_name: Apellido
-        password: Contraseña
-        password_confirmation: Las contraseñas
+        password: La contraseña
+        password_confirmation: Confirmar contraseña
+      company:
+        name: Nombre
+        password: La contraseña
+        password_confirmation: Confirmar contraseña
   devise:
     confirmations:
       confirmed: "Tu cuenta ha sido confirmada."
