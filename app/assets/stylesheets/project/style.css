@@ -17453,3 +17453,28 @@ i.ion-chevron-down{
 .recover-password{
   font-size: 10pt;
 }
+
+.devise-errors{
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.devise-errors > li{
+  background-color: #fddddd;
+  color: #933432;
+  border-color: #933432;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 9px 19px 9px 15px;
+  border-radius: 3px;
+  font-size: 13px;
+  border-width: 0;
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+  margin: 5px;
+}
+
+.devise-errors > li:last-child{
+  margin-bottom: 30px;
+}
