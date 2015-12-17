@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'devise'
+gem 'rails-i18n', '~> 4.0.0'
 gem 'omniauth-linkedin'
 gem "paperclip", "~> 4.3"
 gem "therubyracer"

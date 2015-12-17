@@ -74,7 +74,7 @@
                   <label class="image-replace cd-email" for="signin-email">E-mail</label>
                   <%= f.email_field :email, placeholder: "E-mail",
                   class: "full-width has-padding has-border", id: "signup-email" %>
-                  <span class="cd-error-message">¡Error ingrese un mail valido!</span>
+                  <span class="cd-error-message"><%= devise_error_messages! %></span>
                 </p>
                 <p class="fieldset">
                   <label class="image-replace cd-password" for="signup-password">Contraseña</label>
