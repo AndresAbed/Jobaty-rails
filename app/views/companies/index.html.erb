@@ -12,7 +12,9 @@
         </ul>
         <div id="cd-login"> <!-- log in form -->
           <%= form_for(resource_company, as: resource_name_company, url: session_path(resource_name_company), 
-          html: {class: "cd-form"}) do |f| %>
+          html: {class: "cd-form"}, remote: true) do |f| %>
+            <div class="sessions-errors">
+            </div>
             <p class="fieldset">
               <label class="image-replace cd-email" for="signin-email">E-mail</label>
               <%= f.email_field :email, placeholder: "E-mail", 
