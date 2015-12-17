@@ -8,8 +8,9 @@ class Employee < ActiveRecord::Base
   has_many :degrees
   has_many :interested_jobs
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  validates :first_name, presence: { message: "no puede estar en blanco" }
+  validates :last_name, presence: { message: "no puede estar en blanco" }
+  validates :birth_date, presence: true, on: :update
 
   has_attached_file :profile_img, :styles => {medium: "300x300"}, 
   :url  => "/images/employees/:id/:style/:basename.:extension"
