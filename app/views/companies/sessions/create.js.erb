@@ -1,0 +1,10 @@
+<% if @flag %>
+  window.location.href = "/index"
+<% else %>
+  $(".sessions-errors").html("<%= escape_javascript(render("errors")) %>");
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".sessions-errors .devise-errors").slideUp();
+    }, 4000);
+  });
+<% end %>  

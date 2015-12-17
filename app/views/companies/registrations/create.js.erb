@@ -2,4 +2,9 @@
   window.location.href = "/index"
 <% else %>
   $(".registration-errors").html("<%= escape_javascript(render("new")) %>");
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".registration-errors .devise-errors").slideUp();
+    }, 4000);
+  });
 <% end %>

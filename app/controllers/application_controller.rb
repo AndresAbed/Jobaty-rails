@@ -40,7 +40,16 @@ class ApplicationController < ActionController::Base
     when Company
       index_path
     end
-  end 
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+    case resource_or_scope
+      when :employee, Employee
+        root_path
+      when :company, Company
+        companies_path
+    end
+  end
 
   def resource_name
     :employee
