@@ -1,0 +1,15 @@
+<% if @flag %>
+  $(".password-errors").html("<%= escape_javascript(render("flash")) %>");
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".password-errors .devise-success").slideUp();
+    }, 4000);
+  });
+<% else %>
+  $(".password-errors").html("<%= escape_javascript(render("errors")) %>");
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".password-errors .devise-errors").slideUp();
+    }, 4000);
+  });
+<% end %>

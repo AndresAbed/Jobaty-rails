@@ -49,7 +49,7 @@
                   <a href="user-recover-password.html" class="recover-password">Recuperar contraseña</a>
                 </p>
                 <p class="fieldset">
-                  <%= f.submit "Log in", class: "full-width" %>
+                  <%= f.submit "Iniciar sesión", class: "full-width" %>
                 </p>
               <% end %>  
               <p class="cd-form-bottom-message"><a href="javascript:;">¿Olvidaste tu contraseña?</a></p>
@@ -97,7 +97,7 @@
                   <label for="accept-terms">Acepto los <a href="javascript:;">Terminos y condiciones</a></label>
                 </p>
                 <p class="fieldset">
-                  <%= f.submit "Create acconut", class: "full-width has-padding" %>
+                  <%= f.submit "Crear cuenta", class: "full-width has-padding" %>
                 </p>
               <% end %>
               <!-- <a href="javascript:;" class="cd-close-form">Close</a> -->
@@ -105,7 +105,8 @@
             <div id="cd-reset-password"> <!-- reset password form -->
               <p class="cd-form-message">Perdiste tu contraseña? Please enter your email address. You will receive a link to create a new password.</p>
               <%= form_for(resource, as: resource_name, url: password_path(resource_name), 
-              html: { method: :post, class: "cd-form" }) do |f| %>
+              html: { method: :post, class: "cd-form" }, remote: true) do |f| %>
+                <div class="password-errors"></div>
                 <p class="fieldset">
                   <label class="image-replace cd-email" for="reset-email">E-mail</label>
                   <%= f.email_field :email, placeholder: "E-mail",
@@ -113,7 +114,7 @@
                   <span class="cd-error-message">Error message here!</span>
                 </p>
                 <p class="fieldset">
-                  <%= f.submit "Create acconut", class: "full-width has-padding" %>
+                  <%= f.submit "Enviar", class: "full-width has-padding" %>
                 </p>
               <% end %>
               <p class="cd-form-bottom-message"><a href="javascript:;">Back to log-in</a></p>

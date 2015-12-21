@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'employees#index'
   
-  devise_for :employees, controllers: {registrations: "registrations", sessions: "sessions"}
-  devise_for :companies, controllers: {registrations: "registrations", sessions: "sessions"}
+  devise_for :employees, controllers: {registrations: "registrations", sessions: "sessions", passwords: "passwords"}
+  devise_for :companies, controllers: {registrations: "registrations", sessions: "sessions", passwords: "passwords"}
 
   get "/index" => "main#index", as: :index
   get "/empleadores" => "companies#index", as: :companies
