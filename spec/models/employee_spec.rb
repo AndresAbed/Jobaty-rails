@@ -16,4 +16,13 @@ RSpec.describe Employee, type: :model do
   it 'is invalid without a password' do
     expect(build(:employee, password: nil)).to_not be_valid
   end
+  it "has many job experiences" do
+    expect(Employee.reflect_on_association(:job_experiences).macro).to eq(:has_many)
+  end
+  it "has many degrees" do
+    expect(Employee.reflect_on_association(:degrees).macro).to eq(:has_many)
+  end
+  it "has many interested jobs" do
+    expect(Employee.reflect_on_association(:interested_jobs).macro).to eq(:has_many)
+  end
 end
