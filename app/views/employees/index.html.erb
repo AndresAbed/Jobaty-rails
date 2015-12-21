@@ -61,34 +61,34 @@
                 <div class="registration-errors">
                 </div>
                 <p class="fieldset sideby">
-                  <label class="image-replace cd-username" for="signup-username">Nombre</label>
+                  <label class="image-replace cd-username" for="signup-username"></label>
                   <%= f.text_field :first_name, placeholder: "Nombres",
-                  class: "full-width has-padding has-border", id: "signup-username" %>
+                  class: "full-width has-padding has-border", id: "signup-first-name" %>
                   <span class="cd-error-message">¡Error ingrese sus nombres!</span>
                 </p>
                  <p class="fieldset sideby">
-                  <label class="image-replace cd-username" for="signup-username">Apellidos</label>
+                  <label class="image-replace cd-username" for="signup-username"></label>
                   <%= f.text_field :last_name, placeholder: "Apellidos",
-                  class: "full-width has-padding has-border", id: "signup-username" %>
+                  class: "full-width has-padding has-border", id: "signup-last-name" %>
                   <span class="cd-error-message">¡Error ingrese sus Apellidos!</span>
                 </p>
                 <p class="fieldset">
-                  <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                  <label class="image-replace cd-email" for="signin-email"></label>
                   <%= f.email_field :email, placeholder: "E-mail",
                   class: "full-width has-padding has-border", id: "signup-email" %>
                   <span class="cd-error-message"><%= devise_error_messages! %></span>
                 </p>
                 <p class="fieldset">
-                  <label class="image-replace cd-password" for="signup-password">Contraseña</label>
+                  <label class="image-replace cd-password" for="signup-password"></label>
                   <%= f.password_field :password, placeholder: "Contraseña", autocomplete: "off",
                   class: "full-width has-padding has-border", id: "signup-password" %>
                   <a href="javascript:;" class="hide-password">Show</a>
                   <span class="cd-error-message">¡Error tu contraseña tiene que ser al menos 8 caracteres!</span>
                 </p>
                 <p class="fieldset">
-                  <label class="image-replace cd-password" for="signup-password">Confirmar contraseña</label>
+                  <label class="image-replace cd-password" for="signup-password"></label>
                   <%= f.password_field :password_confirmation, placeholder: "Confirmar contraseña", 
-                  autocomplete: "off", class: "full-width has-padding has-border", id: "signup-password" %>
+                  autocomplete: "off", class: "full-width has-padding has-border", id: "signup-confirm-password" %>
                   <a href="javascript:;" class="hide-password">Show</a>
                   <span class="cd-error-message">¡Error no concuerda con tu contraseña!</span>
                 </p>
@@ -97,7 +97,7 @@
                   <label for="accept-terms">Acepto los <a href="javascript:;">Terminos y condiciones</a></label>
                 </p>
                 <p class="fieldset">
-                  <%= f.submit "Create acconut", class: "full-width has-padding" %>
+                  <%= f.submit "Create account", class: "full-width has-padding" %>
                 </p>
               <% end %>
               <!-- <a href="javascript:;" class="cd-close-form">Close</a> -->
@@ -109,11 +109,11 @@
                 <p class="fieldset">
                   <label class="image-replace cd-email" for="reset-email">E-mail</label>
                   <%= f.email_field :email, placeholder: "E-mail",
-                  class: "full-width has-padding has-border", id: "signup-email" %>
+                  class: "full-width has-padding has-border", id: "reset-password-email" %>
                   <span class="cd-error-message">Error message here!</span>
                 </p>
                 <p class="fieldset">
-                  <%= f.submit "Create acconut", class: "full-width has-padding" %>
+                  <%= f.submit "Reset password", class: "full-width has-padding" %>
                 </p>
               <% end %>
               <p class="cd-form-bottom-message"><a href="javascript:;">Back to log-in</a></p>
