@@ -1,17 +1,19 @@
 module ControllerMacros
-  def login_admin
+  def login_employee
     before(:each) do
-      @request.env["devise.mapping"] = Devise.mappings[:admin]
-      sign_in FactoryGirl.create(:admin) # Using factory girl as an example
+       @request.env["devise.mapping"] = Devise.mappings[:employee]
+      employee = FactoryGirl.create(:employee)
+      #employee.confirm! # or set a confirmed_at inside the factory. Only necessary if you are using the "confirmable" module
+      sign_in employee
     end
   end
 
-  def login_user
+  def login_company
     before(:each) do
-      @request.env["devise.mapping"] = Devise.mappings[:user]
-      user = FactoryGirl.create(:user)
-      user.confirm! # or set a confirmed_at inside the factory. Only necessary if you are using the "confirmable" module
-      sign_in user
+      @request.env["devise.mapping"] = Devise.mappings[:company]
+      company = FactoryGirl.create(:company)
+      #company.confirm! # or set a confirmed_at inside the factory. Only necessary if you are using the "confirmable" module
+      sign_in company
     end
   end
 end
