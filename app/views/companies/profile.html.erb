@@ -1,0 +1,1052 @@
+<!-- BEGIN SIDEBAR -->
+<div class="page-sidebar" data-pages="sidebar">
+  <div id="appMenu" class="sidebar-overlay-slide from-top">
+  </div>
+  <!-- BEGIN SIDEBAR HEADER -->
+  <div class="sidebar-header">
+    <img src="<%= image_path('logo_white.png') %>" alt="logo" class="brand" width="78" height="22">
+    <div class="sidebar-header-controls">
+      <button data-toggle-pin="sidebar" class="btn btn-link visible-lg-inline" type="button"><i class="fa fs-12"></i>
+      </button>
+    </div>
+  </div>
+  <!-- END SIDEBAR HEADER -->
+  <!-- BEGIN SIDEBAR MENU -->
+  <div class="sidebar-menu">
+    <ul class="menu-items">
+      <li class="m-t-30">
+        <a href="user-empleador-perfil.html" class="detailed">
+          <span class="title">Perfil Empresa</span>
+          
+        </a>
+        <span class="icon-thumbnail "><i class="pg-social"></i></span>
+      </li>
+      <li class="m-t-30">
+        <a href="user-empleador-propuesta.html" class="detailed">
+          <span class="title">Crear Puesto</span>
+        </a>
+        <span class="icon-thumbnail "><i class="pg-grid"></i></span>
+      </li>
+      <li class="">
+        <a href="javascript:;">
+          <span class="title">Propuestas</span>
+          <span class=" arrow"></span>
+        </a>
+        <span class="icon-thumbnail"><i class="pg-grid"></i></span>
+        <ul class="sub-menu">
+          <li class="">
+            <a href="user-empleador-propuestas-abiertas.html">Abiertas</a>
+            <span class="icon-thumbnail">AB</span>
+          </li>
+          <li class="">
+            <a href="user-empleador-propuestas-cerradas.html">Cerradas</a>
+            <span class="icon-thumbnail">CE</span>
+          </li>
+          <li class="">
+            <a href="user-empleador-mensajes-aceptados.html">Aceptados</a>
+            <span class="icon-thumbnail">A</span>
+          </li>
+          <li class="">
+            <a href="user-empleador-mensajes-rechazados.html">Rechazados</a>
+            <span class="icon-thumbnail">R</span>
+          </li>
+        </ul>
+        <li class="">
+        <a href="#">
+          <span class="title">Contacto</span>
+        </a>
+        <span class="icon-thumbnail "><i class="pg-mail"></i></span>
+      </li>
+      </li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+  <!-- END SIDEBAR MENU -->
+</div>
+<!-- END SIDEBAR -->
+<!-- START PAGE-CONTAINER -->
+<div class="page-container">
+  <!-- START PAGE HEADER WRAPPER -->
+  <!-- START HEADER -->
+  <div class="header ">
+    <!-- START MOBILE CONTROLS -->
+    <!-- LEFT SIDE -->
+    <div class="pull-left full-height visible-sm visible-xs">
+      <!-- START ACTION BAR -->
+      <div class="sm-action-bar">
+        <a href="#" class="btn-link toggle-sidebar" data-toggle="sidebar">
+          <span class="icon-set menu-hambuger"></span>
+        </a>
+      </div>
+      <!-- END ACTION BAR -->
+    </div>
+    <!-- RIGHT SIDE -->
+    <div class="pull-right full-height visible-sm visible-xs">
+      <!-- START ACTION BAR -->
+      <div class="sm-action-bar">
+        <a href="#" class="btn-link" data-toggle="quickview" data-toggle-element="#quickview">
+          <span class="icon-set menu-hambuger-plus"></span>
+        </a>
+      </div>
+      <!-- END ACTION BAR -->
+    </div>
+    <!-- END MOBILE CONTROLS -->
+    <div class=" pull-left sm-table">
+      <div class="header-inner">
+        <div class="brand inline">
+          <img src="<%= image_path('logo.png') %>" alt="logo" width="78" height="22">
+          
+        </div>
+        <!-- BEGIN NOTIFICATION DROPDOWN -->
+        <ul class="notification-list no-margin hidden-sm hidden-xs b-grey b-l b-r no-style p-l-30 p-r-20">
+          <li class="p-r-15 inline">
+          </li>
+          <!-- <li class="p-r-15 inline">
+            <a href="#" class="icon-set clip "></a>
+          </li>
+          <li class="p-r-15 inline">
+            <a href="#" class="icon-set grid-box"></a>
+          </li> -->
+        </ul>
+        <!-- END NOTIFICATION DROPDOWN -->
+       
+      </div>
+    </div>
+    <div class=" pull-right">
+      <div class="header-inner">
+        <a href="#" class="btn-link icon-set menu-hambuger-plus m-l-20 sm-no-margin hidden-sm hidden-xs" data-toggle="quickview" data-toggle-element="#quickview"></a>
+      </div>
+    </div>
+    <div class=" pull-right">
+
+      <!-- START User Info-->
+      <div class="visible-lg visible-md m-t-10">
+        <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
+          <span class="semi-bold">Lorena</span> <span class="text-master">Lopez</span>
+        </div>
+          
+        <div class="dropdown pull-right">
+          <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="thumbnail-wrapper d32 circular inline m-t-5">
+            <img src="<%= image_path('profiles/3.jpg') %>" alt="" width="32" height="32">
+        </span>
+          </button>
+          <ul class="dropdown-menu profile-dropdown" role="menu">
+            <li><a href="#"><i class="pg-settings_small"></i> Settings</a>
+            </li>
+            <li><a href="#"><i class="pg-outdent"></i>Feedback</a>
+            </li>
+            <li><a href="#"><i class="pg-signals"></i> Help</a>
+            </li>
+            <li class="bg-master-lighter">
+              <a href="#" class="clearfix">
+                <span class="pull-left">Logout</span>
+                <span class="pull-right"><i class="pg-power"></i></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END User Info-->
+    </div>
+  </div>
+  <!-- END HEADER -->
+  <!-- END PAGE HEADER WRAPPER -->
+  <!-- START PAGE CONTENT WRAPPER -->
+  <div class="page-content-wrapper">
+    <!-- START PAGE CONTENT -->
+    <div class="content u-LessPaddingTop">
+      <!-- START JUMBOTRON -->
+      <div class="jumbotron" data-pages="parallax">
+        <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+          <div class="inner">
+            <!-- START BREADCRUMB -->
+            <!-- END BREADCRUMB -->
+          </div>
+        </div>
+      </div>
+      <!-- END JUMBOTRON -->
+      <!-- START CONTAINER FLUID -->
+      <div class="container-fluid container-fixed-lg">
+        <!-- BEGIN PlACE PAGE CONTENT HERE -->
+        <div class="content">
+          <!-- START CONTAINER FLUID -->
+          <div class="container-fluid container-fixed-lg">
+            <div id="rootwizard" class="m-t-50">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs nav-tabs-linetriangle nav-tabs-separator nav-stack-sm">
+                <li class="active">
+                  <a data-toggle="tab" href="#tab1"><i class="fa fa-user tab-icon"></i> <span>Detalles De empresa</span></a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active slide-left" id="tab1">
+                  <div class="row row-same-height">
+                    <div class="p-l-40 m-t-10">
+                      <h2>¡Necesitamos tus datos así los usuarios confían en ti!</h2>
+                      <p>¡Necesitamos los datos y foto asi los usuarios pueden conocer tu empresa!</p>
+                    </div>
+                    <div class="row row-same-height">
+                      <div class="col-md-6 p-l-60 p-r-30">
+                        <p>Subir imagen de empresa</p>
+                        <form action="/file-upload" class="dropzone">
+                          <div class="fallback">
+                              <input name="file" type="file" multiple />
+                          </div>
+                        </form>
+                        <form role="form">
+                          <p>Dirección</p>
+                          <div class="form-group-attached">
+                            <div class="row clearfix">
+                              <div class="col-sm-6">
+                                <div class="form-group form-group-default required">
+                                  <label>Domicilio</label>
+                                  <input type="text" class="form-control" placeholder="Domicilio" required>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="form-group form-group-default">
+                                  <label>Ciudad</label>
+                                  <input type="text" class="form-control">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row clearfix">
+                              <div class="col-sm-6">
+                                <div class="form-group form-group-default required form-group-default-selectFx">
+                                  <label>Pais</label>
+                                  <select class="cs-select cs-skin-slide cs-transparent form-control" data-init-plugin="cs-select">
+                                    <option value="AF">Afghanistan</option>
+                                    <option value="AX">Åland Islands</option>
+                                    <option value="AL">Albania</option>
+                                    <option value="DZ">Algeria</option>
+                                    <option value="AS">American Samoa</option>
+                                    <option value="AD">Andorra</option>
+                                    <option value="AO">Angola</option>
+                                    <option value="AI">Anguilla</option>
+                                    <option value="AQ">Antarctica</option>
+                                    <option value="AG">Antigua and Barbuda</option>
+                                    <option value="AR" Selected>Argentina</option>
+                                    <option value="AM">Armenia</option>
+                                    <option value="AW">Aruba</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="AT">Austria</option>
+                                    <option value="AZ">Azerbaijan</option>
+                                    <option value="BS">Bahamas</option>
+                                    <option value="BH">Bahrain</option>
+                                    <option value="BD">Bangladesh</option>
+                                    <option value="BB">Barbados</option>
+                                    <option value="BY">Belarus</option>
+                                    <option value="BE">Belgium</option>
+                                    <option value="BZ">Belize</option>
+                                    <option value="BJ">Benin</option>
+                                    <option value="BM">Bermuda</option>
+                                    <option value="BT">Bhutan</option>
+                                    <option value="BO">Bolivia, Plurinational State of</option>
+                                    <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                    <option value="BA">Bosnia and Herzegovina</option>
+                                    <option value="BW">Botswana</option>
+                                    <option value="BV">Bouvet Island</option>
+                                    <option value="BR">Brazil</option>
+                                    <option value="IO">British Indian Ocean Territory</option>
+                                    <option value="BN">Brunei Darussalam</option>
+                                    <option value="BG">Bulgaria</option>
+                                    <option value="BF">Burkina Faso</option>
+                                    <option value="BI">Burundi</option>
+                                    <option value="KH">Cambodia</option>
+                                    <option value="CM">Cameroon</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="CV">Cape Verde</option>
+                                    <option value="KY">Cayman Islands</option>
+                                    <option value="CF">Central African Republic</option>
+                                    <option value="TD">Chad</option>
+                                    <option value="CL">Chile</option>
+                                    <option value="CN">China</option>
+                                    <option value="CX">Christmas Island</option>
+                                    <option value="CC">Cocos (Keeling) Islands</option>
+                                    <option value="CO">Colombia</option>
+                                    <option value="KM">Comoros</option>
+                                    <option value="CG">Congo</option>
+                                    <option value="CD">Congo, the Democratic Republic of the</option>
+                                    <option value="CK">Cook Islands</option>
+                                    <option value="CR">Costa Rica</option>
+                                    <option value="CI">Côte d'Ivoire</option>
+                                    <option value="HR">Croatia</option>
+                                    <option value="CU">Cuba</option>
+                                    <option value="CW">Curaçao</option>
+                                    <option value="CY">Cyprus</option>
+                                    <option value="CZ">Czech Republic</option>
+                                    <option value="DK">Denmark</option>
+                                    <option value="DJ">Djibouti</option>
+                                    <option value="DM">Dominica</option>
+                                    <option value="DO">Dominican Republic</option>
+                                    <option value="EC">Ecuador</option>
+                                    <option value="EG">Egypt</option>
+                                    <option value="SV">El Salvador</option>
+                                    <option value="GQ">Equatorial Guinea</option>
+                                    <option value="ER">Eritrea</option>
+                                    <option value="EE">Estonia</option>
+                                    <option value="ET">Ethiopia</option>
+                                    <option value="FK">Falkland Islands (Malvinas)</option>
+                                    <option value="FO">Faroe Islands</option>
+                                    <option value="FJ">Fiji</option>
+                                    <option value="FI">Finland</option>
+                                    <option value="FR">France</option>
+                                    <option value="GF">French Guiana</option>
+                                    <option value="PF">French Polynesia</option>
+                                    <option value="TF">French Southern Territories</option>
+                                    <option value="GA">Gabon</option>
+                                    <option value="GM">Gambia</option>
+                                    <option value="GE">Georgia</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="GH">Ghana</option>
+                                    <option value="GI">Gibraltar</option>
+                                    <option value="GR">Greece</option>
+                                    <option value="GL">Greenland</option>
+                                    <option value="GD">Grenada</option>
+                                    <option value="GP">Guadeloupe</option>
+                                    <option value="GU">Guam</option>
+                                    <option value="GT">Guatemala</option>
+                                    <option value="GG">Guernsey</option>
+                                    <option value="GN">Guinea</option>
+                                    <option value="GW">Guinea-Bissau</option>
+                                    <option value="GY">Guyana</option>
+                                    <option value="HT">Haiti</option>
+                                    <option value="HM">Heard Island and McDonald Islands</option>
+                                    <option value="VA">Holy See (Vatican City State)</option>
+                                    <option value="HN">Honduras</option>
+                                    <option value="HK">Hong Kong</option>
+                                    <option value="HU">Hungary</option>
+                                    <option value="IS">Iceland</option>
+                                    <option value="IN">India</option>
+                                    <option value="ID">Indonesia</option>
+                                    <option value="IR">Iran, Islamic Republic of</option>
+                                    <option value="IQ">Iraq</option>
+                                    <option value="IE">Ireland</option>
+                                    <option value="IM">Isle of Man</option>
+                                    <option value="IL">Israel</option>
+                                    <option value="IT">Italy</option>
+                                    <option value="JM">Jamaica</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="JE">Jersey</option>
+                                    <option value="JO">Jordan</option>
+                                    <option value="KZ">Kazakhstan</option>
+                                    <option value="KE">Kenya</option>
+                                    <option value="KI">Kiribati</option>
+                                    <option value="KP">Korea, Democratic People's Republic of</option>
+                                    <option value="KR">Korea, Republic of</option>
+                                    <option value="KW">Kuwait</option>
+                                    <option value="KG">Kyrgyzstan</option>
+                                    <option value="LA">Lao People's Democratic Republic</option>
+                                    <option value="LV">Latvia</option>
+                                    <option value="LB">Lebanon</option>
+                                    <option value="LS">Lesotho</option>
+                                    <option value="LR">Liberia</option>
+                                    <option value="LY">Libya</option>
+                                    <option value="LI">Liechtenstein</option>
+                                    <option value="LT">Lithuania</option>
+                                    <option value="LU">Luxembourg</option>
+                                    <option value="MO">Macao</option>
+                                    <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+                                    <option value="MG">Madagascar</option>
+                                    <option value="MW">Malawi</option>
+                                    <option value="MY">Malaysia</option>
+                                    <option value="MV">Maldives</option>
+                                    <option value="ML">Mali</option>
+                                    <option value="MT">Malta</option>
+                                    <option value="MH">Marshall Islands</option>
+                                    <option value="MQ">Martinique</option>
+                                    <option value="MR">Mauritania</option>
+                                    <option value="MU">Mauritius</option>
+                                    <option value="YT">Mayotte</option>
+                                    <option value="MX">Mexico</option>
+                                    <option value="FM">Micronesia, Federated States of</option>
+                                    <option value="MD">Moldova, Republic of</option>
+                                    <option value="MC">Monaco</option>
+                                    <option value="MN">Mongolia</option>
+                                    <option value="ME">Montenegro</option>
+                                    <option value="MS">Montserrat</option>
+                                    <option value="MA">Morocco</option>
+                                    <option value="MZ">Mozambique</option>
+                                    <option value="MM">Myanmar</option>
+                                    <option value="NA">Namibia</option>
+                                    <option value="NR">Nauru</option>
+                                    <option value="NP">Nepal</option>
+                                    <option value="NL">Netherlands</option>
+                                    <option value="NC">New Caledonia</option>
+                                    <option value="NZ">New Zealand</option>
+                                    <option value="NI">Nicaragua</option>
+                                    <option value="NE">Niger</option>
+                                    <option value="NG">Nigeria</option>
+                                    <option value="NU">Niue</option>
+                                    <option value="NF">Norfolk Island</option>
+                                    <option value="MP">Northern Mariana Islands</option>
+                                    <option value="NO">Norway</option>
+                                    <option value="OM">Oman</option>
+                                    <option value="PK">Pakistan</option>
+                                    <option value="PW">Palau</option>
+                                    <option value="PS">Palestinian Territory, Occupied</option>
+                                    <option value="PA">Panama</option>
+                                    <option value="PG">Papua New Guinea</option>
+                                    <option value="PY">Paraguay</option>
+                                    <option value="PE">Peru</option>
+                                    <option value="PH">Philippines</option>
+                                    <option value="PN">Pitcairn</option>
+                                    <option value="PL">Poland</option>
+                                    <option value="PT">Portugal</option>
+                                    <option value="PR">Puerto Rico</option>
+                                    <option value="QA">Qatar</option>
+                                    <option value="RE">Réunion</option>
+                                    <option value="RO">Romania</option>
+                                    <option value="RU">Russian Federation</option>
+                                    <option value="RW">Rwanda</option>
+                                    <option value="BL">Saint Barthélemy</option>
+                                    <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                    <option value="KN">Saint Kitts and Nevis</option>
+                                    <option value="LC">Saint Lucia</option>
+                                    <option value="MF">Saint Martin (French part)</option>
+                                    <option value="PM">Saint Pierre and Miquelon</option>
+                                    <option value="VC">Saint Vincent and the Grenadines</option>
+                                    <option value="WS">Samoa</option>
+                                    <option value="SM">San Marino</option>
+                                    <option value="ST">Sao Tome and Principe</option>
+                                    <option value="SA">Saudi Arabia</option>
+                                    <option value="SN">Senegal</option>
+                                    <option value="RS">Serbia</option>
+                                    <option value="SC">Seychelles</option>
+                                    <option value="SL">Sierra Leone</option>
+                                    <option value="SG">Singapore</option>
+                                    <option value="SX">Sint Maarten (Dutch part)</option>
+                                    <option value="SK">Slovakia</option>
+                                    <option value="SI">Slovenia</option>
+                                    <option value="SB">Solomon Islands</option>
+                                    <option value="SO">Somalia</option>
+                                    <option value="ZA">South Africa</option>
+                                    <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                    <option value="SS">South Sudan</option>
+                                    <option value="ES">Spain</option>
+                                    <option value="LK">Sri Lanka</option>
+                                    <option value="SD">Sudan</option>
+                                    <option value="SR">Suriname</option>
+                                    <option value="SJ">Svalbard and Jan Mayen</option>
+                                    <option value="SZ">Swaziland</option>
+                                    <option value="SE">Sweden</option>
+                                    <option value="CH">Switzerland</option>
+                                    <option value="SY">Syrian Arab Republic</option>
+                                    <option value="TW">Taiwan, Province of China</option>
+                                    <option value="TJ">Tajikistan</option>
+                                    <option value="TZ">Tanzania, United Republic of</option>
+                                    <option value="TH">Thailand</option>
+                                    <option value="TL">Timor-Leste</option>
+                                    <option value="TG">Togo</option>
+                                    <option value="TK">Tokelau</option>
+                                    <option value="TO">Tonga</option>
+                                    <option value="TT">Trinidad and Tobago</option>
+                                    <option value="TN">Tunisia</option>
+                                    <option value="TR">Turkey</option>
+                                    <option value="TM">Turkmenistan</option>
+                                    <option value="TC">Turks and Caicos Islands</option>
+                                    <option value="TV">Tuvalu</option>
+                                    <option value="UG">Uganda</option>
+                                    <option value="UA">Ukraine</option>
+                                    <option value="AE">United Arab Emirates</option>
+                                    <option value="GB">United Kingdom</option>
+                                    <option value="US">United States</option>
+                                    <option value="UM">United States Minor Outlying Islands</option>
+                                    <option value="UY">Uruguay</option>
+                                    <option value="UZ">Uzbekistan</option>
+                                    <option value="VU">Vanuatu</option>
+                                    <option value="VE">Venezuela, Bolivarian Republic of</option>
+                                    <option value="VN">Viet Nam</option>
+                                    <option value="VG">Virgin Islands, British</option>
+                                    <option value="VI">Virgin Islands, U.S.</option>
+                                    <option value="WF">Wallis and Futuna</option>
+                                    <option value="EH">Western Sahara</option>
+                                    <option value="YE">Yemen</option>
+                                    <option value="ZM">Zambia</option>
+                                    <option value="ZW">Zimbabwe</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="form-group form-group-default required" style="padding-bottom: 0;">
+                                  <label>Estado/provincia</label>
+                                  <input type="text" class="form-control" placeholder="Indique su provincia" required>
+                                </div>
+                              </div>
+                            </div>  
+                          </div>
+                        </form>
+                        <p class="m-t-20">Tipo de empleador</p>
+                        <div>
+                          <div class="radio radio-success">
+                            <input type="radio" name="tipo" value="0" id="checkbox1" onclick="document.getElementById('selectemp'); if(this.checked){selectemp.disabled = false;}else{selectemp.disabled=true;}">
+                            <label for="checkbox1">Empresa</label>
+                          </div>
+                          <select disabled class="cs-select cs-skin-slide" id="selectemp" name="selectemp">
+                              <option value="1 a 10 empleados">1 a 10 empleados</option>
+                              <option value="11 a 20 empleados">11 a 20 empleados</option>
+                              <option value="21 a 50 empleados">21 a 50 empleados</option>
+                              <option value="51 a 100 empleados">51 a 100 empleados</option>
+                              <option value="más de 101 empleados">más de 101 empleados</option>
+                          </select>
+                          <br>
+                          <div class="radio radio-success">
+                            <input type="radio" name="tipo" value="0" id="checkbox3" onclick="document.getElementById('selectemp'); if(this.checked){selectemp.disabled = true;}else{selectemp.disabled=false;}">
+                            <label for="checkbox3">Consultora RRHH</label>
+                          </div><br>
+                          <div class="radio radio-success">
+                            <input type="radio" name="tipo" value="0" id="checkbox4" onclick="document.getElementById('selectemp'); if(this.checked){selectemp.disabled = true;}else{selectemp.disabled=false;}">
+                            <label for="checkbox4" >Consultora RRHH FREELANCE</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 p-l-30 p-r-60">     
+                          <form role="form">
+                            <p>Sitio web y Redes</p>
+                            <div class="form-group-attached">
+                              <div class="form-group form-group-default required">
+                                <label>Sitio Web</label>
+                                <input type="text" class="form-control" placeholder="www.tusitio.com" required>
+                              </div>
+                              <div class="form-group form-group-default">
+                                <label>Facebook</label>
+                                <input type="text" class="form-control" placeholder="www.facebook.com/company" >
+                              </div>
+                              <div class="form-group form-group-default">
+                                <label>Twitter</label>
+                                <input type="text" class="form-control" placeholder="www.twitter.com/company" >
+                              </div>
+                              <div class="form-group form-group-default required">
+                                <label>LinkedIn</label>
+                                <input type="text" class="form-control" placeholder="https://www.linkedin.com/company" >
+                              </div>
+                              <div class="row clearfix">
+                                <div class="col-sm-12">
+                                  <div class="form-group form-group-default ">
+                                    <label>Otro sitio</label>
+                                    <input type="text" class="form-control" placeholder="https://www.otrositio.com/company">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="padding-20 bg-white">
+                  <ul class="pager wizard">
+                    <li class="next">
+                      <button class="btn btn-primary btn-cons btn-animated from-left fa fa-line-chart pull-right" type="button">
+                        <span>Siguiente</span>
+                      </button>
+                    </li>
+                    <li class="next finish hidden">
+                      <button href="user-perfil-data.html"class="btn btn-primary btn-cons btn-animated from-left fa fa-suitcase pull-right" type="button">
+                        <span><a class="u-link-white" href="/user-empleador.html">Finalizar</a></span>
+                      </button>
+                    </li> 
+                  </ul>
+                </div>
+                <div class="wizard-footer padding-20 bg-master-light">
+                  <p class="small hint-text pull-left no-margin">
+                    Jobaty mantiene seguro tus datos y solo provee tus datos a aquellos que vos se los brindes. para más información lee nuestros <a href="/terminos.html">Terminos y Condiciones</a>
+                  </p>
+                  <div class="pull-right">
+                    <img src="<%= image_path('logo_2x.png') %>" alt="logo" width="78" height="22">
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END PLACE PAGE CONTENT HERE -->
+      </div>
+      <!-- END CONTAINER FLUID -->
+    </div>
+    <!-- END PAGE CONTENT -->
+    <!-- START FOOTER -->
+    <div class="container-fluid container-fixed-lg footer">
+      <div class="copyright sm-text-center">
+        <p class="small no-margin pull-left sm-pull-reset">
+          <span class="hint-text">Copyright © 2015</span>
+          <span class="font-montserrat">JOBATY</span>.
+          <span class="hint-text">TODOS LOS DERECHOS RESERVADOS</span>
+          <span class="sm-block"><a href="#" class="m-l-10 m-r-10">Términos de uso</a> | <a href="#" class="m-l-10">Politica de Privacidad</a>
+                    </span>
+        </p>
+        <p class="small no-margin pull-right sm-pull-reset">
+          <a href="#">Hecho a mano</a>
+          <span class="hint-text">&amp; Made with Love By Jobaty</span>
+        </p>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- END FOOTER -->
+  </div>
+  <!-- END PAGE CONTENT WRAPPER -->
+</div>
+<!-- END PAGE CONTAINER -->
+<!--START QUICKVIEW -->
+<div id="quickview" class="quickview-wrapper" data-pages="quickview">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="">
+      <a href="#quickview-notes" data-toggle="tab">Notas</a>
+    </li>
+    <li>
+      <a href="#quickview-alerts" data-toggle="tab">Alertas</a>
+    </li>
+    <li class="active">
+      <a href="#quickview-chat" data-toggle="tab">Chat</a>
+    </li>
+  </ul>
+  <a class="btn-link quickview-toggle" data-toggle-element="#quickview" data-toggle="quickview"><i class="pg-close"></i></a>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <!-- BEGIN Notes !-->
+    <div class="tab-pane fade  in no-padding" id="quickview-notes">
+      <div class="view-port clearfix quickview-notes" id="note-views">
+        <!-- BEGIN Note List !-->
+        <div class="view list" id="quick-note-list">
+          <div class="toolbar clearfix">
+            <ul class="pull-right ">
+              <li>
+                <a href="#" class="delete-note-link"><i class="fa fa-trash-o"></i></a>
+              </li>
+              <li>
+                <a href="#" class="new-note-link" data-navigate="view" data-view-port="#note-views" data-view-animation="push"><i class="fa fa-plus"></i></a>
+              </li>
+            </ul>
+            <button class="btn-remove-notes btn btn-xs btn-block" style="display:none"><i class="fa fa-times"></i> Eliminar</button>
+          </div>
+          <ul>
+            <!-- BEGIN Note Item !-->
+            <li data-noteid="1" data-navigate="view" data-view-port="#note-views" data-view-animation="push">
+              <div class="left">
+                <!-- BEGIN Note Action !-->
+                <div class="checkbox check-warning no-margin">
+                  <input id="qncheckbox1" type="checkbox" value="1">
+                  <label for="qncheckbox1"></label>
+                </div>
+                <!-- END Note Action !-->
+                <!-- BEGIN Note Preview Text !-->
+                <p class="note-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <!-- BEGIN Note Preview Text !-->
+              </div>
+              <!-- BEGIN Note Details !-->
+              <div class="right pull-right">
+                <!-- BEGIN Note Date !-->
+                <span class="date">12/12/14</span>
+                <a href="#"><i class="fa fa-chevron-right"></i></a>
+                <!-- END Note Date !-->
+              </div>
+              <!-- END Note Details !-->
+            </li>
+            <!-- END Note List !-->
+          </ul>
+        </div>
+        <!-- END Note List !-->
+        <div class="view note" id="quick-note">
+          <div>
+            <ul class="toolbar">
+              <li><a href="#" class="close-note-link" data-navigate="view" data-view-port="#note-views" data-view-animation="push"><i class="pg-arrow_left"></i></a>
+              </li>
+              <li><a href="#" class="Bold"><i class="fa fa-bold"></i></a>
+              </li>
+              <li><a href="#" class="Italic"><i class="fa fa-italic"></i></a>
+              </li>
+              <li><a href="#" class=""><i class="fa fa-link"></i></a>
+              </li>
+            </ul>
+            <div class="body">
+              <div>
+                <div class="top">
+                  <span>21st april 2014 2:13am</span>
+                </div>
+                <div class="content">
+                  <div class="quick-note-editor full-width full-height js-input" contenteditable="true"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Notes !-->
+    <!-- BEGIN Alerts !-->
+    <div class="tab-pane fade no-padding" id="quickview-alerts">
+      <div class="view-port clearfix" id="alerts">
+        <!-- BEGIN Alerts View !-->
+        <div class="view bg-white">
+          <!-- BEGIN View Header !-->
+          <div class="navbar navbar-default navbar-sm">
+            <div class="navbar-inner">
+              <!-- BEGIN Header Controler !-->
+              <a href="javascript:;" class="inline action p-l-10 link text-master" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                <i class="pg-more"></i>
+              </a>
+              <!-- END Header Controler !-->
+              <div class="view-heading">
+                Notications
+              </div>
+              <!-- BEGIN Header Controler !-->
+              <a href="#" class="inline action p-r-10 pull-right link text-master">
+                <i class="pg-search"></i>
+              </a>
+              <!-- END Header Controler !-->
+            </div>
+          </div>
+          <!-- END View Header !-->
+          <!-- BEGIN Alert List !-->
+          <div data-init-list-view="ioslist" class="list-view boreded no-top-border">
+            <!-- BEGIN List Group !-->
+            <div class="list-view-group-container">
+              <!-- BEGIN List Group Header!-->
+              <div class="list-view-group-header text-uppercase">
+                Calendar
+              </div>
+              <!-- END List Group Header!-->
+              <ul>
+                <!-- BEGIN List Group Item!-->
+                <li class="alert-list">
+                  <!-- BEGIN Alert Item Set Animation using data-view-animation !-->
+                  <a href="javascript:;" class="" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                    <p class="col-xs-height col-middle">
+                      <span class="text-warning fs-10"><i class="fa fa-circle"></i></span>
+                    </p>
+                    <p class="p-l-10 col-xs-height col-middle col-xs-9 overflow-ellipsis fs-12">
+                      <span class="text-master">David Nester Birthday</span>
+                    </p>
+                    <p class="p-r-10 col-xs-height col-middle fs-12 text-right">
+                      <span class="text-warning">Today <br></span>
+                      <span class="text-master">All Day</span>
+                    </p>
+                  </a>
+                  <!-- END Alert Item!-->
+                  <!-- BEGIN List Group Item!-->
+                </li>
+                <!-- END List Group Item!-->
+              </ul>
+            </div>
+            <!-- END List Group !-->
+          </div>
+          <!-- END Alert List !-->
+        </div>
+        <!-- EEND Alerts View !-->
+      </div>
+    </div>
+    <!-- END Alerts !-->
+    <div class="tab-pane fade in active no-padding" id="quickview-chat">
+      <div class="view-port clearfix" id="chat">
+        <div class="view bg-white">
+          <!-- BEGIN View Header !-->
+          <div class="navbar navbar-default">
+            <div class="navbar-inner">
+              <!-- BEGIN Header Controler !-->
+              <a href="javascript:;" class="inline action p-l-10 link text-master" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                <i class="pg-plus"></i>
+              </a>
+              <!-- END Header Controler !-->
+              <div class="view-heading">
+                Chat List
+                <div class="fs-11">Show All</div>
+              </div>
+              <!-- BEGIN Header Controler !-->
+              <a href="#" class="inline action p-r-10 pull-right link text-master">
+                <i class="pg-more"></i>
+              </a>
+              <!-- END Header Controler !-->
+            </div>
+          </div>
+          <!-- END View Header !-->
+          <div data-init-list-view="ioslist" class="list-view boreded no-top-border">
+            <div class="list-view-group-container">
+              <div class="list-view-group-header text-uppercase">
+                a</div>
+              <ul>
+                <!-- BEGIN Chat User List Item  !-->
+                <li class="chat-user-list clearfix">
+                  <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
+                    <span class="col-xs-height col-middle">
+                    <span class="thumbnail-wrapper d32 circular bg-success">
+                        <img width="34" height="34" alt="" 
+                        src="<%= image_path('profiles/1x.jpg') %>" class="col-top">
+                    </span>
+                    </span>
+                    <p class="p-l-10 col-xs-height col-middle col-xs-12">
+                      <span class="text-master">ava flores</span>
+                      <span class="block text-master hint-text fs-12">Hello there</span>
+                    </p>
+                  </a>
+                </li>
+                <!-- END Chat User List Item  !-->
+              </ul>
+            </div>
+            <div class="list-view-group-container">
+              <div class="list-view-group-header text-uppercase">b</div>
+              <ul>
+                <!-- BEGIN Chat User List Item  !-->
+                <li class="chat-user-list clearfix">
+                  <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
+                    <span class="col-xs-height col-middle">
+                    <span class="thumbnail-wrapper d32 circular bg-success">
+                        <img width="34" height="34" alt="" 
+                        src="<%= image_path('profiles/2x.jpg') %>" class="col-top">
+                    </span>
+                    </span>
+                    <p class="p-l-10 col-xs-height col-middle col-xs-12">
+                      <span class="text-master">bella mccoy</span>
+                      <span class="block text-master hint-text fs-12">Hello there</span>
+                    </p>
+                  </a>
+                </li>
+                <!-- END Chat User List Item  !-->
+                <!-- BEGIN Chat User List Item  !-->
+                <li class="chat-user-list clearfix">
+                  <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
+                    <span class="col-xs-height col-middle">
+                    <span class="thumbnail-wrapper d32 circular bg-success">
+                        <img width="34" height="34" alt="" 
+                        src="<%= image_path('profiles/3x.jpg') %>" class="col-top">
+                    </span>
+                    </span>
+                    <p class="p-l-10 col-xs-height col-middle col-xs-12">
+                      <span class="text-master">bob stephens</span>
+                      <span class="block text-master hint-text fs-12">Hello there</span>
+                    </p>
+                  </a>
+                </li>
+                <!-- END Chat User List Item  !-->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- BEGIN Conversation View  !-->
+        <div class="view chat-view bg-white clearfix">
+          <!-- BEGIN Header  !-->
+          <div class="navbar navbar-default">
+            <div class="navbar-inner">
+              <a href="javascript:;" class="link text-master inline action p-l-10" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                <i class="pg-arrow_left"></i>
+              </a>
+              <div class="view-heading">
+                John Smith
+                <div class="fs-11 hint-text">Online</div>
+              </div>
+              <a href="#" class="link text-master inline action p-r-10 pull-right ">
+                <i class="pg-more"></i>
+              </a>
+            </div>
+          </div>
+          <!-- END Header  !-->
+          <!-- BEGIN Conversation  !-->
+          <div class="chat-inner" id="my-conversation">
+            <!-- BEGIN From Me Message  !-->
+            <div class="message clearfix">
+              <div class="chat-bubble from-me">
+                Hello there
+              </div>
+            </div>
+            <!-- END From Me Message  !-->
+            <!-- BEGIN From Them Message  !-->
+            <div class="message clearfix">
+              <div class="profile-img-wrapper m-t-5 inline">
+                <img class="col-top" width="30" height="30" 
+                src="<%= image_path('profiles/avatar_small.jpg') %>" alt="">
+              </div>
+              <div class="chat-bubble from-them">
+                Hey
+              </div>
+            </div>
+            <!-- END From Them Message  !-->
+            <!-- BEGIN From Me Message  !-->
+            <div class="message clearfix">
+              <div class="chat-bubble from-me">
+                Did you check out Pages framework ?
+              </div>
+            </div>
+            <!-- END From Me Message  !-->
+            <!-- BEGIN From Me Message  !-->
+            <div class="message clearfix">
+              <div class="chat-bubble from-me">
+                Its an awesome chat
+              </div>
+            </div>
+            <!-- END From Me Message  !-->
+            <!-- BEGIN From Them Message  !-->
+            <div class="message clearfix">
+              <div class="profile-img-wrapper m-t-5 inline">
+                <img class="col-top" width="30" height="30" 
+                src="<%= image_path('profiles/avatar_small.jpg') %>" alt="">
+              </div>
+              <div class="chat-bubble from-them">
+                Yea
+              </div>
+            </div>
+            <!-- END From Them Message  !-->
+          </div>
+          <!-- BEGIN Conversation  !-->
+          <!-- BEGIN Chat Input  !-->
+          <div class="b-t b-grey bg-white clearfix p-l-10 p-r-10">
+            <div class="row">
+              <div class="col-xs-1 p-t-15">
+                <a href="#" class="link text-master"><i class="fa fa-plus-circle"></i></a>
+              </div>
+              <div class="col-xs-8 no-padding">
+                <input type="text" class="form-control chat-input" data-chat-input="" data-chat-conversation="#my-conversation" placeholder="Say something">
+              </div>
+              <div class="col-xs-2 link text-master m-l-10 m-t-15 p-l-10 b-l b-grey col-top">
+                <a href="#" class="link text-master"><i class="pg-camera"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- END Chat Input  !-->
+        </div>
+        <!-- END Conversation View  !-->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END QUICKVIEW-->
+<!-- START OVERLAY -->
+<div class="overlay" style="display: none" data-pages="search">
+  <!-- BEGIN Overlay Content !-->
+  <div class="overlay-content has-results m-t-20">
+    <!-- BEGIN Overlay Header !-->
+    <div class="container-fluid">
+      <!-- BEGIN Overlay Logo !-->
+      <img class="overlay-brand" src="<%= image_path('logo.png') %>" alt="logo" width="78" height="22">
+      <!-- END Overlay Logo !-->
+      <!-- BEGIN Overlay Close !-->
+      <a href="#" class="close-icon-light overlay-close text-black fs-16">
+        <i class="pg-close"></i>
+      </a>
+      <!-- END Overlay Close !-->
+    </div>
+    <!-- END Overlay Header !-->
+    <div class="container-fluid">
+      <!-- BEGIN Overlay Controls !-->
+      <input id="overlay-search" class="no-border overlay-search bg-transparent" placeholder="Search..." autocomplete="off" spellcheck="false">
+      <br>
+      <div class="inline-block">
+        <div class="checkbox right">
+          <input id="checkboxn" type="checkbox" value="1" checked="checked">
+          <label for="checkboxn"><i class="fa fa-search"></i> Search within page</label>
+        </div>
+      </div>
+      <div class="inline-block m-l-10">
+        <p class="fs-13">Press enter to search</p>
+      </div>
+      <!-- END Overlay Controls !-->
+    </div>
+    <!-- BEGIN Overlay Search Results, This part is for demo purpose, you can add anything you like !-->
+    <div class="container-fluid">
+      <span>
+            <strong>suggestions :</strong>
+        </span>
+      <span id="overlay-suggestions"></span>
+      <br>
+      <div class="search-results m-t-40">
+        <p class="bold">Pages Search Results</p>
+        <div class="row">
+          <div class="col-md-6">
+            <!-- BEGIN Search Result Item !-->
+            <div class="">
+              <!-- BEGIN Search Result Item Thumbnail !-->
+              <div class="thumbnail-wrapper d48 circular bg-success text-white inline m-t-10">
+                <div>
+                  <img width="50" height="50" src="<%= image_path('profiles/avatar.jpg') %>" alt="">
+                </div>
+              </div>
+              <!-- END Search Result Item Thumbnail !-->
+              <div class="p-l-10 inline p-t-5">
+                <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> on pages</h5>
+                <p class="hint-text">via john smith</p>
+              </div>
+            </div>
+            <!-- END Search Result Item !-->
+            <!-- BEGIN Search Result Item !-->
+            <div class="">
+              <!-- BEGIN Search Result Item Thumbnail !-->
+              <div class="thumbnail-wrapper d48 circular bg-success text-white inline m-t-10">
+                <div>T</div>
+              </div>
+              <!-- END Search Result Item Thumbnail !-->
+              <div class="p-l-10 inline p-t-5">
+                <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> related topics</h5>
+                <p class="hint-text">via pages</p>
+              </div>
+            </div>
+            <!-- END Search Result Item !-->
+            <!-- BEGIN Search Result Item !-->
+            <div class="">
+              <!-- BEGIN Search Result Item Thumbnail !-->
+              <div class="thumbnail-wrapper d48 circular bg-success text-white inline m-t-10">
+                <div><i class="fa fa-headphones large-text "></i>
+                </div>
+              </div>
+              <!-- END Search Result Item Thumbnail !-->
+              <div class="p-l-10 inline p-t-5">
+                <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> music</h5>
+                <p class="hint-text">via pagesmix</p>
+              </div>
+            </div>
+            <!-- END Search Result Item !-->
+          </div>
+          <div class="col-md-6">
+            <!-- BEGIN Search Result Item !-->
+            <div class="">
+              <!-- BEGIN Search Result Item Thumbnail !-->
+              <div class="thumbnail-wrapper d48 circular bg-info text-white inline m-t-10">
+                <div><i class="fa fa-facebook large-text "></i>
+                </div>
+              </div>
+              <!-- END Search Result Item Thumbnail !-->
+              <div class="p-l-10 inline p-t-5">
+                <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> on facebook</h5>
+                <p class="hint-text">via facebook</p>
+              </div>
+            </div>
+            <!-- END Search Result Item !-->
+            <!-- BEGIN Search Result Item !-->
+            <div class="">
+              <!-- BEGIN Search Result Item Thumbnail !-->
+              <div class="thumbnail-wrapper d48 circular bg-complete text-white inline m-t-10">
+                <div><i class="fa fa-twitter large-text "></i>
+                </div>
+              </div>
+              <!-- END Search Result Item Thumbnail !-->
+              <div class="p-l-10 inline p-t-5">
+                <h5 class="m-b-5">Tweats on<span class="semi-bold result-name"> ice cream</span></h5>
+                <p class="hint-text">via twitter</p>
+              </div>
+            </div>
+            <!-- END Search Result Item !-->
+            <!-- BEGIN Search Result Item !-->
+            <div class="">
+              <!-- BEGIN Search Result Item Thumbnail !-->
+              <div class="thumbnail-wrapper d48 circular text-white bg-danger inline m-t-10">
+                <div><i class="fa fa-google-plus large-text "></i>
+                </div>
+              </div>
+              <!-- END Search Result Item Thumbnail !-->
+              <div class="p-l-10 inline p-t-5">
+                <h5 class="m-b-5">Circles on<span class="semi-bold result-name"> ice cream</span></h5>
+                <p class="hint-text">via google plus</p>
+              </div>
+            </div>
+            <!-- END Search Result Item !-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Overlay Search Results !-->
+  </div>
+  <!-- END Overlay Content !-->
+</div>
+<!-- END OVERLAY -->
