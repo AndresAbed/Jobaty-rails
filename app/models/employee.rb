@@ -28,7 +28,7 @@ class Employee < ActiveRecord::Base
       employee.profile_img = auth.info.image
       employee.oauth_token = auth.credentials.token
       #employee.skip_confirmation!
-      employee.save(:validate => false)
+      employee.save
     end
   end
 end

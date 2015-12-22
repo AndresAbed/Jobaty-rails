@@ -1,4 +1,5 @@
 <% if @flag %>
+<<<<<<< HEAD
   $(".registration-messages").html("<%= escape_javascript(render("flash")) %>");
   $("#signup_form")[0].reset();
   $(document).ready(function() {
@@ -6,6 +7,8 @@
       $(".registration-messages .devise-success").slideUp();
     }, 8000);
   });
+=======
+>>>>>>> c4b768b7247a38b3d41db295923821607ff3c5fc
 <% else %>
   $(".registration-messages").html("<%= escape_javascript(render("errors")) %>");
   $(document).ready(function() {

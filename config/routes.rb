@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get "/index" => "main#index", as: :index
   get "/empleadores" => "companies#index", as: :companies
+  get "/candidatos" => "companies#candidates", as: :candidates
+  get "/perfil-empresa" => "companies#profile", as: :company_profile
 
   get "/ofertas" => "employees#offers", as: :offers
   get "/perfil" => "employees#profile", as: :employee_profile
