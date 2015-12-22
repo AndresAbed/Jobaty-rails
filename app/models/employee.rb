@@ -2,7 +2,7 @@ class Employee < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :trackable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :confirmable
          
   has_many :job_experiences
   has_many :degrees
@@ -10,7 +10,7 @@ class Employee < ActiveRecord::Base
 
   validates :first_name, presence: { message: "no puede estar en blanco" }
   validates :last_name, presence: { message: "no puede estar en blanco" }
-  validates :birth_date, presence: true, on: :update
+  validates :birth_date, presence: true, on: :profile
 
   has_attached_file :profile_img, :styles => {medium: "300x300"}, 
   :url  => "/images/employees/:id/:style/:basename.:extension"
