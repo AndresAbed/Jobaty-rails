@@ -21,7 +21,7 @@ class PasswordsController < Devise::PasswordsController
 
     if resource.errors.empty?
       resource.unlock_access! if unlockable?(resource)
-      redirect_to root_path
+      redirect_to after_resetting_password_path_for( resource)
       flash[:notice] = "Tu contraseña fue actualizada"
     else
       set_minimum_password_length
@@ -29,11 +29,11 @@ class PasswordsController < Devise::PasswordsController
     end
   end
   protected
-  def after_sending_reset_password_instructions_path_for(resource_name)
-    case resource_name
-    when :employee
+  def after_resetting_password_path_for(resource)
+    case resource
+    when Employee
       root_path
-    when :company
+    when Company
       companies_path
     end
   end
