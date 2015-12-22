@@ -101,7 +101,7 @@
               <p class="cd-form-message">Perdiste tu contraseña? Please enter your email address. You will receive a link to create a new password.</p>
               <%= form_for(resource, as: resource_name, url: password_path(resource_name), 
               html: { method: :post, class: "cd-form", id: :password_form}, remote: true) do |f| %>
-                <div class="password-errors"></div>
+                <div class="password-messages"></div>
                 <p class="fieldset">
                   <label class="image-replace cd-email" for="reset-email">E-mail</label>
                   <%= f.email_field :email, placeholder: "E-mail",

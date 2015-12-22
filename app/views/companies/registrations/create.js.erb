@@ -1,10 +1,16 @@
 <% if @flag %>
-  window.location.href = "/index"
-<% else %>
-  $(".registration-errors").html("<%= escape_javascript(render("new")) %>");
+  $(".registration-messages").html("<%= escape_javascript(render("flash")) %>");
+  $("#signup_form")[0].reset();
   $(document).ready(function() {
     setTimeout(function() {
-      $(".registration-errors .devise-errors").slideUp();
-    }, 4000);
+      $(".registration-messages").slideUp();
+    }, 8000);
+  });
+<% else %>
+  $(".registration-messages").html("<%= escape_javascript(render("errors")) %>");
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".registration-messages .devise-errors").slideUp();
+    }, 8000);
   });
 <% end %>

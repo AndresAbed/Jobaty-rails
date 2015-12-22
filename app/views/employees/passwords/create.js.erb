@@ -1,17 +1,17 @@
 <% if @flag %>
-  $(".password-errors").html("<%= escape_javascript(render("flash")) %>");
+  $(".password-messages").html("<%= escape_javascript(render("flash")) %>");
   $("#password_form")[0].reset();
   $(document).ready(function() {
     setTimeout(function() {
-      $(".password-errors .devise-success").slideUp();
+      $(".password-messages .devise-success").slideUp();
     }, 8000);
   });
 <% else %>
-  $(".password-errors").html("<%= escape_javascript(render("errors")) %>");
+  $(".password-messages").html("<%= escape_javascript(render("errors")) %>");
   $("#password_form")[0].reset();
   $(document).ready(function() {
     setTimeout(function() {
-      $(".password-errors .devise-errors").slideUp();
+      $(".password-messages .devise-errors").slideUp();
     }, 8000);
   });
 <% end %>
