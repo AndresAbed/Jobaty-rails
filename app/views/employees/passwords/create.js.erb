@@ -1,15 +1,17 @@
 <% if @flag %>
   $(".password-errors").html("<%= escape_javascript(render("flash")) %>");
+  $("#password_form")[0].reset();
   $(document).ready(function() {
     setTimeout(function() {
       $(".password-errors .devise-success").slideUp();
-    }, 4000);
+    }, 8000);
   });
 <% else %>
   $(".password-errors").html("<%= escape_javascript(render("errors")) %>");
+  $("#password_form")[0].reset();
   $(document).ready(function() {
     setTimeout(function() {
       $(".password-errors .devise-errors").slideUp();
-    }, 4000);
+    }, 8000);
   });
 <% end %>
