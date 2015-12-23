@@ -16,7 +16,7 @@ class SessionsController < DeviseController
       end
     else
       respond_to do |format|
-          format.js
+          format.js {flash[:alert] = "Email o contraseña inválidos"}
       end
     end
   end
