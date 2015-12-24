@@ -1,5 +1,5 @@
 <% if @flag %>
-  window.location.href = "/index"
+  window.location.href = "/candidatos"
 <% else %>
   $(".sessions-errors").html("<%= escape_javascript(render("errors")) %>");
   $("#signin_form #signin-password").val('');

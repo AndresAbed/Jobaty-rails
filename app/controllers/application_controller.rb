@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
     when Employee
       offers_path
     when Company
-      index_path
+      candidates_path
     end
   end
 
