@@ -5,7 +5,7 @@ class ConfirmationsController < DeviseController
 
     if successfully_sent?(resource)
       respond_with({}, location: after_resending_confirmation_instructions_path_for(resource_name))
-      flash[:notice] = "Las instrucciones para confirmar tu cuenta fueron reenviadas a tu correo."
+      flash[:alert] = "Las instrucciones para confirmar tu cuenta fueron reenviadas a tu correo."
     else
       respond_with(resource)
     end

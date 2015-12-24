@@ -5,7 +5,7 @@ class RegistrationsController < Devise::RegistrationsController
     if resource.save
       @flag = true
       respond_to do |format|
-        format.js {flash[:notice] = "Gracias por registrarte! Recibirás un correo con instrucciones para confirmar tu cuenta."}
+        format.js {flash[:alert] = "Gracias por registrarte! Recibirás un correo con instrucciones para confirmar tu cuenta."}
       end
     else  
       respond_to do |format|

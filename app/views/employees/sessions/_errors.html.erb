@@ -1,3 +1,5 @@
-<ul class="devise-errors">
-  <li>Email o contraseña inválidos</li>
-</ul>
+<% if flash.alert %>
+  <ul class="devise-errors">
+    <li><%= flash.alert %></li>
+  </ul>
+<% end %>

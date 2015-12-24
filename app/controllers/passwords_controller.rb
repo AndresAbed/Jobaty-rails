@@ -6,7 +6,7 @@ class PasswordsController < Devise::PasswordsController
     if successfully_sent?(resource)
       @flag = true
       respond_to do |format|
-        format.js {flash[:notice] = "Recibirás un correo electrónico con instrucciones sobre cómo restablecer tu contraseña en unos minutos."}
+        format.js {flash[:alert] = "Recibirás un correo electrónico con instrucciones sobre cómo restablecer tu contraseña en unos minutos."}
       end
     else
       respond_to do |format|
@@ -22,7 +22,7 @@ class PasswordsController < Devise::PasswordsController
     if resource.errors.empty?
       resource.unlock_access! if unlockable?(resource)
       redirect_to after_resetting_password_path_for( resource)
-      flash[:notice] = "Tu contraseña fue actualizada"
+      flash[:alert] = "Tu contraseña fue actualizada"
     else
       set_minimum_password_length
       respond_with resource
