@@ -776,10 +776,12 @@
   <!-- END Overlay Content !-->
 </div>
 <!-- END OVERLAY -->
-<script>
-  $(document).ready(function () {
-    setTimeout(function(){
-      $('#grayOverlay').addClass("opacity-1");
-    }, 2000);
-  });
-</script>
+<% if current_company.profile_completed != true %>
+  <script>
+    $(document).ready(function () {
+      setTimeout(function(){
+        $('#grayOverlay').addClass("opacity-1");
+      }, 2000);
+    });
+  </script>
+<% end %>  
