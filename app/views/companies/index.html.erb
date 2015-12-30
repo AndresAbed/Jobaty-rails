@@ -283,58 +283,45 @@
   <div id="section-companies"  class="section footer-stick">
     <div id="section-contact" class="container clearfix">
       <h3>Contactate con nosotros</h3>
-      <div id="contact-form-result" data-notify-type="success" 
-      data-notify-msg="<i class=icon-ok-sign></i> Mensaje enviado!"></div>
-      <form class="nobottommargin" id="template-contactform" 
-      name="template-contactform" action="include/sendemail.php" method="post">
+      <div class="contact-messages"></div>
+      <%= form_for :contact, url: contact_path,
+       html: {class: "nobottommargin", id: :contact_form}, remote: true do |company| %>
         <div class="form-process"></div>
         <div class="col_one_third">
-          <label for="template-contactform-name">Empresa <small>*</small></label>
-          <input type="text" id="template-contactform-name" 
-          name="template-contactform-name" value="" class="sm-form-control required" />
+          <label for="template_contactform_name">Empresa <small>*</small></label>
+          <%= company.text_field :company, class: "sm-form-control required" %>
         </div>
         <div class="col_one_third">
-          <label for="template-contactform-email">Email <small>*</small></label>
-          <input type="email" id="template-contactform-email" 
-          name="template-contactform-email" value="" class="required email sm-form-control" />
+          <label for="template_contactform-email">Email <small>*</small></label>
+          <%= company.email_field :email, class: "required email sm-form-control" %>
         </div>
         <div class="col_one_third col_last">
-          <label for="template-contactform-phone">Telefono</label>
-          <input type="text" id="template-contactform-phone" 
-          name="template-contactform-phone" value="" class="sm-form-control" />
+          <label for="template_contactform-phone">Telefono</label>
+          <%= company.text_field :phone, class: "sm-form-control" %>
         </div>
         <div class="clear"></div>
         <div class="col_two_third">
-          <label for="template-contactform-subject">Asunto <small>*</small></label>
-          <input type="text" id="template-contactform-subject" 
-          name="template-contactform-subject" value="" class="required sm-form-control" />
+          <label for="template_contactform-subject">Asunto <small>*</small></label>
+          <%= company.text_field :subject, class: "required sm-form-control" %>
         </div>
         <div class="col_one_third col_last">
-          <label for="template-contactform-service">Planes</label>
-          <select id="template-contactform-service" 
-          name="template-contactform-service" class="sm-form-control">
-            <option value="">-- Seleccione Uno --</option>
-            <option value="Plan Inicial">Plan Inicial</option>
-            <option value="Plan Avanzado">Plan Avanzado</option>
-            <option value="Plan Premium">Plan Premium</option>
-            <option value="Consulta">Consulta</option>
-          </select>
+          <label for="template_contactform-service">Planes</label>
+          <%= company.select :plan, [['Plan Inicial'], ['Plan Avanzado'], ['Plan Premium'], ['Consulta']], 
+          {prompt:'-- Seleccione Uno --'}, class: 'sm-form-control' %>
         </div>
         <div class="clear"></div>
         <div class="col_full">
-          <label for="template-contactform-message">Mensaje <small>*</small></label>
-          <textarea class="required sm-form-control" id="template-contactform-message" 
-          name="template-contactform-message" rows="6" cols="30"></textarea>
+          <label for="template_contactform-message">Mensaje <small>*</small></label>
+          <%= company.text_area :message, class: "required sm-form-control", rows: "8", cols: "30" %>
         </div>
         <div class="col_full hidden">
-          <input type="text" id="template-contactform-botcheck" 
-          name="template-contactform-botcheck" value="" class="sm-form-control" />
+          <input type="text" id="template_contactform-botcheck" 
+          name="template_contactform-botcheck" value="" class="sm-form-control" />
         </div>
         <div class="col_full">
-          <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" 
-          name="template-contactform-submit" value="submit">ENVIAR</button>
+          <%= company.submit 'Enviar', class: "button button-3d nomargin" %>
         </div>
-      </form>
+      <% end %>
     </div>
   </div>
 </section><!-- #content end -->
