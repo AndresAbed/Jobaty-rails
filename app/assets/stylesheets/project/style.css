@@ -276,6 +276,7 @@ xsigin/signup popup
 
 .cd-form {
   padding: 1.4em;
+  margin-bottom: 0px;
 }
 .cd-form .fieldset {
   position: relative;
@@ -464,16 +465,22 @@ xsigin/signup popup
 }
 
 .cd-form-bottom-message {
-  position: absolute;
   width: 100%;
   left: 0;
   bottom: -30px;
   text-align: center;
   font-size: 14px;
   font-size: 0.875rem;
+  padding-bottom: 15px;
 }
+
+.cd-form-bottom-message p{
+  display: inline;
+  margin: 0 10px;
+}
+
 .cd-form-bottom-message a {
-  color: #FFF;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -495,11 +502,12 @@ xsigin/signup popup
   }
 }
 
-#cd-login, #cd-signup, #cd-reset-password {
+#cd-login, #cd-signup, #cd-reset-password, #cd-resend-confirmation {
   display: none;
 }
 
-#cd-login.is-selected, #cd-signup.is-selected, #cd-reset-password.is-selected {
+#cd-login.is-selected, #cd-signup.is-selected, 
+#cd-reset-password.is-selected, #cd-resend-confirmation.is-selected {
   display: block;
 }
 

@@ -46,8 +46,11 @@
                 <p class="fieldset">
                   <%= f.submit "Iniciar sesión", class: "full-width" %>
                 </p>
-              <% end %>  
-              <p class="cd-form-bottom-message"><a href="javascript:;">¿Olvidaste tu contraseña?</a></p>
+              <% end %>
+              <div class="cd-form-bottom-message">
+                <p><a class="forgot-password" href="javascript:;">¿Olvidaste tu contraseña?</a></p>
+                <p><a class="resend-confirmation" href="javascript:;">Reenviar confirmación</a></p>
+              </div>
               <!-- <a href="javascript:;" class="cd-close-form">Close</a> -->
             </div> <!-- cd-login -->
             <div id="cd-signup"> <!-- sign up form -->
@@ -113,7 +116,24 @@
                 </p>
               <% end %>
               <p class="cd-form-bottom-message"><a href="javascript:;">Back to log-in</a></p>
-            </div> <!-- cd-reset-password -->
+            </div> <!-- resend-confirmation -->
+            <div id="cd-resend-confirmation"> <!-- resend confirmation form -->
+              <p class="cd-form-message">Si necesitas reenviar las instrucciones de confirmación, ingresa tu email y serán enviadas a tu correo nuevamente</p>
+              <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), 
+              html: { method: :post, class: "cd-form", id: :confirmation_form}, remote: true) do |f| %>
+                <div class="confirmation-messages"></div>
+                <p class="fieldset">
+                  <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                  <%= f.email_field :email, placeholder: "E-mail",
+                  class: "full-width has-padding has-border", id: "reset-password-email" %>
+                  <span class="cd-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset">
+                  <%= f.submit "Reenviar instrucciones", class: "full-width has-padding" %>
+                </p>
+              <% end %>
+              <p class="cd-form-bottom-message"><a href="javascript:;">Back to log-in</a></p>
+            </div> <!-- resend-confirmation -->
             <a href="javascript:;" class="cd-close-form">Close</a>
           </div> <!-- cd-user-modal-container -->
       </div> <!-- cd-user-modal -->

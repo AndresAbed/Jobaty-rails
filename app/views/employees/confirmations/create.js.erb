@@ -1,0 +1,17 @@
+<% if @flag %>
+  $(".confirmation-messages").html("<%= escape_javascript(render("flash")) %>");
+  $("#confirmation_form")[0].reset();
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".confirmation-messages .devise-success").slideUp();
+    }, 5000);
+  });
+<% else %>
+  $(".confirmation-messages").html("<%= escape_javascript(render("errors")) %>");
+  $("#confirmation_form")[0].reset();
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".confirmation-messages .devise-errors").slideUp();
+    }, 5000);
+  });
+<% end %>
