@@ -237,14 +237,18 @@ body.dashboard .page-container {
   bottom: 0;
   top: 0;
   right: auto;
-  overflow: hidden;
-  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
-  -moz-transition: -moz-transform 400ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
-  -o-transition: -o-transform 400ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
-  transition: transform 400ms cubic-bezier(0.05, 0.74, 0.27, 0.99);
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
+  overflow: hidden; 
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
 }
+
+.page-sidebar:hover{
+  left:0px;
+}
+
 .page-sidebar a,
 .page-sidebar button {
   color: #e6e6e6;
