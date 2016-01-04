@@ -147,3 +147,15 @@ $(document).ready(function(){
           scrollTop: $("#section-contact").offset().top},800);
   });
 })
+
+$(document).ready(function(){
+  $("#signin_form").bind("ajax:error", function(evt, data, status, xhr){
+    if (data.status == 401) {
+      $(".sessions-errors").append("<ul class="+"devise-errors"+"><li>"+"Esta cuenta no está confirmada, revisa tu correo o reenvía las instrucciones"+"</li></ul>");
+      $("#signin_form #signin-password").val('');
+      setTimeout(function() {
+        $(".sessions-errors .devise-errors").slideUp();
+      }, 5000);
+    };
+  });
+});
