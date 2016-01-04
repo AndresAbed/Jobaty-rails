@@ -1,370 +1,372 @@
-<% if flash.notice %>
-  <div class="alert alert-success">
-    <%= flash.notice %>  
-  </div>
-<% end %>
-<!-- Document Wrapper
-============================================= -->
-<div id="wrapper" class="clearfix">
-  <!-- Header
+<body>
+  <% if flash.notice %>
+    <div class="alert alert-success">
+      <%= flash.notice %>  
+    </div>
+  <% end %>
+  <!-- Document Wrapper
   ============================================= -->
-  <header id="header" class="transparent-header page-section dark">
-    <div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
-      <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
-        <ul class="cd-switcher">
-          <li><a href="javascript:;">Ingresar</a></li>
-          <li><a href="javascript:;">Registrarse</a></li>
-        </ul>
-        <div id="cd-login"> <!-- log in form -->
-          <%= form_for(resource_company, as: resource_name_company, url: session_path(resource_name_company), 
-          html: {class: "cd-form", id: :signin_form}, remote: true) do |f| %>
-            <div class="sessions-errors">
+  <div id="wrapper" class="clearfix">
+    <!-- Header
+    ============================================= -->
+    <header id="header" class="transparent-header page-section dark">
+      <div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+        <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+          <ul class="cd-switcher">
+            <li><a href="javascript:;">Ingresar</a></li>
+            <li><a href="javascript:;">Registrarse</a></li>
+          </ul>
+          <div id="cd-login"> <!-- log in form -->
+            <%= form_for(resource_company, as: resource_name_company, url: session_path(resource_name_company), 
+            html: {class: "cd-form", id: :signin_form}, remote: true) do |f| %>
+              <div class="sessions-errors">
+              </div>
+              <p class="fieldset">
+                <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                <%= f.email_field :email, placeholder: "E-mail", 
+                class: "full-width has-padding has-border", id: "signin-email" %>
+                <span class="cd-error-message">¡Error Email no registrado!</span>
+              </p>
+              <p class="fieldset">
+                <label class="image-replace cd-password" for="signin-password">Contraseña</label>
+                <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña",
+                 class: "full-width has-padding has-border", id: "signin-password"%>
+                <a href="javascript:;" class="hide-password">Show</a>
+                <span class="cd-error-message">¡Error tu contraseña es equivocada!</span>
+              </p>
+              <p class="fieldset">
+                <%= f.check_box :remember_me, id: "remember-me" %>
+                <label for="remember-me">¡Recuerdame!</label>
+              </p>
+              <p class="fieldset">
+                <a href="user-recover-password.html" class="recover-password">Recuperar contraseña</a>
+              </p>
+              <p class="fieldset">
+                <%= f.submit "Iniciar sesión", class: "full-width" %>
+              </p>
+            <% end %>
+            <div class="cd-form-bottom-message">
+              <p><a class="forgot-password" href="javascript:;">¿Olvidaste tu contraseña?</a></p>
+              <p><a class="resend-confirmation" href="javascript:;">Reenviar confirmación</a></p>
             </div>
-            <p class="fieldset">
-              <label class="image-replace cd-email" for="signin-email">E-mail</label>
-              <%= f.email_field :email, placeholder: "E-mail", 
-              class: "full-width has-padding has-border", id: "signin-email" %>
-              <span class="cd-error-message">¡Error Email no registrado!</span>
-            </p>
-            <p class="fieldset">
-              <label class="image-replace cd-password" for="signin-password">Contraseña</label>
-              <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña",
-               class: "full-width has-padding has-border", id: "signin-password"%>
-              <a href="javascript:;" class="hide-password">Show</a>
-              <span class="cd-error-message">¡Error tu contraseña es equivocada!</span>
-            </p>
-            <p class="fieldset">
-              <%= f.check_box :remember_me, id: "remember-me" %>
-              <label for="remember-me">¡Recuerdame!</label>
-            </p>
-            <p class="fieldset">
-              <a href="user-recover-password.html" class="recover-password">Recuperar contraseña</a>
-            </p>
-            <p class="fieldset">
-              <%= f.submit "Iniciar sesión", class: "full-width" %>
-            </p>
-          <% end %>
-          <div class="cd-form-bottom-message">
-            <p><a class="forgot-password" href="javascript:;">¿Olvidaste tu contraseña?</a></p>
-            <p><a class="resend-confirmation" href="javascript:;">Reenviar confirmación</a></p>
-          </div>
-          <!-- <a href="javascript:;" class="cd-close-form">Close</a> -->
-        </div> <!-- cd-login -->
-        <div id="cd-signup"> <!-- sign up form -->
-          <%= form_for(resource_company, as: resource_name_company, url: registration_path(resource_name_company), 
-          html: {class: "cd-form", id: :signup_form}, remote: true) do |f| %>
-            <div class="registration-messages"></div>
-            <p class="fieldset">
-              <label class="image-replace cd-username" for="signup-username">Nombre</label>
-              <%= f.text_field :name, placeholder: "Nombre Empresa",
-              class: "full-width has-padding has-border", id: "signup-username" %>
-              <span class="cd-error-message">¡Error ingrese sus nombres!</span>
-            </p>
-            <p class="fieldset">
-              <label class="image-replace cd-email" for="signin-email">E-mail</label>
-              <%= f.email_field :email, placeholder: "E-mail",
-              class: "full-width has-padding has-border", id: "signup-email" %>
-              <span class="cd-error-message">¡Error ingrese un mail valido!</span>
-            </p>
-            <p class="fieldset">
-              <label class="image-replace cd-password" for="signup-password">Contraseña</label>
-              <%= f.password_field :password, placeholder: "Contraseña", autocomplete: "off",
-              class: "full-width has-padding has-border", id: "signup-password" %>
-              <a href="javascript:;" class="hide-password">Show</a>
-              <span class="cd-error-message">¡Error tu contraseña tiene que ser al menos 8 caracteres!</span>
-            </p>
-            <p class="fieldset">
-              <label class="image-replace cd-password" for="signup-password">Confirmar contraseña</label>
-              <%= f.password_field :password_confirmation, placeholder: "Confirmar contraseña", 
-              autocomplete: "off", class: "full-width has-padding has-border", id: "signup-password" %>
-              <a href="javascript:;" class="hide-password">Show</a>
-              <span class="cd-error-message">¡Error no concuerda con tu contraseña!</span>
-            </p>
-            <p class="fieldset">
-              <input type="checkbox" id="accept-terms">
-              <label for="accept-terms">Acepto los <a href="javascript:;">Terminos y condiciones</a></label>
-            </p>
-            <p class="fieldset">
-              <%= f.submit "Crear cuenta", class: "full-width has-padding" %>
-            </p>
-          <% end %>
-          <!-- <a href="javascript:;" class="cd-close-form">Close</a> -->
-        </div> <!-- cd-signup -->
-        <div id="cd-reset-password"> <!-- reset password form -->
-          <p class="cd-form-message">Perdiste tu contraseña? Please enter your email address. You will receive a link to create a new password.</p>
-          <%= form_for(resource_company, as: resource_name_company, url: password_path(resource_name_company), 
-          html: { method: :post, class: "cd-form", id: :password_form }, remote: true) do |f| %>
-            <div class="password-messages"></div>
-            <p class="fieldset">
-              <label class="image-replace cd-email" for="reset-email">E-mail</label>
-              <%= f.email_field :email, placeholder: "E-mail",
-              class: "full-width has-padding has-border", id: "signup-email" %>
-              <span class="cd-error-message">Error message here!</span>
-            </p>
-            <p class="fieldset">
-              <%= f.submit "Enviar", class: "full-width has-padding" %>
-            </p>
-          <% end %>
-          <p class="cd-form-bottom-message"><a href="javascript:;">Back to log-in</a></p>
-        </div> <!-- cd-reset-password -->
-        <div id="cd-resend-confirmation"> <!-- resend confirmation form -->
-          <p class="cd-form-message">Si necesitas reenviar las instrucciones de confirmación, ingresa tu email y serán enviadas a tu correo nuevamente</p>
-          <%= form_for(resource_company, as: resource_name_company, url: confirmation_path(resource_name_company), 
-          html: { method: :post, class: "cd-form", id: :confirmation_form}, remote: true) do |f| %>
-            <div class="confirmation-messages"></div>
-            <p class="fieldset">
-              <label class="image-replace cd-email" for="reset-email">E-mail</label>
-              <%= f.email_field :email, placeholder: "E-mail",
-              class: "full-width has-padding has-border", id: "reset-password-email" %>
-              <span class="cd-error-message">Error message here!</span>
-            </p>
-            <p class="fieldset">
-              <%= f.submit "Reenviar instrucciones", class: "full-width has-padding" %>
-            </p>
-          <% end %>
-          <p class="cd-form-bottom-message"><a href="javascript:;">Back to log-in</a></p>
-        </div> <!-- resend-confirmation -->
-        <a href="javascript:;" class="cd-close-form">Close</a>
-      </div> <!-- cd-user-modal-container -->
-    </div> <!-- cd-user-modal -->
-    <div id="header-wrap">
-      <div class="container clearfix">
-        <div id="primary-menu-trigger"><i class="ion-navicon-round"></i></div>
-        <!-- Logo
-        ============================================= -->
-        <div id="logo">
-          <a href="<%= root_path %>" class="standard-logo" ><img src="<%= image_path('logo-dark.png') %>" alt="Jobaty Logo"></a>
-          <a href="<%= root_path %>" class="retina-logo"><img src="<%= image_path('logo-dark@2x.png') %>" alt="Jobaty Logo"></a>
-        </div><!-- #logo end -->
-        <!-- Primary Navigation
-        ============================================= -->
-        <nav id="primary-menu" class="main-nav-2 style-3">
-          <ul >            
-            <li class="current"><a href="<%= root_path %>">Para Talentos</a></li>
-          </ul>
-        </nav><!-- #primary-menu end -->
-        <nav id="primary-menu" class="main-nav style-3 main-nav-no-margin">
-          <ul >
-            <li ><a class="cd-signin" href="javascript:;">Ingresar</a></li>
-            <li ><a class="cd-signup" href="javascript:;">Registrarse</a></li>
-            <!--<li><a href="#section-steps"><div>Pasos</div></a></li>
-            <li><a href="#section-profiles"><div>Perfiles</div></a></li> -->
-          </ul>
-        </nav><!-- #primary-menu end -->
-      </div>
-    </div>
-  </header><!-- #header end -->
-  <section id="slider" class="force-full-screen slider-parallax full-screen dark" 
-  style="background: url(<%= image_path('landing/bgc.jpg') %>) center;">
-    <div class="container vertical-middle clearfix">
-      <div class="heading-block title-center nobottomborder">
-        <!-- <h1 data-caption-animate="fadeInUp">Tu trabajo ideal va a vos</h1> -->
-        <h1 data-caption-animate="fadeInUp">Agiliza el proceso de selección</h1>
-        <span data-caption-animate="fadeInUp" data-caption-delay="200">Busca entre nuestra red de profesionales calificados</span>
-      </div>
-      <div class="center">
-        <a href="javascript:;" class="button button-rounded button-reveal button-large 
-        button-dirtygreen">
-          <i class="fa fa-paper-plane"></i>
-          <span>Contactar</span>
-        </a>
-      </div>
-    </div>
-    <a href="javascript:;" class="companies-arrow">
-    <i class="ion-chevron-down infinite animated fadeInDown"></i></a>
-  </section>
-</div>
-<!-- Content
-============================================= -->
-<section id="content">
-  <div class="promo-dark promo-full bottommargin" style="background-color: #F5F5F5;">
-    <div id="section-profiles" class="container clearfix">
-      <div  class="heading-block title-center page-section">
-        <h2>Perfiles</h2>
-        <span>Contamos con una red de profesionales de las siguientes áreas</span>
-      </div>
-      <div class="col_one_third">
-        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn">
-          <div class="fbox-icon">
-            <a href="#"><i class="ion-ios-gear-outline"></i></a>
-          </div>
-          <h3>Backend</h3>
-          <p class="p-text">Java, Ruby, Python, Node.js, .NET</p>
+            <!-- <a href="javascript:;" class="cd-close-form">Close</a> -->
+          </div> <!-- cd-login -->
+          <div id="cd-signup"> <!-- sign up form -->
+            <%= form_for(resource_company, as: resource_name_company, url: registration_path(resource_name_company), 
+            html: {class: "cd-form", id: :signup_form}, remote: true) do |f| %>
+              <div class="registration-messages"></div>
+              <p class="fieldset">
+                <label class="image-replace cd-username" for="signup-username">Nombre</label>
+                <%= f.text_field :name, placeholder: "Nombre Empresa",
+                class: "full-width has-padding has-border", id: "signup-username" %>
+                <span class="cd-error-message">¡Error ingrese sus nombres!</span>
+              </p>
+              <p class="fieldset">
+                <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                <%= f.email_field :email, placeholder: "E-mail",
+                class: "full-width has-padding has-border", id: "signup-email" %>
+                <span class="cd-error-message">¡Error ingrese un mail valido!</span>
+              </p>
+              <p class="fieldset">
+                <label class="image-replace cd-password" for="signup-password">Contraseña</label>
+                <%= f.password_field :password, placeholder: "Contraseña", autocomplete: "off",
+                class: "full-width has-padding has-border", id: "signup-password" %>
+                <a href="javascript:;" class="hide-password">Show</a>
+                <span class="cd-error-message">¡Error tu contraseña tiene que ser al menos 8 caracteres!</span>
+              </p>
+              <p class="fieldset">
+                <label class="image-replace cd-password" for="signup-password">Confirmar contraseña</label>
+                <%= f.password_field :password_confirmation, placeholder: "Confirmar contraseña", 
+                autocomplete: "off", class: "full-width has-padding has-border", id: "signup-password" %>
+                <a href="javascript:;" class="hide-password">Show</a>
+                <span class="cd-error-message">¡Error no concuerda con tu contraseña!</span>
+              </p>
+              <p class="fieldset">
+                <input type="checkbox" id="accept-terms">
+                <label for="accept-terms">Acepto los <a href="javascript:;">Terminos y condiciones</a></label>
+              </p>
+              <p class="fieldset">
+                <%= f.submit "Crear cuenta", class: "full-width has-padding" %>
+              </p>
+            <% end %>
+            <!-- <a href="javascript:;" class="cd-close-form">Close</a> -->
+          </div> <!-- cd-signup -->
+          <div id="cd-reset-password"> <!-- reset password form -->
+            <p class="cd-form-message">Perdiste tu contraseña? Please enter your email address. You will receive a link to create a new password.</p>
+            <%= form_for(resource_company, as: resource_name_company, url: password_path(resource_name_company), 
+            html: { method: :post, class: "cd-form", id: :password_form }, remote: true) do |f| %>
+              <div class="password-messages"></div>
+              <p class="fieldset">
+                <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                <%= f.email_field :email, placeholder: "E-mail",
+                class: "full-width has-padding has-border", id: "signup-email" %>
+                <span class="cd-error-message">Error message here!</span>
+              </p>
+              <p class="fieldset">
+                <%= f.submit "Enviar", class: "full-width has-padding" %>
+              </p>
+            <% end %>
+            <p class="cd-form-bottom-message"><a href="javascript:;">Back to log-in</a></p>
+          </div> <!-- cd-reset-password -->
+          <div id="cd-resend-confirmation"> <!-- resend confirmation form -->
+            <p class="cd-form-message">Si necesitas reenviar las instrucciones de confirmación, ingresa tu email y serán enviadas a tu correo nuevamente</p>
+            <%= form_for(resource_company, as: resource_name_company, url: confirmation_path(resource_name_company), 
+            html: { method: :post, class: "cd-form", id: :confirmation_form}, remote: true) do |f| %>
+              <div class="confirmation-messages"></div>
+              <p class="fieldset">
+                <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                <%= f.email_field :email, placeholder: "E-mail",
+                class: "full-width has-padding has-border", id: "reset-password-email" %>
+                <span class="cd-error-message">Error message here!</span>
+              </p>
+              <p class="fieldset">
+                <%= f.submit "Reenviar instrucciones", class: "full-width has-padding" %>
+              </p>
+            <% end %>
+            <p class="cd-form-bottom-message"><a href="javascript:;">Back to log-in</a></p>
+          </div> <!-- resend-confirmation -->
+          <a href="javascript:;" class="cd-close-form">Close</a>
+        </div> <!-- cd-user-modal-container -->
+      </div> <!-- cd-user-modal -->
+      <div id="header-wrap">
+        <div class="container clearfix">
+          <div id="primary-menu-trigger"><i class="ion-navicon-round"></i></div>
+          <!-- Logo
+          ============================================= -->
+          <div id="logo">
+            <a href="<%= root_path %>" class="standard-logo" ><img src="<%= image_path('logo-dark.png') %>" alt="Jobaty Logo"></a>
+            <a href="<%= root_path %>" class="retina-logo"><img src="<%= image_path('logo-dark@2x.png') %>" alt="Jobaty Logo"></a>
+          </div><!-- #logo end -->
+          <!-- Primary Navigation
+          ============================================= -->
+          <nav id="primary-menu" class="main-nav-2 style-3">
+            <ul >            
+              <li class="current"><a href="<%= root_path %>">Para Talentos</a></li>
+            </ul>
+          </nav><!-- #primary-menu end -->
+          <nav id="primary-menu" class="main-nav style-3 main-nav-no-margin">
+            <ul >
+              <li ><a class="cd-signin" href="javascript:;">Ingresar</a></li>
+              <li ><a class="cd-signup" href="javascript:;">Registrarse</a></li>
+              <!--<li><a href="#section-steps"><div>Pasos</div></a></li>
+              <li><a href="#section-profiles"><div>Perfiles</div></a></li> -->
+            </ul>
+          </nav><!-- #primary-menu end -->
         </div>
       </div>
-      <div class="col_one_third">
-        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="200">
-          <div class="fbox-icon">
-            <a href="#"><i class="ion-monitor"></i></a>
-          </div>
-          <h3>Frontend</h3>
-          <p class="p-text">JQuery, AngularJS, Backbone, HTML5, CSS3</p>
+    </header><!-- #header end -->
+    <section id="slider" class="force-full-screen slider-parallax full-screen dark" 
+    style="background: url(<%= image_path('landing/bgc.jpg') %>) center;">
+      <div class="container vertical-middle clearfix">
+        <div class="heading-block title-center nobottomborder">
+          <!-- <h1 data-caption-animate="fadeInUp">Tu trabajo ideal va a vos</h1> -->
+          <h1 data-caption-animate="fadeInUp">Agiliza el proceso de selección</h1>
+          <span data-caption-animate="fadeInUp" data-caption-delay="200">Busca entre nuestra red de profesionales calificados</span>
+        </div>
+        <div class="center">
+          <a href="javascript:;" class="button button-rounded button-reveal button-large 
+          button-dirtygreen">
+            <i class="fa fa-paper-plane"></i>
+            <span>Contactar</span>
+          </a>
         </div>
       </div>
-      <div class="col_one_third col_last">
-        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="400">
-          <div class="fbox-icon">
-            <a href="#"><i class="ion-iphone"></i></a>
-          </div>
-          <h3>Mobile</h3>
-          <p class="p-text">Android, iOS, Windows Phone</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-      <div class="col_one_third">
-        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="600">
-          <div class="fbox-icon">
-            <a href="#"><i class="ion-android-funnel"></i></a>
-          </div>
-          <h3>Infraestructura</h3>
-          <p class="p-text">SysAdmin, Implementador, Soporte</p>
-        </div>
-      </div>
-      <div class="col_one_third">
-        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="800">
-          <div class="fbox-icon">
-            <a href="#"><i class="ion-edit"></i></a>
-          </div>
-          <h3>Design</h3>
-          <p class="p-text">Web Designer, Brand Designer, Ilustrador, UX, UI</p>
-        </div>
-      </div>
-      <div class="col_one_third col_last">
-        <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="1000">
-          <div class="fbox-icon">
-            <a href="#"><i class="ion-ios-checkmark-outline"></i></a>
-          </div>
-          <h3>Managment</h3>
-          <p class="p-text">Project Manager, Account Manager, Product Manager</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
+      <a href="javascript:;" class="companies-arrow">
+      <i class="ion-chevron-down infinite animated fadeInDown"></i></a>
+    </section>
   </div>
-  <div class="content-wrap">
-    <div id="section-steps" class="container clearfix" >
-      <div id="section-features" class="heading-block title-center page-section">
-        <h2>Servicios</h2>
-        <span>Estos son algunos de los servicios que ofrecemos</span>
-      </div>
-      <div class="col_one_third">
-        <div class="feature-box fbox-plain">
-          <div class="fbox-icon" data-animate="bounceIn">
-            <a href="#"><img src="<%= image_path('features/retina.png') %>" alt="Responsive Layout"></a>
-          </div>
-          <h3>Perfiles</h3>
-          <p>Acceso a nuestra red de profesionales en tecnología.</p>
-        </div>
-      </div>
-      <div class="col_one_third">
-        <div class="feature-box fbox-plain">
-          <div class="fbox-icon" data-animate="bounceIn" data-delay="200">
-            <a href="#"><img src="<%= image_path('features/responsive.png') %>" alt="Retina Graphics"></a>
-          </div>
-          <h3>Panel</h3>
-          <p>Acceso a un panel donde podrás gestionar las ofertas creadas y perfiles.</p>
-        </div>
-      </div>
-      <div class="col_one_third col_last">
-        <div class="feature-box fbox-plain">
-          <div class="fbox-icon" data-animate="bounceIn" data-delay="400">
-            <a href="#"><img src="<%= image_path('features/tools.png') %>" alt="Powerful Performance"></a>
-          </div>
-          <h3>ESTADÍSTICAS</h3>
-          <p>Dentro del panel podrá ver estadísticas del mercado y de las ofertas creadas.</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-      <div class="col_one_third">
-        <div class="feature-box fbox-plain">
-          <div class="fbox-icon" data-animate="bounceIn" data-delay="600">
-            <a href="#"><img src="<%= image_path('features/support.png') %>" alt="Responsive Layout"></a>
-          </div>
-          <h3>Asesoramiento</h3>
-          <p>Ofrecemos nuestro asesoramiento para optimizar tu búsqueda.</p>
-        </div>
-      </div>
-      <div class="col_one_third">
-        <div class="feature-box fbox-plain">
-          <div class="fbox-icon" data-animate="bounceIn" data-delay="800">
-            <a href="#"><img src="<%= image_path('features/performance.png') %>" alt="Retina Graphics"></a>
-          </div>
-          <h3>Aplicación de gestión</h3>
-          <p>Aplicaciones para crear y gestionar tus búsquedas. iOS &amp; Android.</p>
-        </div>
-      </div>
-      <div class="col_one_third col_last">
-        <div class="feature-box fbox-plain">
-          <div class="fbox-icon" data-animate="bounceIn" data-delay="1000">
-            <a href="#"><img src="<%= image_path('features/seo.png') %>" alt="Powerful Performance"></a>
-          </div>
-          <h3>Servicio de Entrevista</h3>
-          <p>Contamos con un departamento de RRHH para realizar entrevistas que coincidan con tus busquedas.</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>    
-  </div>
-  <div id="section-companies"  class="section footer-stick">
-    <div id="section-contact" class="container clearfix">
-      <h3>Contactate con nosotros</h3>
-      <div class="contact-messages"></div>
-      <%= form_for :contact, url: contact_path,
-       html: {class: "nobottommargin", id: :contact_form}, remote: true do |company| %>
-        <div class="form-process"></div>
-        <div class="col_one_third">
-          <label for="template_contactform_name">Empresa <small>*</small></label>
-          <%= company.text_field :company, class: "sm-form-control required" %>
-        </div>
-        <div class="col_one_third">
-          <label for="template_contactform-email">Email <small>*</small></label>
-          <%= company.email_field :email, class: "required email sm-form-control" %>
-        </div>
-        <div class="col_one_third col_last">
-          <label for="template_contactform-phone">Telefono</label>
-          <%= company.text_field :phone, class: "sm-form-control" %>
-        </div>
-        <div class="clear"></div>
-        <div class="col_two_third">
-          <label for="template_contactform-subject">Asunto <small>*</small></label>
-          <%= company.text_field :subject, class: "required sm-form-control" %>
-        </div>
-        <div class="col_one_third col_last">
-          <label for="template_contactform-service">Planes</label>
-          <%= company.select :plan, [['Plan Inicial'], ['Plan Avanzado'], ['Plan Premium'], ['Consulta']], 
-          {prompt:'-- Seleccione Uno --'}, class: 'sm-form-control' %>
-        </div>
-        <div class="clear"></div>
-        <div class="col_full">
-          <label for="template_contactform-message">Mensaje <small>*</small></label>
-          <%= company.text_area :message, class: "required sm-form-control", rows: "8", cols: "30" %>
-        </div>
-        <div class="col_full hidden">
-          <input type="text" id="template_contactform-botcheck" 
-          name="template_contactform-botcheck" value="" class="sm-form-control" />
-        </div>
-        <div class="col_full">
-          <%= company.submit 'Enviar', class: "button button-3d nomargin" %>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</section><!-- #content end -->
-<!-- Footer
-============================================= -->
-<footer id="footer" class="dark">
-  <!-- Copyrights
+  <!-- Content
   ============================================= -->
-  <div id="copyrights">
-    <div class="container clearfix">
-      <div class="col_half">
-        Copyrights &copy; 2015 All Rights Reserved by Jobaty.<br>
-        <div class="copyright-links"><a href="index.html">Inicio</a> / <a href="companies.html">Para Empresas</a></div>
-      </div>
-      <div class="col_half col_last tright">                
+  <section id="content">
+    <div class="promo-dark promo-full bottommargin" style="background-color: #F5F5F5;">
+      <div id="section-profiles" class="container clearfix">
+        <div  class="heading-block title-center page-section">
+          <h2>Perfiles</h2>
+          <span>Contamos con una red de profesionales de las siguientes áreas</span>
+        </div>
+        <div class="col_one_third">
+          <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn">
+            <div class="fbox-icon">
+              <a href="#"><i class="ion-ios-gear-outline"></i></a>
+            </div>
+            <h3>Backend</h3>
+            <p class="p-text">Java, Ruby, Python, Node.js, .NET</p>
+          </div>
+        </div>
+        <div class="col_one_third">
+          <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="200">
+            <div class="fbox-icon">
+              <a href="#"><i class="ion-monitor"></i></a>
+            </div>
+            <h3>Frontend</h3>
+            <p class="p-text">JQuery, AngularJS, Backbone, HTML5, CSS3</p>
+          </div>
+        </div>
+        <div class="col_one_third col_last">
+          <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="400">
+            <div class="fbox-icon">
+              <a href="#"><i class="ion-iphone"></i></a>
+            </div>
+            <h3>Mobile</h3>
+            <p class="p-text">Android, iOS, Windows Phone</p>
+          </div>
+        </div>
         <div class="clear"></div>
-        <a href="mailto:info@jobaty.com"><i class="footer-info ion-ios-email-outline"></i> info@jobaty.com</a> <span class="middot">&middot;</span><a href="skype:contacto.jobaty"><i class="footer-info ion-social-skype"></i> contacto.jobaty</a>
+        <div class="col_one_third">
+          <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="600">
+            <div class="fbox-icon">
+              <a href="#"><i class="ion-android-funnel"></i></a>
+            </div>
+            <h3>Infraestructura</h3>
+            <p class="p-text">SysAdmin, Implementador, Soporte</p>
+          </div>
+        </div>
+        <div class="col_one_third">
+          <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="800">
+            <div class="fbox-icon">
+              <a href="#"><i class="ion-edit"></i></a>
+            </div>
+            <h3>Design</h3>
+            <p class="p-text">Web Designer, Brand Designer, Ilustrador, UX, UI</p>
+          </div>
+        </div>
+        <div class="col_one_third col_last">
+          <div class="feature-box fbox-small fbox-plain" data-animate="fadeIn" data-delay="1000">
+            <div class="fbox-icon">
+              <a href="#"><i class="ion-ios-checkmark-outline"></i></a>
+            </div>
+            <h3>Managment</h3>
+            <p class="p-text">Project Manager, Account Manager, Product Manager</p>
+          </div>
+        </div>
+        <div class="clear"></div>
       </div>
     </div>
-  </div><!-- #copyrights end -->
-</footer><!-- #footer end -->
+    <div class="content-wrap">
+      <div id="section-steps" class="container clearfix" >
+        <div id="section-features" class="heading-block title-center page-section">
+          <h2>Servicios</h2>
+          <span>Estos son algunos de los servicios que ofrecemos</span>
+        </div>
+        <div class="col_one_third">
+          <div class="feature-box fbox-plain">
+            <div class="fbox-icon" data-animate="bounceIn">
+              <a href="#"><img src="<%= image_path('features/retina.png') %>" alt="Responsive Layout"></a>
+            </div>
+            <h3>Perfiles</h3>
+            <p>Acceso a nuestra red de profesionales en tecnología.</p>
+          </div>
+        </div>
+        <div class="col_one_third">
+          <div class="feature-box fbox-plain">
+            <div class="fbox-icon" data-animate="bounceIn" data-delay="200">
+              <a href="#"><img src="<%= image_path('features/responsive.png') %>" alt="Retina Graphics"></a>
+            </div>
+            <h3>Panel</h3>
+            <p>Acceso a un panel donde podrás gestionar las ofertas creadas y perfiles.</p>
+          </div>
+        </div>
+        <div class="col_one_third col_last">
+          <div class="feature-box fbox-plain">
+            <div class="fbox-icon" data-animate="bounceIn" data-delay="400">
+              <a href="#"><img src="<%= image_path('features/tools.png') %>" alt="Powerful Performance"></a>
+            </div>
+            <h3>ESTADÍSTICAS</h3>
+            <p>Dentro del panel podrá ver estadísticas del mercado y de las ofertas creadas.</p>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="col_one_third">
+          <div class="feature-box fbox-plain">
+            <div class="fbox-icon" data-animate="bounceIn" data-delay="600">
+              <a href="#"><img src="<%= image_path('features/support.png') %>" alt="Responsive Layout"></a>
+            </div>
+            <h3>Asesoramiento</h3>
+            <p>Ofrecemos nuestro asesoramiento para optimizar tu búsqueda.</p>
+          </div>
+        </div>
+        <div class="col_one_third">
+          <div class="feature-box fbox-plain">
+            <div class="fbox-icon" data-animate="bounceIn" data-delay="800">
+              <a href="#"><img src="<%= image_path('features/performance.png') %>" alt="Retina Graphics"></a>
+            </div>
+            <h3>Aplicación de gestión</h3>
+            <p>Aplicaciones para crear y gestionar tus búsquedas. iOS &amp; Android.</p>
+          </div>
+        </div>
+        <div class="col_one_third col_last">
+          <div class="feature-box fbox-plain">
+            <div class="fbox-icon" data-animate="bounceIn" data-delay="1000">
+              <a href="#"><img src="<%= image_path('features/seo.png') %>" alt="Powerful Performance"></a>
+            </div>
+            <h3>Servicio de Entrevista</h3>
+            <p>Contamos con un departamento de RRHH para realizar entrevistas que coincidan con tus busquedas.</p>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>    
+    </div>
+    <div id="section-companies"  class="section footer-stick">
+      <div id="section-contact" class="container clearfix">
+        <h3>Contactate con nosotros</h3>
+        <div class="contact-messages"></div>
+        <%= form_for :contact, url: contact_path,
+         html: {class: "nobottommargin", id: :contact_form}, remote: true do |company| %>
+          <div class="form-process"></div>
+          <div class="col_one_third">
+            <label for="template_contactform_name">Empresa <small>*</small></label>
+            <%= company.text_field :company, class: "sm-form-control required" %>
+          </div>
+          <div class="col_one_third">
+            <label for="template_contactform-email">Email <small>*</small></label>
+            <%= company.email_field :email, class: "required email sm-form-control" %>
+          </div>
+          <div class="col_one_third col_last">
+            <label for="template_contactform-phone">Telefono</label>
+            <%= company.text_field :phone, class: "sm-form-control" %>
+          </div>
+          <div class="clear"></div>
+          <div class="col_two_third">
+            <label for="template_contactform-subject">Asunto <small>*</small></label>
+            <%= company.text_field :subject, class: "required sm-form-control" %>
+          </div>
+          <div class="col_one_third col_last">
+            <label for="template_contactform-service">Planes</label>
+            <%= company.select :plan, [['Plan Inicial'], ['Plan Avanzado'], ['Plan Premium'], ['Consulta']], 
+            {prompt:'-- Seleccione Uno --'}, class: 'sm-form-control' %>
+          </div>
+          <div class="clear"></div>
+          <div class="col_full">
+            <label for="template_contactform-message">Mensaje <small>*</small></label>
+            <%= company.text_area :message, class: "required sm-form-control", rows: "8", cols: "30" %>
+          </div>
+          <div class="col_full hidden">
+            <input type="text" id="template_contactform-botcheck" 
+            name="template_contactform-botcheck" value="" class="sm-form-control" />
+          </div>
+          <div class="col_full">
+            <%= company.submit 'Enviar', class: "button button-3d nomargin" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section><!-- #content end -->
+  <!-- Footer
+  ============================================= -->
+  <footer id="footer" class="dark">
+    <!-- Copyrights
+    ============================================= -->
+    <div id="copyrights">
+      <div class="container clearfix">
+        <div class="col_half">
+          Copyrights &copy; 2015 All Rights Reserved by Jobaty.<br>
+          <div class="copyright-links"><a href="index.html">Inicio</a> / <a href="companies.html">Para Empresas</a></div>
+        </div>
+        <div class="col_half col_last tright">                
+          <div class="clear"></div>
+          <a href="mailto:info@jobaty.com"><i class="footer-info ion-ios-email-outline"></i> info@jobaty.com</a> <span class="middot">&middot;</span><a href="skype:contacto.jobaty"><i class="footer-info ion-social-skype"></i> contacto.jobaty</a>
+        </div>
+      </div>
+    </div><!-- #copyrights end -->
+  </footer><!-- #footer end -->
+</body>  
