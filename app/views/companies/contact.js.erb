@@ -4,13 +4,13 @@
   $(document).ready(function() {
     setTimeout(function() {
       $(".contact-messages .devise-success").slideUp();
-    }, 5000);
+    }, 6000);
   });
 <% else %>
   $(".contact-messages").html("<%= escape_javascript(render("errors")) %>");
   $(document).ready(function() {
     setTimeout(function() {
       $(".contact-messages .devise-errors").slideUp();
-    }, 5000);
+    }, 6000);
   });
 <% end %>  

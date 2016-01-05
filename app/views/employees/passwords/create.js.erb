@@ -4,7 +4,7 @@
   $(document).ready(function() {
     setTimeout(function() {
       $(".password-messages .devise-success").slideUp();
-    }, 5000);
+    }, 6000);
   });
 <% else %>
   $(".password-messages").html("<%= escape_javascript(render("errors")) %>");
@@ -12,6 +12,6 @@
   $(document).ready(function() {
     setTimeout(function() {
       $(".password-messages .devise-errors").slideUp();
-    }, 5000);
+    }, 6000);
   });
 <% end %>

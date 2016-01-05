@@ -155,7 +155,7 @@ $(document).ready(function(){
       $("#signin_form #signin-password").val('');
       setTimeout(function() {
         $(".sessions-errors .devise-errors").slideUp();
-      }, 5000);
+      }, 6000);
     };
   });
 });

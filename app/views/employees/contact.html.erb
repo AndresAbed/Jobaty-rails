@@ -1,18 +1,11 @@
 <body class="fixed-header">
-  <!-- OVERLAY -->
-  <div class="grayOverlay" id="grayOverlay">
-    <div class="grayOverlay-box">
-      <a href="<%= employee_profile_path %>"><button class="btn btn-primary btn-cons">Completá tu perfil</button></a>
-      <p class="m-t-30">Completá tu perfil para acceder a todas las ofertas</p>
-    </div>
-  </div>
   <!-- BEGIN SIDEBAR -->
   <div class="page-sidebar" data-pages="sidebar">
     <div id="appMenu" class="sidebar-overlay-slide from-top">
     </div>
     <!-- BEGIN SIDEBAR HEADER -->
     <div class="sidebar-header">
-      <img src="<%= image_path('logo_white.png') %>" alt="logo" class="brand" data-src="<%= image_path('logo_white.png') %>" data-src-retina="<%= image_path('logo_white_2x.png') %>" width="78" height="22">
+      <img src="<%= image_path('logo_white.png') %>" alt="logo" class="brand" width="78" height="22">
       <div class="sidebar-header-controls">
         <button data-toggle-pin="sidebar" class="btn btn-link visible-lg-inline" type="button"><i class="fa fs-12"></i>
         </button>
@@ -55,7 +48,7 @@
     <!-- END SIDEBAR MENU -->
   </div>
   <!-- END SIDEBAR -->
-  <!-- START PAGE-CONTAINER -->
+ <!-- START PAGE-CONTAINER -->
   <div class="page-container">
     <!-- START PAGE HEADER WRAPPER -->
     <!-- START HEADER -->
@@ -90,49 +83,43 @@
           <!-- BEGIN NOTIFICATION DROPDOWN -->
           <ul class="notification-list no-margin hidden-sm hidden-xs b-grey b-l b-r no-style p-l-30 p-r-20">
             <li class="p-r-15 inline">
-              <div class="dropdown">
-                <a href="javascript:;" id="notification-center" class="icon-set globe-fill" data-toggle="dropdown">
-                  <span class="bubble"></span>
-                </a>
-                <div class="dropdown-menu notification-toggle" role="menu" aria-labelledby="notification-center">
-                  <div class="notification-panel">
-                    <!-- START Notification Body-->
-                    <div class="notification-body scrollable">
-                      <!-- START Notification Item-->
-                      <div class="notification-item  clearfix">
-                        <div class="heading">
-                          <a href="#" class="text-danger">
-                            <i class="fa fa-exclamation-triangle m-r-10"></i>
-                            <span class="bold">Backend Dev</span>
-                            <span class="fs-12 m-l-10">Propuesta interesante</span>
-                          </a>
-                          <span class="pull-right time">2 mins ago</span>
+                <div class="dropdown">
+                  <a href="javascript:;" id="notification-center" class="icon-set globe-fill" data-toggle="dropdown" aria-expanded="false">
+                    <span class="bubble"></span>
+                  </a>
+                  <div class="dropdown-menu notification-toggle" role="menu" aria-labelledby="notification-center">
+                    <div class="notification-panel">
+                      <!-- START Notification Body-->
+                      <div class="scroll-wrapper notification-body scrollable" style="position: relative;"><div class="notification-body scrollable scroll-content" style="margin-bottom: 0px; margin-right: 0px;">
+                        <!-- START Notification Item-->
+                        <div class="notification-item  clearfix">
+                          <div class="heading">
+                            <a href="#" class="text-danger">
+                              <i class="fa fa-exclamation-triangle m-r-10"></i>
+                              <span class="bold">Backend Dev</span>
+                              <span class="fs-12 m-l-10">Propuesta interesante</span>
+                            </a>
+                            <span class="pull-right time">2 mins ago</span>
+                          </div>
+                          <div class="option">
+                            <a href="#" class="mark"></a>
+                          </div>
                         </div>
-                        <div class="option">
-                          <a href="#" class="mark"></a>
-                        </div>
+                        <!-- END Notification Item-->
+                      </div><div class="scroll-element scroll-x"><div class="scroll-element_outer">    <div class="scroll-element_size"></div>    <div class="scroll-element_track"></div>    <div class="scroll-bar" style="width: 96px;"></div></div></div><div class="scroll-element scroll-y"><div class="scroll-element_outer">    <div class="scroll-element_size"></div>    <div class="scroll-element_track"></div>    <div class="scroll-bar" style="height: 93px;"></div></div></div></div>
+                      <!-- END Notification Body-->
+                      <!-- START Notification Footer-->
+                      <div class="notification-footer text-center">
+                        <a href="#" class="">Leer todas las notificaciones</a>
+                        <a data-toggle="refresh" class="portlet-refresh text-black pull-right" href="#">
+                          <i class="pg-refresh_new"></i>
+                        </a>
                       </div>
-                      <!-- END Notification Item-->
+                      <!-- END Notification Footer-->
                     </div>
-                    <!-- END Notification Body-->
-                    <!-- START Notification Footer-->
-                    <div class="notification-footer text-center">
-                      <a href="#" class="">Leer todas las notificaciones</a>
-                      <a data-toggle="refresh" class="portlet-refresh text-black pull-right" href="#">
-                        <i class="pg-refresh_new"></i>
-                      </a>
-                    </div>
-                    <!-- END Notification Footer-->
                   </div>
                 </div>
-              </div>
-            </li>
-            <!-- <li class="p-r-15 inline">
-              <a href="#" class="icon-set clip "></a>
-            </li>
-            <li class="p-r-15 inline">
-              <a href="#" class="icon-set grid-box"></a>
-            </li> -->
+              </li>
           </ul>
           <!-- END NOTIFICATION DROPDOWN -->
          
@@ -152,7 +139,7 @@
           <div class="dropdown pull-right">
             <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="thumbnail-wrapper d32 circular inline m-t-5">
-              <img src="<%= image_path('profiles/avatar.jpg') %>" alt="" width="32" height="32">
+              <img alt="" src="<%= image_path('profiles/avatar.jpg') %>" width="32" height="32">
           </span>
             </button>
             <ul class="dropdown-menu profile-dropdown" role="menu">
@@ -179,13 +166,12 @@
     <!-- START PAGE CONTENT WRAPPER -->
     <div class="page-content-wrapper">
       <!-- START PAGE CONTENT -->
-      <div class="content-special">
+      <div class="content">
         <!-- START JUMBOTRON -->
         <div class="jumbotron" data-pages="parallax">
           <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
             <div class="inner">
               <!-- START BREADCRUMB -->
-            
               <!-- END BREADCRUMB -->
             </div>
           </div>
@@ -194,86 +180,89 @@
         <!-- START CONTAINER FLUID -->
         <div class="container-fluid container-fixed-lg">
           <!-- BEGIN PlACE PAGE CONTENT HERE -->
-          <div class="col-md-4">
-                  <div class="panel panel-default">
-                    <div class="panel-heading separator">
-                      <div class="panel-title"><i class="ion-ios-gear-outline orange-icon"></i>Backend Dev
-                      </div>
-                    </div>
-                    <div class="panel-body">
-                      <h3><span class="semi-bold">Puesto</span> Full Time - Local</h3>
-                      <p>Empresa importante de zona norte busca un Backend dev. Conocimientos: Node.js, MEAN stack, Mongo DB </p>
-                      <h3>Sueldo <span class="semi-bold">$20.000</span></h3>
-                    </div>
-                  </div>
-                </div>
-              <div class="col-md-4">
-                  <div class="panel panel-default">
-                    <div class="panel-heading separator">
-                      <div class="panel-title">
-                         <i class="ion-monitor orange-icon"></i>Front-end Dev
-                      </div>
-                    </div>
-                    <div class="panel-body">
-                      <h3><span class="semi-bold">Puesto</span> Full Time - Local</h3>
-                      <p>Empresa importante de zona norte busca un Backend dev. Conocimientos: Node.js, MEAN stack, Mongo DB </p>
-                      <h3>Sueldo <span class="semi-bold">$20.000</span></h3>
-                    </div>
-                  </div>
-                </div>
-            <div class="col-md-4">
-                  <div class="panel panel-default">
-                    <div class="panel-heading separator">
-                      <div class="panel-title"><i class="icon-line-circle-check orange-icon"></i>Proyect Manager
-                      </div>
-                    </div>
-                    <div class="panel-body">
-                      <h3><span class="semi-bold">Puesto</span> Full Time - Local</h3>
-                      <p>Empresa importante de zona norte busca un Backend dev. Conocimientos: Node.js, MEAN stack, Mongo DB </p>
-                      <h3>Sueldo <span class="semi-bold">$20.000</span></h3>
-                    </div>
-                  </div>
-                </div>
-            <div class="col-md-4">
-                  <div class="panel panel-default">
-                    <div class="panel-heading separator">
-                      <div class="panel-title"><i class="ion-ios-gear-outline orange-icon"></i>Backend Dev
-                      </div>
-                    </div>
-                    <div class="panel-body">
-                      <h3><span class="semi-bold">Puesto</span> Full Time - Local</h3>
-                      <p>Empresa importante de zona norte busca un Backend dev. Conocimientos: Node.js, MEAN stack, Mongo DB </p>
-                      <h3>Sueldo <span class="semi-bold">$20.000</span></h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="panel panel-default">
-                    <div class="panel-heading separator">
-                      <div class="panel-title"><i class="ion-monitor orange-icon"></i>Front-end Dev
-                      </div>
-                    </div>
-                    <div class="panel-body">
-                       <h3><span class="semi-bold">Puesto</span> Full Time - Remoto</h3>
-                      <p>Empresa importante de zona norte busca un Backend dev. Conocimientos: Node.js, MEAN stack, Mongo DB </p>
-                      <h3>Sueldo <span class="semi-bold">$20.000</span></h3>
-                    </div>
-                  </div>
-                </div>
-                  <div class="col-md-4">
-                  <div class="panel panel-default">
-                    <div class="panel-heading separator">
-                      <div class="panel-title"><i class="ion-ios-gear-outline orange-icon"></i>Backend Dev
-                      </div>
-                    </div>
+          <div class="content">
+            <!-- START CONTAINER FLUID -->
+            <div class="container-fluid container-fixed-lg">
+              <div id="rootwizard" class="m-t-50">
+                <!-- Nav tabs -->
+              
+                <!-- Tab panes -->
+              <div class="tab-content">
+                    <div class="tab-pane active slide-left" id="tab1">
+                      <div class="row row-same-height">
+                        <div class="container-fluid container-fixed-lg">
                       <div class="panel-body">
-                        <h3><span class="semi-bold">Puesto</span> Full Time - Remoto</h3>
-                        <p>Empresa importante de zona oeste busca un Backend dev. Conocimientos: Node.js, MEAN stack, Mongo DB </p>
-                        <h3>Sueldo <span class="semi-bold">$20.000</span></h3>
-                      </div>
-                  </div>
-                </div>
+                        <div class="row">
+                          <div class="col-sm-12">
 
+                            <div class="section-infoMainPreguntas">
+                              <h3 class="contactoInfo-title u-greenText m-t-50">Preguntas Frecuentes</h3>
+                              <div id="faqs">
+                                <h5 class="bold pointer">How do I become an author?</h5>
+                                <div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</p>
+                                </div>
+                                <hr class="m-t-10 m-b-10">
+                                <h5 class="bold pointer">Helpful Resources for Authors</h5>
+                                <div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</p>
+                                </div>
+                                <hr class="m-t-10 m-b-10">
+                                <h5 class="bold pointer">How much money can I make?</h5>
+                                <div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</p>
+                                </div>
+                                <hr class="m-t-10 m-b-10">
+                                <h5 class="bold pointer">Can I offer my items for free on a promotional basis?</h5>
+                                <div>
+                                  <p>
+                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.
+                                  </p>
+                                </div>
+                                <hr class="m-t-10 m-b-10">
+                                <h5 class="bold pointer">An Introduction to the Marketplaces for Authors</h5>
+                                <div>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <br>
+                              <h3>Contactate con nosotros</h3>
+
+                                <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Mensaje enviado!"></div>
+
+                                <form class="nobottommargin" id="template-contactform2" name="template-contactform" action="include/sendemail.php" method="post">
+
+                                    <div class="col_two_third">
+                                        <label for="template-contactform-subject">Asunto <small>*</small></label>
+                                        <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control" />
+                                    </div>
+
+                                    <div class="clear"></div>
+
+                                    <div class="col_full">
+                                        <label for="template-contactform-message">Mensaje <small>*</small></label>
+                                        <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+                                    </div>
+
+                                    <div class="col_full hidden">
+                                        <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+                                    </div>
+
+                                    <div class="col_full">
+                                        <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">ENVIAR</button>
+                                    </div>
+                                </form>
+                         </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END PANEL -->
+                  </div>
+                  <!-- END CONTAINER FLUID -->
+                </div>
+          <!-- END PLACE PAGE CONTENT HERE -->
+        </div>
           <!-- END PLACE PAGE CONTENT HERE -->
         </div>
         <!-- END CONTAINER FLUID -->
@@ -484,7 +473,7 @@
                     <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
                       <span class="col-xs-height col-middle">
                       <span class="thumbnail-wrapper d32 circular bg-success">
-                          <img width="34" height="34" alt="" src="<%= image_path('profiles/1x.jpg') %>" class="col-top">
+                          <img width="34" height="34" alt="" alt="" src="<%= image_path('profiles/1x.jpg') %>" class="col-top">
                       </span>
                       </span>
                       <p class="p-l-10 col-xs-height col-middle col-xs-12">
@@ -563,7 +552,7 @@
               <!-- BEGIN From Them Message  !-->
               <div class="message clearfix">
                 <div class="profile-img-wrapper m-t-5 inline">
-                  <img class="col-top" width="30" height="30" src="<%= image_path('profiles/avatar_small.jpg') %>" alt="">
+                  <img class="col-top" width="30" height="30" alt="" src="<%= image_path('profiles/avatar_small.jpg') %>">
                 </div>
                 <div class="chat-bubble from-them">
                   Hey
@@ -587,7 +576,7 @@
               <!-- BEGIN From Them Message  !-->
               <div class="message clearfix">
                 <div class="profile-img-wrapper m-t-5 inline">
-                  <img class="col-top" width="30" height="30" src="<%= image_path('profiles/avatar_small.jpg') %>" alt="">
+                  <img class="col-top" width="30" height="30" alt="" src="<%= image_path('profiles/avatar_small.jpg') %>">
                 </div>
                 <div class="chat-bubble from-them">
                   Yea
@@ -619,16 +608,157 @@
   </div>
   <!-- END QUICKVIEW-->
   <!-- START OVERLAY -->
+  <div class="overlay" style="display: none" data-pages="search">
+    <!-- BEGIN Overlay Content !-->
+    <div class="overlay-content has-results m-t-20">
+      <!-- BEGIN Overlay Header !-->
+      <div class="container-fluid">
+        <!-- BEGIN Overlay Logo !-->
+        <img class="overlay-brand" alt="logo" src="<%= image_path('logo.png') %>" width="78" height="22">
+        <!-- END Overlay Logo !-->
+        <!-- BEGIN Overlay Close !-->
+        <a href="#" class="close-icon-light overlay-close text-black fs-16">
+          <i class="pg-close"></i>
+        </a>
+        <!-- END Overlay Close !-->
+      </div>
+      <!-- END Overlay Header !-->
+      <div class="container-fluid">
+        <!-- BEGIN Overlay Controls !-->
+        <input id="overlay-search" class="no-border overlay-search bg-transparent" placeholder="Search..." autocomplete="off" spellcheck="false">
+        <br>
+        <div class="inline-block">
+          <div class="checkbox right">
+            <input id="checkboxn" type="checkbox" value="1" checked="checked">
+            <label for="checkboxn"><i class="fa fa-search"></i> Search within page</label>
+          </div>
+        </div>
+        <div class="inline-block m-l-10">
+          <p class="fs-13">Press enter to search</p>
+        </div>
+        <!-- END Overlay Controls !-->
+      </div>
+      <!-- BEGIN Overlay Search Results, This part is for demo purpose, you can add anything you like !-->
+      <div class="container-fluid">
+        <span>
+              <strong>suggestions :</strong>
+          </span>
+        <span id="overlay-suggestions"></span>
+        <br>
+        <div class="search-results m-t-40">
+          <p class="bold">Pages Search Results</p>
+          <div class="row">
+            <div class="col-md-6">
+              <!-- BEGIN Search Result Item !-->
+              <div class="">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular bg-success text-white inline m-t-10">
+                  <div>
+                    <img width="50" height="50" alt="" src="<%= image_path('profiles/avatar.jpg') %>" alt="">
+                  </div>
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10 inline p-t-5">
+                  <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> on pages</h5>
+                  <p class="hint-text">via john smith</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+              <!-- BEGIN Search Result Item !-->
+              <div class="">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular bg-success text-white inline m-t-10">
+                  <div>T</div>
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10 inline p-t-5">
+                  <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> related topics</h5>
+                  <p class="hint-text">via pages</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+              <!-- BEGIN Search Result Item !-->
+              <div class="">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular bg-success text-white inline m-t-10">
+                  <div><i class="fa fa-headphones large-text "></i>
+                  </div>
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10 inline p-t-5">
+                  <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> music</h5>
+                  <p class="hint-text">via pagesmix</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+            </div>
+            <div class="col-md-6">
+              <!-- BEGIN Search Result Item !-->
+              <div class="">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular bg-info text-white inline m-t-10">
+                  <div><i class="fa fa-facebook large-text "></i>
+                  </div>
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10 inline p-t-5">
+                  <h5 class="m-b-5"><span class="semi-bold result-name">ice cream</span> on facebook</h5>
+                  <p class="hint-text">via facebook</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+              <!-- BEGIN Search Result Item !-->
+              <div class="">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular bg-complete text-white inline m-t-10">
+                  <div><i class="fa fa-twitter large-text "></i>
+                  </div>
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10 inline p-t-5">
+                  <h5 class="m-b-5">Tweats on<span class="semi-bold result-name"> ice cream</span></h5>
+                  <p class="hint-text">via twitter</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+              <!-- BEGIN Search Result Item !-->
+              <div class="">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular text-white bg-danger inline m-t-10">
+                  <div><i class="fa fa-google-plus large-text "></i>
+                  </div>
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10 inline p-t-5">
+                  <h5 class="m-b-5">Circles on<span class="semi-bold result-name"> ice cream</span></h5>
+                  <p class="hint-text">via google plus</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Overlay Search Results !-->
+    </div>
+    <!-- END Overlay Content !-->
   </div>
   <!-- END OVERLAY -->
-
-  <% if current_employee.profile_completed != true %>
-    <script>
-      $(document).ready(function () {
-        setTimeout(function(){
-          $('#grayOverlay').addClass("opacity-1");
-        }, 2000);
-      });
-    </script>
-  <% end %>
-</body>  
+  <!--
+  <script type="text/javascript">
+    $("#template-contactform").validate({
+      submitHandler: function(form) {
+        $('.form-process').fadeIn();
+        $(form).ajaxSubmit({
+          target: '#contact-form-result',
+          success: function() {
+            $('.form-process').fadeOut();
+            $('#template-contactform').find('.sm-form-control').val('');
+            $('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
+            SEMICOLON.widget.notifications($('#contact-form-result'));
+          }
+        });
+      }
+    });
+  </script> -->
+</body>
