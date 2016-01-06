@@ -1,6 +1,10 @@
 class Contact < ApplicationMailer
-  def contact(message)
+  def company_index_contact(message)
     @message = message
-    mail(to: "test@test.com", subject: 'Contacto')
+    mail(to: "abedandres@gmail.com", subject: 'Contacto')
+  end
+  def employee_contact(message)
+    @message = message
+    mail(to: "abedandres@gmail.com", subject: 'Contacto')
   end
 end
