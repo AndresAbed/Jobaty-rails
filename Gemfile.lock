@@ -169,7 +169,7 @@ GEM
       mime-types
       mimemagic (= 0.3.0)
     pg (0.18.3)
-    pry (0.10.1)
+    pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
@@ -293,6 +293,7 @@ DEPENDENCIES
   omniauth-linkedin
   paperclip (~> 4.3)
   pg
+  pry
   rails (= 4.2.4)
   rails-i18n (~> 4.0.0)
   rails_12factor

@@ -6,6 +6,7 @@
       $(".contact-messages .devise-success").slideUp();
     }, 6000);
   });
+  $('.form-process').fadeOut();
 <% else %>
   $(".contact-messages").html("<%= escape_javascript(render("errors")) %>");
   $(document).ready(function() {
@@ -13,4 +14,5 @@
       $(".contact-messages .devise-errors").slideUp();
     }, 6000);
   });
+  $('.form-process').fadeOut();
 <% end %>  

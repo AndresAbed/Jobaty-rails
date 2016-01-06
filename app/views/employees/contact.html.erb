@@ -229,6 +229,7 @@
                         <div class="contact-messages"></div>
                         <%= form_for :contact, url: employee_contact_form_path,
                         html: {class: "nobottommargin", id: :contact_form}, remote: true do |employee| %>
+                          <div class="form-process"></div>
                           <div class="col_two_third">
                             <label for="template-contactform-subject">Asunto <small>*</small></label>
                             <%= employee.text_field :subject, class: "required sm-form-control" %>
@@ -733,21 +734,9 @@
     <!-- END Overlay Content !-->
   </div>
   <!-- END OVERLAY -->
-  <!--
   <script type="text/javascript">
-    $("#template-contactform").validate({
-      submitHandler: function(form) {
-        $('.form-process').fadeIn();
-        $(form).ajaxSubmit({
-          target: '#contact-form-result',
-          success: function() {
-            $('.form-process').fadeOut();
-            $('#template-contactform').find('.sm-form-control').val('');
-            $('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
-            SEMICOLON.widget.notifications($('#contact-form-result'));
-          }
-        });
-      }
+    $("#contact_form").submit(function( ) {
+      $('.form-process').fadeIn();
     });
-  </script> -->
+  </script>
 </body>
