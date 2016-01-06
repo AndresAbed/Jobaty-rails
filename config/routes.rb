@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get "/aceptadas" => "employees#acepted", as: :employee_acepted
   get "/rechazadas" => "employees#rejected", as: :employee_rejected
   get "/contacto-talento" => "employees#contact", as: :employee_contact
+  post "/contacto-talento" => "employees#contact_form", as: :employee_contact_form
   
   #Omniauth
   get 'auth/:provider/callback', to: 'oauth_sessions#create_oauth_session'
