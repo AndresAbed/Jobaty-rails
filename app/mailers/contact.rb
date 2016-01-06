@@ -1,5 +1,5 @@
 class Contact < ApplicationMailer
-  def contact(message)
+  def company_index_contact(message)
     @message = message
     mail(to: "test@test.com", subject: 'Contacto')
   end

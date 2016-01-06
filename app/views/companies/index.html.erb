@@ -310,7 +310,7 @@
       <div id="section-contact" class="container clearfix">
         <h3>Contactate con nosotros</h3>
         <div class="contact-messages"></div>
-        <%= form_for :contact, url: contact_path,
+        <%= form_for :contact, url: company_index_contact_path,
          html: {class: "nobottommargin", id: :contact_form}, remote: true do |company| %>
           <div class="form-process"></div>
           <div class="col_one_third">

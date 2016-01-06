@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get "/empleadores" => "companies#index", as: :companies
   get "/candidatos" => "companies#candidates", as: :candidates
   get "/perfil-empresa" => "companies#profile", as: :company_profile
-  post "/empleadores" => "companies#contact", as: :contact
+  post "/empleadores" => "companies#index_contact", as: :company_index_contact
 
   get "/ofertas" => "employees#offers", as: :offers
   get "/perfil" => "employees#profile", as: :employee_profile

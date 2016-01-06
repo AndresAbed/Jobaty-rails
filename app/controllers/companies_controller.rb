@@ -3,10 +3,10 @@ class CompaniesController < ApplicationController
   end
   def candidates
   end
-  def contact
+  def index_contact
     message = Message.new(params[:contact])
     if message.valid?
-      Contact.contact(message).deliver
+      Contact.company_index_contact(message).deliver
       @flag = true
       respond_to do |format|
         format.js {flash[:alert] = "Mensaje enviado. Gracias por contactarnos."}
